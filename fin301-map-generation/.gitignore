@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+work/
+*.db3
+*.db3-shm
+*.db3-wal
+*.mcap
+*.pbstream
+*.zip
+*.log
+.venv/
+*.partial

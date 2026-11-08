@@ -1,0 +1,65 @@
+{
+  "format": "gzip-chunks-v1",
+  "chunk_limit_bytes": 536870912,
+  "datasets": {
+    "fin301": {
+      "database": "fin301/fin301_0.db3",
+      "bytes": 5548421120,
+      "sha256": "bef1f1fd77040cbe4e98b4e4eda1abb7990927f0db5af5e5b2bd8f7746313543",
+      "parts": [
+        {
+          "file": "fin301/fin301_0.db3.gz.part000",
+          "bytes": 536870912,
+          "sha256": "2a43ce654a525e44b15175493e75b54dd1a87187891e8a7867f7112e0a6abced"
+        },
+        {
+          "file": "fin301/fin301_0.db3.gz.part001",
+          "bytes": 536870912,
+          "sha256": "448ec0c669d15926a992d34bba73898277d56e082aea23e31cfaa636bfc3614f"
+        },
+        {
+          "file": "fin301/fin301_0.db3.gz.part002",
+          "bytes": 536870912,
+          "sha256": "a9dc8f4872ad455b7e2bcdcb3a658e89a71dddc274c50071e10e06ad2acfccdc"
+        },
+        {
+          "file": "fin301/fin301_0.db3.gz.part003",
+          "bytes": 536870912,
+          "sha256": "169e2fe818f34c4f499fe106aff374f8e08a178a81f6278151b8253e4972a84e"
+        },
+        {
+          "file": "fin301/fin301_0.db3.gz.part004",
+          "bytes": 26391067,
+          "sha256": "eb95b3e76af1e7b7c2041e0320118635e1076f6053a4a74d25d84c55afd211be"
+        }
+      ]
+    },
+    "Fin301-11051740": {
+      "database": "Fin301-11051740/Fin301-11051740_0.db3",
+      "bytes": 5793841152,
+      "sha256": "b12004a582a4f7c27a510cd74215efda6c00e18023094b767510bf4c8ebd93e3",
+      "parts": [
+        {
+          "file": "Fin301-11051740/Fin301-11051740_0.db3.gz.part000",
+          "bytes": 536870912,
+          "sha256": "68779cd9af6b7f076f11cacdc630eee4c84d018c5f63a1a285526bf4a1d49f61"
+        },
+        {
+          "file": "Fin301-11051740/Fin301-11051740_0.db3.gz.part001",
+          "bytes": 536870912,
+          "sha256": "d9820038d1dad4c4a949644e8fd4d9e68c83339925fe6f1dbe78863900f97c69"
+        },
+        {
+          "file": "Fin301-11051740/Fin301-11051740_0.db3.gz.part002",
+          "bytes": 536870912,
+          "sha256": "d8803b00f1552cd4129872034e337fdeaa654ad995a3d7e16892b73a49eab130"
+        },
+        {
+          "file": "Fin301-11051740/Fin301-11051740_0.db3.gz.part003",
+          "bytes": 300636032,
+          "sha256": "0b8bf74bf28f4dd7ed6bf3874836f89659c3ec482ec337ebb6668ba9c8d7e1d4"
+        }
+      ]
+    }
+  }
+}
