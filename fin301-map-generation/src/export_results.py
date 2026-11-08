@@ -1,4 +1,4 @@
-"""Export only the sensor-only occupancy PGM and its matching portable YAML."""
+"""Export only the camera-constrained occupancy PGM and matching portable YAML."""
 import os
 from pathlib import Path
 import cv2

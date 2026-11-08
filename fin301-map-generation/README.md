@@ -1,153 +1,81 @@
-# Fin301 sensor-only occupancy maps
+# Camera–LiDAR indoor mapping
 
-This package contains the active code, both original recordings and only the final **PGM/YAML** results.
-Both maps use raw LiDAR through Cartographer 2D. IMU, camera images, recorded odometry,
-recorded maps and the previously supplied map screenshot are not used for map generation.
+Reconstructs both `fin301` and `Fin301-11051740` from their bundled original recordings.
+Uses Python, ROS 2 and Cartographer 2D. No IMU, GNSS, recorded odometry/map,
+manually drawn map or supplied screenshot is used.
 
-| Recording | Occupancy image | Configuration |
-|---|---|---|
-| fin301 | [PGM](results/fin301/map.pgm) | [YAML](results/fin301/map.yaml) |
-| Fin301-11051740 | [PGM](results/Fin301-11051740/map.pgm) | [YAML](results/Fin301-11051740/map.yaml) |
+## Run
 
-There are no point clouds, 3D reconstruction, previews, trajectories, reports or comparison
-outputs in `results/`. The generation code does not create those products.
-
-## Folder layout
-
-```
-run_mapping.sh                   portable entry point
-src/                             data restoration, scan replay, SLAM runner and PGM/YAML export
-config/cartographer/             Cartographer settings and required Lua includes
-config/datasets.json             filenames relative to the data root
-results/fin301/map.pgm            first recording's final occupancy map
-results/fin301/map.yaml           its matching metadata
-results/Fin301-11051740/map.pgm    second recording's final occupancy map
-results/Fin301-11051740/map.yaml   its matching metadata
-data/                            both original databases as compressed Git LFS chunks
-requirements.txt                 non-ROS Python dependencies
-```
-
-## Requirements
-
-Use Ubuntu 22.04 / ROS 2 Humble, Python 3.10, the SQLite rosbag2 storage plugin,
-`rosbag2_py`, and a compatible Cartographer ROS 2 installation. The installation must provide
-`lib/cartographer_ros/cartographer_offline_node` and
-`lib/cartographer_ros/cartographer_pbstream_to_ros_map`.
-Install the Python packages in `requirements.txt` in an environment that can import ROS.
-`MAP_PYTHON` can select the Python interpreter.
-
-Source your ROS setup and Cartographer workspace setup before running. For example, source
-`/opt/ros/humble/setup.bash`, then your Cartographer workspace's `install/setup.bash`.
-The runtime libraries are dependencies; they are not copied into this repository.
-
-## Run after cloning
-
-With Git LFS installed:
+Use Ubuntu 22.04, ROS 2 Humble, SQLite rosbag2 support, and Cartographer ROS 2
+(including its Python messages, offline node, trajectory-query node and map exporter).
+Source ROS and your Cartographer workspace setup, then:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd YOUR_REPOSITORY_FOLDER
+pip install -r requirements.txt
 git lfs pull
-```
-
-After activating the dependencies above:
-
-```bash
 bash run_mapping.sh --dataset both
 ```
 
-The runner automatically restores both bundled databases, verifies their SHA256 checksums,
-and writes only `map.pgm` and `map.yaml` under each recording's results folder.
-To generate only one recording, use `--dataset fin301` or `--dataset Fin301-11051740`.
+The runner restores the original databases from the bundled Git LFS chunks and verifies
+SHA256 hashes. Allow space for about 4.1 GB compressed data, 11.3 GB restored data and
+scratch files. `--dataset fin301` or `--dataset Fin301-11051740` selects one recording.
+`--rebuild-backend` recomputes the mapping after algorithm changes.
+`--data-root`, `--work-root`, `--results-root` and `--cartographer-prefix` support other locations.
+Logs and intermediate states stay in ignored `work/`; runtime dependencies are not bundled.
 
-Additional options:
+## Method
 
-```bash
-bash run_mapping.sh --help
-bash run_mapping.sh --dataset both --rebuild-backend
-bash run_mapping.sh --dataset both --data-root /path/to/recordings
-bash run_mapping.sh --dataset both --work-root /path/to/scratch --results-root /path/to/output
-```
+An initial LiDAR trajectory proposes revisits. Timestamp-associated, undistorted camera
+images verify place identity using ORB and homography RANSAC. Robust point-to-line ICP
+supplies metric relative geometry. Camera-gated virtual place constraints enter a second
+Cartographer optimization. Every third accepted pair is reserved from these added constraints;
+a recording with only one accepted pair has no reserved pair. Cameras contribute to optimization,
+while LiDAR supplies metric scale and scan-plane occupancy. Camera features are not projected
+into LiDAR, so camera mounting information is inspected rather than used for pixel/range fusion.
 
-An external data root must contain `fin301/fin301_0.db3` and
-`Fin301-11051740/Fin301-11051740_0.db3`. For a custom Cartographer prefix, add
-`--cartographer-prefix /path/to/prefix`. That prefix must contain `lib/cartographer_ros/`.
-The adapter also supports an extracted Ubuntu-style runtime root.
+Raw scan range limits are 0.22–12 m; occupancy resolution is 0.025 m. The camera-loop ICP helper
+additionally filters isolated angular returns and uses robust residual weights. Cartographer's
+submap matching and global optimization address drift; no corners or walls are drawn manually.
+These steps cannot guarantee that every doubled wall or unobserved corner is resolved.
 
-The entry point works from any current directory and the package can be moved or renamed.
-No code depends on the original project paths. Source database and configuration SHA256
-signatures invalidate stale backend caches. Logs and intermediate SLAM states remain under
-`work/`, which Git ignores. These are not final deliverables.
+## Results
 
-## Included recordings
+Each recording has its own directory under `results/` containing:
 
-Both complete original SQLite databases are stored as lossless gzip chunks of at most
-512 MiB each. They total about 4.1 GB compressed and restore to about 11.3 GB.
-`data/archives.json` records original sizes and hashes plus the ordered chunk hashes.
-These are full byte-identical recordings, not reduced scan subsets. Recorded IMU and camera
-topics remain preserved in the source archives but are not supplied to the mapping backend.
+- `map.pgm` and `map.yaml`: occupied black, free white, unknown gray. Keep them together;
+  open the PGM in an image viewer or load the YAML through a ROS map server.
+- `vehicle_poses.csv`: measurement time in seconds, vehicle `base_link` x/y in metres and
+  heading in radians. Full recorded static mounting transforms convert optimized laser poses
+  using `map_from_base = map_from_laser × inverse(base_from_laser)`.
+- `quality_checks.json`: initialization coverage, trajectory gaps, sampled scan alignment,
+  pose-jump warnings, low-support scans, camera decode counts and numerical revisit disagreement.
+  Flagged locations/times identify areas needing inspection; they are heuristic warnings,
+  not proven tracking failures. The map represents returns in the LiDAR scan plane.
 
-The runner restores `data/fin301/fin301_0.db3` and
-`data/Fin301-11051740/Fin301-11051740_0.db3` automatically. Restored databases are ignored by Git
-so the recording is not uploaded twice. Original source metadata files are not needed.
-Allow disk space for compressed archives, restored databases and additional backend caches.
-For data restoration alone:
+Each map uses Cartographer's initial laser frame as its local origin and axes. Trajectory
+positions and map dimensions are metric. Reliability checks sample approximately once per
+second; limited coverage, glass, repetitive views and missing corners can remain undetected.
+Revisit residuals reuse the mapping sensors and do not establish absolute accuracy.
 
-```bash
-python3 src/restore_data.py
-```
+## Optional physical-reference checks
 
-## Mapping method
+No independently measured room distances/checkpoints with uncertainty were supplied.
+The results explicitly mark physical-reference validation unavailable; no measurements are invented.
+To evaluate actual measurements, supply `--reference-measurements /path/to/measurements.json`.
+The JSON object is keyed by dataset name, with a list of checks for each dataset. Each check needs
+`timestamp_a_s`, `timestamp_b_s`, `measured_distance_m`, `uncertainty_m` (positive stated bound),
+and `source` (how the physical measurement was obtained). Measure the Euclidean separation of
+vehicle `base_link` positions at the two recorded times, not the travelled path length.
+The result records estimated separation, signed error and comparison with the stated uncertainty.
+These checks assess the measured separations, not global map accuracy or a SLAM confidence interval.
 
-Only `/scan/raw` is copied into a fresh replay bag as `/scan`. Original databases are read-only.
-Cartographer 2D uses correlative scan-to-submap matching, Ceres refinement, overlapping
-probability submaps and global loop constraints. Settings remain 0.22–12 m range,
-0.025 m grid resolution, 75 insertions per submap and 0.58 minimum loop match score.
-IMU, odometry, GNSS and external landmark inputs are disabled.
+## GitHub
 
-The optimized SLAM state is rendered into a native occupancy grid. The final three-value
-PGM marks native occupied evidence >=65/100 black (0), known evidence <20/100 white (254),
-and everything else gray (205). Its YAML uses a relative `image: map.pgm` path and preserves
-Cartographer's metric origin and resolution. This matches the occupancy export used before
-the point-cloud and camera stages were removed; point-cloud filtering never changed this grid.
+Keep `.gitattributes` and install Git LFS before committing the large data chunks.
+Clone with Git and run `git lfs pull`; ZIP downloads may contain pointers instead of data.
+Unchanged data is reused when pushing later code/result commits. Restored databases and scratch
+files are ignored. No reports, comparison versions or report-generation scripts are included.
 
-There is no screenshot guidance, point-cloud cleanup, camera triangulation, wall thickening,
-or forced corner closure in this occupancy-only workflow. Glass, occlusion, noisy objects
-and possible doubled walls can remain. No claim of complete denoising or surveyed accuracy
-is made. The grid resolution is a sampling scale, not an accuracy guarantee.
-
-Each recording retains its own first-laser map frame. Keep each PGM beside its matching YAML;
-do not exchange metadata between recordings. Black means occupied, white observed free space,
-and gray unknown. The two coordinate frames are not aligned to each other.
-
-## Upload with Git LFS
-
-The included `.gitattributes` tracks all `data/**/*.gz.part*` files with Git LFS. Use Git LFS
-rather than browser drag-and-drop or ordinary Git for these large chunks. Ensure your GitHub
-account has sufficient LFS storage and download allowance.
-
-Install Git LFS first, then run in this folder (replace the repository URL):
-
-```bash
-git init
-git lfs install --local
-git add .
-git commit -m "Add occupancy mapping code data and PGM YAML results"
-git branch -M main
-git remote add origin YOUR_GITHUB_REPOSITORY_URL
-git push -u origin main
-```
-
-Download on another computer with `git clone` and `git lfs pull`. GitHub's Download ZIP may
-contain LFS pointers instead of the data; missing chunks or unresolved pointers produce an
-explicit restoration error. Upload the entire folder including `data/`, `.gitattributes`
-and `.gitignore`. Do not force-add restored `.db3` files or scratch caches.
-
-GitHub LFS documentation:
-https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage
-
-## Software attribution
-
-Cartographer and Ceres provide SLAM. NumPy, OpenCV and PyYAML provide occupancy export.
-Required Cartographer Lua files retain upstream Apache license notices. ROS, Cartographer,
-Ceres and Python dependencies retain their own licenses; no runtime binaries are redistributed.
+Dependencies: [Cartographer ROS 2](https://github.com/ros2/cartographer_ros),
+[Ceres](https://ceres-solver.org/), [OpenCV](https://opencv.org/), NumPy, SciPy, PyYAML and ROS 2.
+Upstream Lua configuration files retain their license notices.

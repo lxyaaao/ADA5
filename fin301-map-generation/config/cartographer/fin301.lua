@@ -27,7 +27,7 @@ options = {
   use_pose_extrapolator = true,
   use_odometry = false,
   use_nav_sat = false,
-  use_landmarks = false,
+  use_landmarks = true,
   num_laser_scans = 1,
   num_multi_echo_laser_scans = 0,
   num_subdivisions_per_laser_scan = 1,
@@ -66,4 +66,5 @@ TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(2.)
 TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.025
 MAP_BUILDER.num_background_threads = 4
 POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 4
+TRAJECTORY_BUILDER.collate_landmarks = false
 return options

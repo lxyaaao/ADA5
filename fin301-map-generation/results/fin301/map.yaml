@@ -1,8 +1,8 @@
 image: map.pgm
 resolution: 0.025
 origin:
-- -37.129507
-- -28.194794
+- -37.13396
+- -28.195374
 - 0.0
 negate: 0
 occupied_thresh: 0.65

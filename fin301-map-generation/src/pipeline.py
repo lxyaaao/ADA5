@@ -24,6 +24,7 @@ def main():
     parser.add_argument('--work-root', type=Path, default=ROOT / 'work')
     parser.add_argument('--results-root', type=Path, default=ROOT / 'results')
     parser.add_argument('--cartographer-prefix', type=Path, help='Optional custom Cartographer ROS installation prefix')
+    parser.add_argument('--reference-measurements', type=Path, help='JSON object keyed by dataset, containing independent physical distance checks')
     parser.add_argument('--rebuild-backend', action='store_true')
     args = parser.parse_args()
     datasets = json.loads((ROOT / 'config/datasets.json').read_text())
@@ -53,7 +54,7 @@ def main():
         except (ImportError, LookupError) as exc:
             parser.error(f'Source ROS and Cartographer setup files first, or supply --cartographer-prefix: {exc}')
     commands = {name: prefix / 'lib/cartographer_ros' / name for name in
-                ['cartographer_offline_node', 'cartographer_pbstream_to_ros_map']}
+                ['cartographer_offline_node', 'cartographer_pbstream_to_ros_map', 'cartographer_node']}
     for command in commands.values():
         if not command.is_file():
             parser.error(f'Required Cartographer executable missing: {command}')
@@ -66,11 +67,11 @@ def main():
                    MAP_RESULTS_DIR=str((args.results_root / name).resolve()),
                    ROS_DOMAIN_ID=str(183 + list(datasets).index(name)))
         config_hash = hashlib.sha256(b''.join(p.read_bytes() for p in sorted((ROOT / 'config/cartographer').glob('*.lua')))).hexdigest()
-        signature = {'source_sha256': digest(bag), 'config_sha256': config_hash, 'format_version': 1}
+        signature = {'source_sha256': digest(bag), 'config_sha256': config_hash, 'format_version': 2}
         cache_key = work / 'input_signature.json'
         stale = not cache_key.exists() or json.loads(cache_key.read_text()) != signature
         if stale:
-            for relative in ['backend', 'raw_scans']:
+            for relative in ['backend', 'baseline', 'raw_scans', 'camera', 'camera_scans', 'baseline_config']:
                 path = work / relative
                 if path.exists():
                     shutil.rmtree(path)
@@ -91,15 +92,56 @@ def main():
             if (work / 'raw_scans').exists():
                 shutil.rmtree(work / 'raw_scans')
             stage('prepare_scans')
-        if args.rebuild_backend or not all((backend / n).is_file() for n in ['native_map.pgm', 'native_map.yaml']):
-            run([commands['cartographer_offline_node'], '-configuration_directory=' + str(ROOT / 'config/cartographer'),
+        cache_key.write_text(json.dumps(signature, indent=2))
+        baseline = work / 'baseline'
+        baseline.mkdir(exist_ok=True)
+        baseline_config = work / 'baseline_config'
+        shutil.copytree(ROOT / 'config/cartographer', baseline_config, dirs_exist_ok=True)
+        config_file = baseline_config / 'fin301.lua'
+        config_file.write_text(config_file.read_text().replace('use_landmarks = true', 'use_landmarks = false'))
+
+        def query_state(folder, configuration):
+            with (logs / ('query_' + folder.name + '.log')).open('w') as output:
+                node = subprocess.Popen([str(commands['cartographer_node']),
+                    '-configuration_directory=' + str(configuration), '-configuration_basename=fin301.lua',
+                    '-load_state_filename=' + str(folder / 'map.pbstream'),
+                    '-load_frozen_state=true', '-start_trajectory_with_default_topics=false'],
+                    env=env, cwd=ROOT, stdout=output, stderr=subprocess.STDOUT)
+                try:
+                    env['MAP_QUERY_DIR'] = str(folder)
+                    stage('query_poses')
+                finally:
+                    node.terminate()
+                    try:
+                        node.wait(timeout=15)
+                    except subprocess.TimeoutExpired:
+                        node.kill();node.wait()
+
+        if args.rebuild_backend or not (baseline / 'optimized_poses.csv').is_file():
+            run([commands['cartographer_offline_node'], '-configuration_directory=' + str(baseline_config),
                  '-configuration_basenames=fin301.lua', '-bag_filenames=' + str(work / 'raw_scans'),
-                 '-use_bag_transforms=false', '-save_state_filename=' + str(backend / 'map.pbstream')], 'cartographer')
+                 '-use_bag_transforms=false', '-save_state_filename=' + str(baseline / 'map.pbstream')], 'baseline')
+            query_state(baseline, baseline_config)
+        if args.rebuild_backend or not (work / 'camera/revisits.json').is_file() or not (work / 'camera_scans/metadata.yaml').is_file():
+            stage('camera_revisits')
+        rebuilt_final = args.rebuild_backend or not all((backend / n).is_file() for n in ['native_map.pgm', 'native_map.yaml'])
+        if rebuilt_final:
+            run([commands['cartographer_offline_node'], '-configuration_directory=' + str(ROOT / 'config/cartographer'),
+                 '-configuration_basenames=fin301.lua', '-bag_filenames=' + str(work / 'camera_scans'),
+                 '-use_bag_transforms=false', '-save_state_filename=' + str(backend / 'map.pbstream')], 'camera_fused')
             run([commands['cartographer_pbstream_to_ros_map'], '-pbstream_filename=' + str(backend / 'map.pbstream'),
                  '-map_filestem=' + str(backend / 'native_map'), '-resolution=.025'], 'native_occupancy')
-        # The signature is written only after backend export succeeds.
-        cache_key.write_text(json.dumps(signature, indent=2))
+        if rebuilt_final or not (backend / 'optimized_poses.csv').is_file():
+            query_state(backend, ROOT / 'config/cartographer')
+        if args.reference_measurements:
+            references = json.loads(args.reference_measurements.read_text())
+            reference_file = work / 'reference_measurements.json'
+            reference_file.write_text(json.dumps(references.get(name, [])))
+            env['MAP_REFERENCE_MEASUREMENTS'] = str(reference_file)
+        else:
+            env.pop('MAP_REFERENCE_MEASUREMENTS', None)
         stage('export_results')
+        stage('evaluate_mapping')
         print(f'[{name}] Complete: {env["MAP_RESULTS_DIR"]}', flush=True)
 
 if __name__ == '__main__':
