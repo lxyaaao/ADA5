@@ -1,0 +1,186 @@
+{
+ "params": {
+  "process_every": 2,
+  "range_min": 0.15,
+  "range_max": 20.0,
+  "scan_voxel": 0.05,
+  "icp_voxel": 0.08,
+  "map_voxel": 0.05,
+  "local_map_keyframes": 30,
+  "icp_max_iter": 30,
+  "icp_gate_start": 0.6,
+  "icp_gate_end": 0.15,
+  "icp_huber": 0.05,
+  "icp_inlier_dist": 0.1,
+  "min_inlier": 0.35,
+  "max_jump_m": 0.3,
+  "max_jump_deg": 12.0,
+  "degenerate_eig": 0.02,
+  "strong_inlier": 0.6,
+  "prior_check_deg": 1.0,
+  "kf_dist": 0.25,
+  "kf_deg": 8.0,
+  "use_camera_prior": false,
+  "use_camera_loops": true,
+  "camera_heading_every": 2,
+  "orb_features_heading": 600,
+  "orb_features_loop": 1000,
+  "camera_ransac_px": 1.5,
+  "camera_ransac_iters": 300,
+  "loop_image_max_dt": 0.06,
+  "bow_words": 200,
+  "loop_min_gap_s": 30.0,
+  "loop_min_path_m": 5.0,
+  "loop_top_k": 3,
+  "loop_min_score": 0.25,
+  "loop_min_inliers": 20,
+  "loop_submap_half": 10,
+  "loop_min_lidar_inlier": 0.65,
+  "loop_max_rmse": 0.025,
+  "loop_max_yaw_disagreement_deg": 5.0,
+  "loop_max_correction_frac": 0.1,
+  "odom_sigma_xy": 0.005,
+  "odom_sigma_xy_per_m": 0.01,
+  "odom_sigma_deg": 0.1,
+  "odom_sigma_deg_per_deg": 0.01,
+  "lost_inflation": 10.0,
+  "loop_sigma_xy": 0.02,
+  "loop_sigma_deg": 0.3,
+  "graph_f_scale": 3.0,
+  "map_resolution": 0.05,
+  "map_max_free": 12.0
+ },
+ "frontend": {
+  "scans_processed": 8785,
+  "status_counts": {
+   "init": 1,
+   "lost": 3,
+   "tracked": 8781
+  },
+  "keyframes": 912,
+  "inlier_p5_p50": [
+   0.618,
+   0.778
+  ],
+  "weak_eigen_p1_p5_p50": [
+   0.1871,
+   0.2321,
+   0.3318
+  ],
+  "iterations_mean": 10.15,
+  "path_length_m": 243.18,
+  "prior_used_share": 0.0,
+  "both_predictions_tried_share": 0.0,
+  "camera_prediction_chosen_share": 0.0,
+  "camera_chosen_when_both_tried": null,
+  "prediction_error_deg_p50_p95": [
+   0.086,
+   0.547
+  ]
+ },
+ "camera_vs_lidar_heading": {
+  "pairs": 2708,
+  "pairs_with_camera_estimate_share": 0.9214018373596461,
+  "abs_diff_deg_p50_p95": [
+   0.108,
+   3.183
+  ],
+  "slope_camera_vs_lidar_when_turning": 0.981,
+  "correlation": 0.8633
+ },
+ "loop_closure": {
+  "candidates": 2578,
+  "camera_verified": 47,
+  "accepted": 14
+ },
+ "pose_graph": {
+  "keyframes": 912,
+  "odometry_edges": 911,
+  "loop_edges": 14,
+  "cost_start": null,
+  "cost_end": 0.8461847730215444,
+  "iterations": 60
+ },
+ "revisit_consistency": {
+  "loop_error_before_m_p50_max": [
+   0.008110385643836725,
+   0.018563960166868648
+  ],
+  "loop_error_before_deg_p50_max": [
+   0.15435155966400863,
+   0.380411045877337
+  ],
+  "loop_error_after_m_p50_max": [
+   0.0037681970515351564,
+   0.008364508608228096
+  ],
+  "loop_error_after_deg_p50_max": [
+   0.039720200662044465,
+   0.11910967514217531
+  ],
+  "keyframe_shift_m_p50_max": [
+   0.012692742790933556,
+   0.017699470068641244
+  ]
+ },
+ "revisit_consistency_lidar_check": {
+  "note": "validation only: LiDAR ICP at keyframe pairs within 1 m, >30 s and >10 m of path apart",
+  "lidar_odometry_only": {
+   "pairs_checked": 72,
+   "pairs_with_strong_alignment": 45,
+   "time_between_visits_s_min_max": [
+    30.153021574020386,
+    196.84007167816162
+   ],
+   "error_m_p50_p95_max": [
+    0.018330462977645914,
+    0.11140634895621658,
+    0.12132578922859215
+   ],
+   "error_deg_p50_p95_max": [
+    0.2618280942769696,
+    0.5315444909759067,
+    0.614350621859392
+   ]
+  },
+  "final": {
+   "pairs_checked": 71,
+   "pairs_with_strong_alignment": 44,
+   "time_between_visits_s_min_max": [
+    30.153021574020386,
+    196.84007167816162
+   ],
+   "error_m_p50_p95_max": [
+    0.01835932144719385,
+    0.1107538357301221,
+    0.12053642831478277
+   ],
+   "error_deg_p50_p95_max": [
+    0.15648228981290388,
+    0.5334818102518111,
+    0.607392011059736
+   ]
+  }
+ },
+ "map": {
+  "file": "fin301_map_no_prior.yaml",
+  "resolution_m": 0.05,
+  "size_cells": [
+   985,
+   1241
+  ],
+  "origin_m": [
+   -41.793070528199046,
+   -30.9145471698031
+  ],
+  "occupied_cells": 11260,
+  "free_cells": 207752,
+  "occupied_cells_before_loop_closure": 11274
+ },
+ "timing_s": {
+  "load_and_camera_heading_s": 5.9,
+  "pose_graph_s": 6.1,
+  "consistency_check_s": 1.9,
+  "map_s": 3.5
+ }
+}

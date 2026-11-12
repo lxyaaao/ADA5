@@ -1,0 +1,48 @@
+{
+ "images": 5879,
+ "scans": 17570,
+ "forward_beam_delay_ms": 16.730843199184164,
+ "image_minus_nearest_scan_ms": {
+  "median": 0.9782314300537109,
+  "p95_abs": 15.949845314025875,
+  "max_abs": 16.95990562438965
+ },
+ "laser_origin_in_camera_frame_m": [
+  7.55901531780948e-07,
+  -0.08748924409787798,
+  -0.2057883213659379
+ ],
+ "scan_plane_above_camera_m": 0.08748924409787798,
+ "K": [
+  [
+   433.76863,
+   0.0,
+   311.07619
+  ],
+  [
+   0.0,
+   430.02557,
+   221.52648
+  ],
+  [
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "D": [
+  -0.066549,
+  0.048809,
+  -0.000212,
+  -0.004628,
+  0.0
+ ],
+ "edge_alignment": {
+  "edges": 5010,
+  "median_px": -1.6937907647384947,
+  "mad_px": 11.334151664382162,
+  "share_within_5px": 0.18902195608782435,
+  "implied_yaw_offset_deg": -0.2237288781241491,
+  "note": "positive: the image edge lies right of the projected scan edge"
+ }
+}

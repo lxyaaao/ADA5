@@ -1,0 +1,54 @@
+[
+ {
+  "name": "A",
+  "what": "distance between the two parallel walls",
+  "centre_m": [
+   -14.168,
+   -10.381
+  ],
+  "direction_deg": 144.0,
+  "map_width_m": 2.521,
+  "ray_width_m": 2.44,
+  "walls_angle_deg": 0.28,
+  "fit_rms_m": 0.0294,
+  "endpoints_m": [
+   [
+    -15.155,
+    -9.664
+   ],
+   [
+    -13.181,
+    -11.098
+   ]
+  ],
+  "cell_uncertainty_m": 0.05,
+  "nearest_pass_s": 554.3,
+  "vehicle_distance_from_centre_m": 0.28
+ },
+ {
+  "name": "B",
+  "what": "distance between the two parallel walls",
+  "centre_m": [
+   -23.653,
+   -14.944
+  ],
+  "direction_deg": 50.0,
+  "map_width_m": 2.395,
+  "ray_width_m": 2.3,
+  "walls_angle_deg": 1.1,
+  "fit_rms_m": 0.0254,
+  "endpoints_m": [
+   [
+    -22.914,
+    -14.063
+   ],
+   [
+    -24.392,
+    -15.825
+   ]
+  ],
+  "cell_uncertainty_m": 0.05,
+  "nearest_pass_s": 494.8,
+  "vehicle_distance_from_centre_m": 0.22
+ }
+]
