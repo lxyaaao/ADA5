@@ -44,6 +44,10 @@ Each recording has its own directory under `results/` containing:
 
 - `map.pgm` and `map.yaml`: occupied black, free white, unknown gray. Keep them together;
   open the PGM in an image viewer or load the YAML through a ROS map server.
+- `map_xinyao_pcd_old.pcd` / `.yaml` for `fin301`, or `map_xinyao_pcd_new.pcd` / `.yaml`
+  for `Fin301-11051740`: binary XYZ occupied-cell point cloud, in metres with z = 0.
+  Open the PCD in CloudCompare or PCL. Its YAML describes the cloud; it is custom metadata,
+  not a ROS occupancy-map YAML. Use `map.yaml` for the ROS map server.
 - `vehicle_poses.csv`: measurement time in seconds, vehicle `base_link` x/y in metres and
   heading in radians. Full recorded static mounting transforms convert optimized laser poses
   using `map_from_base = map_from_laser × inverse(base_from_laser)`.

@@ -1,0 +1,16 @@
+pcd: map_xinyao_pcd_new.pcd
+format: PCD 0.7 binary XYZ float32
+frame_id: map
+units: metres
+points: 15741
+source_image: map.pgm
+occupancy_yaml: map.yaml
+resolution: 0.025
+origin:
+- -36.643073
+- -13.38862
+- 0.0
+z: 0.0
+representation: One point at each occupied grid cell centre in the 2D laser scan plane;
+  not a 3D reconstruction.
+coordinates: Points already include the map origin and yaw; do not apply origin again.
