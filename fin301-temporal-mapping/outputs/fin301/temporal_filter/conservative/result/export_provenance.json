@@ -1,0 +1,47 @@
+{
+  "profile": "conservative",
+  "description": "Conservative temporal filter: removes strong visible-free conflicts; retains insufficient evidence",
+  "source_result": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\outputs\\fin301\\result",
+  "source_sha256": {
+    "lidar_scan_map.pcd": "1a24cf7f9b160689f7961e0b7e3e17568410b3fcc26c80526c3e67907a573f22",
+    "map.yaml": "82f29394d71b44da441d2312dfe3dc40c84ed914fc86a7461d32c63b05cdfde1",
+    "map.pgm": "90d706ad71b468b2cb177f7261a3fbac1cad4ef0d6c446c71243ab76a032d034",
+    "trajectory.csv": "278fda09e04ecbe3ef03f4a78105922fbe083f6d681288061eafe1447681f285",
+    "trajectory_arrays.npz": "ea2e50efe96f1e8cb87ee600770c6326a30c876d9894f57dcc5abe0fac69aeed",
+    "visual_landmarks.pcd": "13fdc60f147ab284fb9d99cfc1bec074e450d97f461ee839b10866d4faef6ebe"
+  },
+  "candidate_sha256": "b6127d9999bad48bf0d560a41230143130c6a6523345fd48be24d4f1b12d99f3",
+  "filter_report_sha256": "887ec2451b49f7333d0400f7cdb34918ed1d3a2495caec375b8c83f4263aa925",
+  "grid": {
+    "method": "Original occupied cell centers without retained LiDAR point support are masked to unknown",
+    "support_distance_m": 0.1,
+    "unknown_pixel": 205,
+    "occupied_cells_original": 9144,
+    "occupied_cells_retained": 9135,
+    "occupied_cells_masked_to_unknown": 9,
+    "free_cells_preserved": 164855,
+    "original_unknown_cells_preserved": 595285,
+    "new_free_cells": 0,
+    "new_occupied_cells": 0,
+    "interpretation": "Conservative raster companion; no free-space inference from removed point endpoints"
+  },
+  "exact_subset_pcd": true,
+  "original_trajectory_and_camera_unchanged": true,
+  "absolute_accuracy_validated": false,
+  "output_sha256": {
+    "lidar_scan_map.pcd": "b6127d9999bad48bf0d560a41230143130c6a6523345fd48be24d4f1b12d99f3",
+    "map.pcd": "fe54c74f2ba28db0b5aee85afaf24258efa934be9ae4e57e28787336b3e9d667",
+    "map.pgm": "9c8e72feb24ab4108b2ca69830262a1e9f7c742751a24ab34ee2f445f8be72af",
+    "map.png": "3b85613f457296c277d15dc06f46e583ba43c267c32945abd8af893e48500982",
+    "map.yaml": "82f29394d71b44da441d2312dfe3dc40c84ed914fc86a7461d32c63b05cdfde1",
+    "map_metadata.json": "5cfaef47009970c380624877eff53622bb443d92e9ee477780fe331b24a403b8",
+    "metrics.json": "69f27b08d3879b5dd4c826a9ca93f12eb0e228a0adfc1a311083137256d9bce5",
+    "odometry.npz": "1231a78c715f5f5248122f2f9240189ede7b4d7b3a6aeb50e1dd543c2555d31b",
+    "pose_graph.json": "38173db13960c08e9045c706943dcbeed6d3806ff0d3618cb4f8ffa8f655db03",
+    "trajectory.csv": "278fda09e04ecbe3ef03f4a78105922fbe083f6d681288061eafe1447681f285",
+    "trajectory_arrays.npz": "ea2e50efe96f1e8cb87ee600770c6326a30c876d9894f57dcc5abe0fac69aeed",
+    "visual_landmarks.pcd": "13fdc60f147ab284fb9d99cfc1bec074e450d97f461ee839b10866d4faef6ebe",
+    "visual_landmark_evidence.csv": "b3f4fe5b3ec45143ecdf58ac18e92e7d4010c82fbd9e2eb20c815998e18c2640",
+    "visual_landmark_stats.json": "e88dd49da108b696f7567efec58d4bc544b8c35d2b371e05054c710879cfbcdc"
+  }
+}

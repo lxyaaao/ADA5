@@ -1,0 +1,41 @@
+{
+  "estimator_inputs": [
+    "/scan/raw",
+    "/camera/camera/color/image_raw/compressed",
+    "/tf_static"
+  ],
+  "calibration_audited": "/camera/camera/color/camera_info",
+  "scan_period_s": 0.15,
+  "range_min_m": 0.12,
+  "range_max_m": 12.0,
+  "scan_voxel_m": 0.045,
+  "submap_scans": 5,
+  "keyframe_min_interval_s": 1.0,
+  "keyframe_distance_m": 0.35,
+  "keyframe_angle_rad": 0.18,
+  "keyframe_max_interval_s": 3.0,
+  "association_window_ms": 50,
+  "loop_min_elapsed_s": 35,
+  "loop_min_excursion_m": 3.0,
+  "loop_max_odometry_distance_m": 8.0,
+  "pcd_voxel_m": 0.03,
+  "occupancy_resolution_m": 0.05,
+  "max_seconds": null,
+  "resume": true,
+  "visual_landmarks": true,
+  "lidar_revisits": true,
+  "source_sha256": {
+    "bag_io.py": "8c6af92d98b78bce3aa5ea2c6e4c2320a055abe2788e99ce85666e05a79f15ff",
+    "figures.py": "1d523bf04bf3a8325c3febddbc9036d5cc9c3060af20664e1034e1157854a313",
+    "geometry.py": "921d6668154e17accc9a5ee4819db5b668e8a2644ed202d2cb14b0d7411037b7",
+    "graph.py": "b849c341107dfba175328610561d187337de4f286c2c249ec373a0dfc58a6c46",
+    "lidar_revisits.py": "1a229441e157f93e3018580095e086dd5a3674acaecca1cdb35b5c47880010e4",
+    "localization_map.py": "f321fd4a6b866956e3e65220b8191e697539aca7d2119a8240bd58146447cb83",
+    "occupancy.py": "be1064deb57f27f24a0b5a4f1ade57f2d557ba8ad012292f8f57f71887982657",
+    "pipeline.py": "c4fb02e4d54b33d7d24660c32503c1f460ab6697fc15fd6ca7f17364339f22f3",
+    "ros_node.py": "a8bd12fa3b72ef69396f4121497c3f3aa2eea24445dff33e12da23a62d699348",
+    "vision.py": "14eb873b523edcaeb937d7f1926c876bb5df4870d62d364fb27d10c6887576e3",
+    "visual_landmarks.py": "72265ba637901713bf6fb9dfddda342d82127d3bb2a90b5dd82e41a876e6f449",
+    "__init__.py": "212ace23d6efd1e4acbed212b2b8d2f300da147fd3c8850e05f20970c38c729a"
+  }
+}

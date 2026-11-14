@@ -1,0 +1,231 @@
+{
+  "epoch_count_recomputation": {
+    "hit_epochs": true,
+    "free_epochs": true,
+    "occluded_epochs": true
+  },
+  "classification_recomputation": {
+    "conflicted": true,
+    "static_supported": true,
+    "insufficient": true
+  },
+  "exact_subset_checks": {
+    "conservative": {
+      "mask_exact": true,
+      "coordinates_exact": true,
+      "ascii_rows_exact": true,
+      "pcd_hash_matches": true
+    },
+    "static": {
+      "mask_exact": true,
+      "coordinates_exact": true,
+      "ascii_rows_exact": true,
+      "pcd_hash_matches": true
+    }
+  },
+  "source_hashes_unchanged": {
+    "source_pcd": true,
+    "scans": true,
+    "trajectory": true,
+    "scan_ids": true,
+    "protocol": true,
+    "module": true,
+    "exact_subset_io": true,
+    "script": true
+  },
+  "evidence_hash_matches": true,
+  "all_raw_ray_examples_pass": true,
+  "raw_ray_examples": [
+    {
+      "point_id": 35291,
+      "point_xyz": [
+        0.392214,
+        -4.400796,
+        0.0
+      ],
+      "event": "first_hit",
+      "raw_scan_index": 1755,
+      "timestamp_ns": 1793312201446675675,
+      "relative_time_s": 58.932120608,
+      "point_range_m": 6.733454593515751,
+      "closest_endpoint_m": 0.011891346126676248,
+      "fan_beam_count": 9,
+      "all_fan_rays_finite_valid": false,
+      "minimum_fan_return_m": null,
+      "event_independently_reproduced": true
+    },
+    {
+      "point_id": 35291,
+      "point_xyz": [
+        0.392214,
+        -4.400796,
+        0.0
+      ],
+      "event": "last_hit",
+      "raw_scan_index": 2730,
+      "timestamp_ns": 1793312234185361073,
+      "relative_time_s": 91.670806006,
+      "point_range_m": 1.0587615875030032,
+      "closest_endpoint_m": 0.01640590817945351,
+      "fan_beam_count": 65,
+      "all_fan_rays_finite_valid": false,
+      "minimum_fan_return_m": null,
+      "event_independently_reproduced": true
+    },
+    {
+      "point_id": 35291,
+      "point_xyz": [
+        0.392214,
+        -4.400796,
+        0.0
+      ],
+      "event": "first_free",
+      "raw_scan_index": 3115,
+      "timestamp_ns": 1793312247115931793,
+      "relative_time_s": 104.601376726,
+      "point_range_m": 4.7489810666285335,
+      "closest_endpoint_m": 0.48386859061194243,
+      "fan_beam_count": 17,
+      "all_fan_rays_finite_valid": true,
+      "minimum_fan_return_m": 6.4710001945495605,
+      "event_independently_reproduced": true
+    },
+    {
+      "point_id": 35291,
+      "point_xyz": [
+        0.392214,
+        -4.400796,
+        0.0
+      ],
+      "event": "last_free",
+      "raw_scan_index": 6730,
+      "timestamp_ns": 1793312368501567241,
+      "relative_time_s": 225.987012174,
+      "point_range_m": 2.69115344796636,
+      "closest_endpoint_m": 0.5802620201360701,
+      "fan_beam_count": 33,
+      "all_fan_rays_finite_valid": true,
+      "minimum_fan_return_m": 4.105000019073486,
+      "event_independently_reproduced": true
+    },
+    {
+      "point_id": 4968,
+      "point_xyz": [
+        -19.119915,
+        -20.894199,
+        0.0
+      ],
+      "event": "first_hit",
+      "raw_scan_index": 15035,
+      "timestamp_ns": 1793312647386707613,
+      "relative_time_s": 504.872152546,
+      "point_range_m": 7.076139590597689,
+      "closest_endpoint_m": 0.11487948840620515,
+      "fan_beam_count": 9,
+      "all_fan_rays_finite_valid": false,
+      "minimum_fan_return_m": null,
+      "event_independently_reproduced": true
+    },
+    {
+      "point_id": 4968,
+      "point_xyz": [
+        -19.119915,
+        -20.894199,
+        0.0
+      ],
+      "event": "last_hit",
+      "raw_scan_index": 15775,
+      "timestamp_ns": 1793312672235543657,
+      "relative_time_s": 529.72098859,
+      "point_range_m": 0.1472402358085929,
+      "closest_endpoint_m": 0.0825479477485628,
+      "fan_beam_count": 513,
+      "all_fan_rays_finite_valid": false,
+      "minimum_fan_return_m": null,
+      "event_independently_reproduced": true
+    },
+    {
+      "point_id": 4968,
+      "point_xyz": [
+        -19.119915,
+        -20.894199,
+        0.0
+      ],
+      "event": "first_free",
+      "raw_scan_index": 14080,
+      "timestamp_ns": 1793312615315677977,
+      "relative_time_s": 472.80112291,
+      "point_range_m": 10.03568497559008,
+      "closest_endpoint_m": 1.1646447301184448,
+      "fan_beam_count": 9,
+      "all_fan_rays_finite_valid": true,
+      "minimum_fan_return_m": 11.694000244140625,
+      "event_independently_reproduced": true
+    },
+    {
+      "point_id": 4968,
+      "point_xyz": [
+        -19.119915,
+        -20.894199,
+        0.0
+      ],
+      "event": "last_free",
+      "raw_scan_index": 16445,
+      "timestamp_ns": 1793312694730083535,
+      "relative_time_s": 552.215528468,
+      "point_range_m": 6.2794314578593555,
+      "closest_endpoint_m": 1.8562059243183404,
+      "fan_beam_count": 9,
+      "all_fan_rays_finite_valid": true,
+      "minimum_fan_return_m": 8.133000373840332,
+      "event_independently_reproduced": true
+    }
+  ],
+  "main_room_limits_xy_m": [
+    [
+      -10,
+      10
+    ],
+    [
+      -8,
+      6
+    ]
+  ],
+  "main_room_counts": {
+    "original": 26650,
+    "conservative": 25662,
+    "strict_static_supported": 20811,
+    "conflicted": 988,
+    "insufficient": 4851
+  },
+  "removed_with_hit_epochs_at_least": {
+    "2": 1662,
+    "3": 966,
+    "5": 365,
+    "10": 58
+  },
+  "insufficient_with_at_least_3_hit_epochs_and_10s_span": 5094,
+  "interpretation": [
+    "The conservative mask implements the declared repeated hit/free rule and preserves all insufficient points.",
+    "The same-axis room plot must be visually reviewed; temporal filtering does not remove every dense or disordered region.",
+    "966 removed points have at least three hit epochs. Removal means contradictory evidence under estimated poses, not proven human motion.",
+    "Point35291 and point4968 have both hit and free support across multiple times; the raw-ray examples reproduce the claimed event geometry.",
+    "Pose error, reflective/transparent surfaces and boundaries can cause false temporal conflicts. Camera context cannot certify individual laser-plane points.",
+    "Strict output also removes 8065 insufficient/mixed points;5094 have enough hit count/span but fail the strict free-fraction criterion.",
+    "Do not convert removed PCD locations into free occupancy cells. Original YAML/PGM semantics and origin remain unchanged."
+  ],
+  "review_source_sha256": {
+    "filter_report": "887ec2451b49f7333d0400f7cdb34918ed1d3a2495caec375b8c83f4263aa925",
+    "evidence": "d9445d8eb80899e171ade853c64504f631aba4654c7b302830c14fa9cdf4afd4",
+    "review_script": "78399d459b80b3cedb031da58261e8ca399a3c359249e28ed886e625b3946362"
+  },
+  "filter_parameters_changed": false,
+  "original_files_modified": false,
+  "manual_visual_review": {
+    "same_axes_room_panel_inspected": true,
+    "persistent_dense_clutter_remains": true,
+    "conflicted_points_include_coherent_line_segments": true,
+    "insufficient_points_include_long_boundaries": true,
+    "semantic_classification_or_false_removal_rate_established": false
+  }
+}

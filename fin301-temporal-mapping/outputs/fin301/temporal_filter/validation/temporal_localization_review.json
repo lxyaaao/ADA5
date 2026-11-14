@@ -1,0 +1,3900 @@
+{
+  "schema": "temporal_exact_pcd_validation_review_v1",
+  "scope": "full-map repeat-observation stability",
+  "variants": {
+    "original": {
+      "scope": "full-map repeat-observation stability",
+      "variant": "original",
+      "queries_summary": {
+        "query_count": 100,
+        "attempted_initializations": 800,
+        "accepted_registrations": 283,
+        "acceptance_rate": 0.35375,
+        "all_starts_agree_queries": 11,
+        "all_starts_agree_fraction": 0.11,
+        "accepted_overlap_fraction": {
+          "count": 283,
+          "median": 0.596078431372549,
+          "p95": 0.8207885304659498,
+          "max": 0.8503649635036497
+        },
+        "query_max_pairwise_translation_m": {
+          "count": 40,
+          "median": 0.004594781350058324,
+          "p95": 0.9861187894802192,
+          "max": 1.217115348841328
+        },
+        "query_max_pairwise_yaw_deg": {
+          "count": 40,
+          "median": 0.059362513268776285,
+          "p95": 11.675203143637713,
+          "max": 16.45368037096257
+        },
+        "by_perturbation": {
+          "0.25": {
+            "attempted": 400,
+            "accepted": 153
+          },
+          "0.5": {
+            "attempted": 400,
+            "accepted": 130
+          }
+        },
+        "point_to_line_fit_rmse_m": {
+          "count": 283,
+          "median": 0.011494415222214411,
+          "p95": 0.0829071078377197,
+          "max": 0.09963935519981543
+        },
+        "euclidean_fit_rmse_m": {
+          "count": 283,
+          "median": 0.019663893861878744,
+          "p95": 0.09613592835260323,
+          "max": 0.11166971184890476
+        }
+      },
+      "elapsed_s": 90.46900000001187,
+      "pcd_path": "outputs\\fin301\\result\\lidar_scan_map.pcd",
+      "pcd_sha256": "1a24cf7f9b160689f7961e0b7e3e17568410b3fcc26c80526c3e67907a573f22",
+      "pcd_points": 49783,
+      "protocol_sha256": "d31faa51f300366ac228352aa90c90151b886a1651b43e7122355dbb90e2e57a",
+      "quality_gates": {
+        "minimum_overlap": 0.5,
+        "maximum_point_to_line_rmse_m": 0.1,
+        "maximum_condition": 5000.0,
+        "agreement_translation_m": 0.15,
+        "agreement_yaw_deg": 3.0,
+        "icp_distance_m": 0.8,
+        "icp_iterations": 45
+      },
+      "temporal_exclusion_applied": false,
+      "crosspass_metrics_computed": false,
+      "absolute_accuracy_validated": false
+    },
+    "occupancy_supported": {
+      "scope": "full-map repeat-observation stability",
+      "variant": "occupancy_supported",
+      "queries_summary": {
+        "query_count": 100,
+        "attempted_initializations": 800,
+        "accepted_registrations": 332,
+        "acceptance_rate": 0.415,
+        "all_starts_agree_queries": 29,
+        "all_starts_agree_fraction": 0.29,
+        "accepted_overlap_fraction": {
+          "count": 332,
+          "median": 0.5894736842105263,
+          "p95": 0.8490566037735849,
+          "max": 0.864963503649635
+        },
+        "query_max_pairwise_translation_m": {
+          "count": 45,
+          "median": 3.883267715791817e-11,
+          "p95": 0.04200981642031981,
+          "max": 0.477034027829511
+        },
+        "query_max_pairwise_yaw_deg": {
+          "count": 45,
+          "median": 7.05139781796762e-10,
+          "p95": 0.4593850292099735,
+          "max": 1.379045514665787
+        },
+        "by_perturbation": {
+          "0.25": {
+            "attempted": 400,
+            "accepted": 174
+          },
+          "0.5": {
+            "attempted": 400,
+            "accepted": 158
+          }
+        },
+        "point_to_line_fit_rmse_m": {
+          "count": 332,
+          "median": 0.011414559964541143,
+          "p95": 0.03152652416327082,
+          "max": 0.061409296942860465
+        },
+        "euclidean_fit_rmse_m": {
+          "count": 332,
+          "median": 0.019992442648101225,
+          "p95": 0.043179904110528355,
+          "max": 0.09289623813501376
+        }
+      },
+      "elapsed_s": 49.14100000000326,
+      "pcd_path": "outputs\\fin301\\filtering\\lidar_scan_map_clean_occupancy_supported.pcd",
+      "pcd_sha256": "171b7cea5ca999d78a9b90910704db4e373c3c308e3552be21898309d841fca5",
+      "pcd_points": 30165,
+      "protocol_sha256": "d31faa51f300366ac228352aa90c90151b886a1651b43e7122355dbb90e2e57a",
+      "quality_gates": {
+        "minimum_overlap": 0.5,
+        "maximum_point_to_line_rmse_m": 0.1,
+        "maximum_condition": 5000.0,
+        "agreement_translation_m": 0.15,
+        "agreement_yaw_deg": 3.0,
+        "icp_distance_m": 0.8,
+        "icp_iterations": 45
+      },
+      "temporal_exclusion_applied": false,
+      "crosspass_metrics_computed": false,
+      "absolute_accuracy_validated": false,
+      "saved_original_reused_without_rerun": true,
+      "paired_against_original": {
+        "accepted_trial_gains": 116,
+        "accepted_trial_losses": 67,
+        "accepted_gain_scan_initialization_ids": [
+          [
+            6943,
+            0
+          ],
+          [
+            6943,
+            2
+          ],
+          [
+            6943,
+            3
+          ],
+          [
+            6943,
+            4
+          ],
+          [
+            6943,
+            7
+          ],
+          [
+            7121,
+            6
+          ],
+          [
+            7121,
+            7
+          ],
+          [
+            7298,
+            0
+          ],
+          [
+            7298,
+            1
+          ],
+          [
+            7298,
+            2
+          ],
+          [
+            7298,
+            3
+          ],
+          [
+            7298,
+            4
+          ],
+          [
+            7298,
+            5
+          ],
+          [
+            7298,
+            6
+          ],
+          [
+            7298,
+            7
+          ],
+          [
+            7654,
+            0
+          ],
+          [
+            7654,
+            1
+          ],
+          [
+            7654,
+            2
+          ],
+          [
+            7654,
+            3
+          ],
+          [
+            7654,
+            4
+          ],
+          [
+            7654,
+            5
+          ],
+          [
+            7654,
+            6
+          ],
+          [
+            7654,
+            7
+          ],
+          [
+            7833,
+            0
+          ],
+          [
+            7833,
+            1
+          ],
+          [
+            7833,
+            2
+          ],
+          [
+            7833,
+            3
+          ],
+          [
+            7833,
+            4
+          ],
+          [
+            7833,
+            5
+          ],
+          [
+            7833,
+            6
+          ],
+          [
+            7833,
+            7
+          ],
+          [
+            8189,
+            6
+          ],
+          [
+            9079,
+            0
+          ],
+          [
+            9079,
+            1
+          ],
+          [
+            9079,
+            2
+          ],
+          [
+            9079,
+            3
+          ],
+          [
+            9079,
+            4
+          ],
+          [
+            9079,
+            5
+          ],
+          [
+            9079,
+            6
+          ],
+          [
+            9079,
+            7
+          ],
+          [
+            9257,
+            0
+          ],
+          [
+            9257,
+            1
+          ],
+          [
+            9257,
+            2
+          ],
+          [
+            9257,
+            3
+          ],
+          [
+            9257,
+            4
+          ],
+          [
+            9257,
+            5
+          ],
+          [
+            9257,
+            6
+          ],
+          [
+            9257,
+            7
+          ],
+          [
+            9434,
+            0
+          ],
+          [
+            9434,
+            1
+          ],
+          [
+            9434,
+            2
+          ],
+          [
+            9434,
+            3
+          ],
+          [
+            9434,
+            4
+          ],
+          [
+            9434,
+            5
+          ],
+          [
+            9434,
+            6
+          ],
+          [
+            9434,
+            7
+          ],
+          [
+            9613,
+            0
+          ],
+          [
+            9613,
+            2
+          ],
+          [
+            9613,
+            3
+          ],
+          [
+            9613,
+            4
+          ],
+          [
+            9613,
+            7
+          ],
+          [
+            9791,
+            0
+          ],
+          [
+            9791,
+            1
+          ],
+          [
+            9791,
+            2
+          ],
+          [
+            9791,
+            3
+          ],
+          [
+            9791,
+            4
+          ],
+          [
+            9791,
+            5
+          ],
+          [
+            9791,
+            6
+          ],
+          [
+            9791,
+            7
+          ],
+          [
+            9969,
+            0
+          ],
+          [
+            9969,
+            1
+          ],
+          [
+            9969,
+            2
+          ],
+          [
+            9969,
+            3
+          ],
+          [
+            9969,
+            4
+          ],
+          [
+            9969,
+            6
+          ],
+          [
+            9969,
+            7
+          ],
+          [
+            10147,
+            0
+          ],
+          [
+            10147,
+            1
+          ],
+          [
+            10147,
+            2
+          ],
+          [
+            10147,
+            3
+          ],
+          [
+            10147,
+            4
+          ],
+          [
+            10147,
+            5
+          ],
+          [
+            10147,
+            6
+          ],
+          [
+            10147,
+            7
+          ],
+          [
+            10326,
+            1
+          ],
+          [
+            10326,
+            5
+          ],
+          [
+            10503,
+            0
+          ],
+          [
+            10503,
+            1
+          ],
+          [
+            10503,
+            2
+          ],
+          [
+            10503,
+            3
+          ],
+          [
+            10503,
+            4
+          ],
+          [
+            10503,
+            5
+          ],
+          [
+            10503,
+            6
+          ],
+          [
+            10503,
+            7
+          ],
+          [
+            11393,
+            6
+          ],
+          [
+            11571,
+            6
+          ],
+          [
+            11749,
+            6
+          ],
+          [
+            11927,
+            5
+          ],
+          [
+            11927,
+            6
+          ],
+          [
+            12639,
+            5
+          ],
+          [
+            13173,
+            0
+          ],
+          [
+            13173,
+            1
+          ],
+          [
+            13173,
+            2
+          ],
+          [
+            13173,
+            3
+          ],
+          [
+            13173,
+            6
+          ],
+          [
+            13173,
+            7
+          ],
+          [
+            13529,
+            6
+          ],
+          [
+            13707,
+            5
+          ],
+          [
+            17268,
+            2
+          ],
+          [
+            17268,
+            5
+          ],
+          [
+            17268,
+            6
+          ],
+          [
+            17446,
+            1
+          ],
+          [
+            17446,
+            2
+          ],
+          [
+            17446,
+            5
+          ],
+          [
+            17624,
+            5
+          ],
+          [
+            17624,
+            6
+          ]
+        ],
+        "accepted_loss_scan_initialization_ids": [
+          [
+            1424,
+            0
+          ],
+          [
+            1424,
+            1
+          ],
+          [
+            1424,
+            2
+          ],
+          [
+            1424,
+            3
+          ],
+          [
+            1424,
+            4
+          ],
+          [
+            1424,
+            5
+          ],
+          [
+            1424,
+            6
+          ],
+          [
+            1424,
+            7
+          ],
+          [
+            1602,
+            0
+          ],
+          [
+            1602,
+            1
+          ],
+          [
+            1602,
+            2
+          ],
+          [
+            1602,
+            3
+          ],
+          [
+            1602,
+            4
+          ],
+          [
+            1602,
+            5
+          ],
+          [
+            1781,
+            0
+          ],
+          [
+            1781,
+            1
+          ],
+          [
+            1781,
+            2
+          ],
+          [
+            1781,
+            3
+          ],
+          [
+            1781,
+            4
+          ],
+          [
+            1781,
+            5
+          ],
+          [
+            1781,
+            6
+          ],
+          [
+            1781,
+            7
+          ],
+          [
+            1958,
+            0
+          ],
+          [
+            1958,
+            1
+          ],
+          [
+            1958,
+            2
+          ],
+          [
+            1958,
+            3
+          ],
+          [
+            1958,
+            4
+          ],
+          [
+            1958,
+            5
+          ],
+          [
+            2136,
+            0
+          ],
+          [
+            2136,
+            1
+          ],
+          [
+            2136,
+            2
+          ],
+          [
+            2136,
+            3
+          ],
+          [
+            2136,
+            4
+          ],
+          [
+            2136,
+            6
+          ],
+          [
+            2136,
+            7
+          ],
+          [
+            2314,
+            7
+          ],
+          [
+            5163,
+            6
+          ],
+          [
+            5341,
+            6
+          ],
+          [
+            6408,
+            5
+          ],
+          [
+            6587,
+            6
+          ],
+          [
+            8723,
+            0
+          ],
+          [
+            8723,
+            1
+          ],
+          [
+            8723,
+            2
+          ],
+          [
+            8723,
+            3
+          ],
+          [
+            8723,
+            4
+          ],
+          [
+            8723,
+            5
+          ],
+          [
+            8723,
+            6
+          ],
+          [
+            8723,
+            7
+          ],
+          [
+            10681,
+            1
+          ],
+          [
+            10681,
+            6
+          ],
+          [
+            10859,
+            5
+          ],
+          [
+            11037,
+            0
+          ],
+          [
+            11037,
+            1
+          ],
+          [
+            11037,
+            2
+          ],
+          [
+            11037,
+            3
+          ],
+          [
+            11037,
+            4
+          ],
+          [
+            11037,
+            5
+          ],
+          [
+            11037,
+            6
+          ],
+          [
+            11037,
+            7
+          ],
+          [
+            12283,
+            4
+          ],
+          [
+            12283,
+            5
+          ],
+          [
+            12283,
+            7
+          ],
+          [
+            16556,
+            1
+          ],
+          [
+            17268,
+            0
+          ],
+          [
+            17268,
+            3
+          ],
+          [
+            17268,
+            7
+          ],
+          [
+            17624,
+            3
+          ]
+        ],
+        "stable_query_gains": 20,
+        "stable_query_losses": 2,
+        "stable_gain_scan_ids": [
+          6943,
+          7121,
+          7298,
+          7654,
+          7833,
+          8189,
+          9079,
+          9257,
+          9434,
+          9791,
+          10147,
+          10326,
+          10503,
+          11927,
+          12106,
+          12639,
+          13529,
+          13707,
+          17089,
+          17446
+        ],
+        "stable_loss_scan_ids": [
+          1424,
+          8723
+        ],
+        "common_accepted_fit_rmse_delta_m": {
+          "count": 216,
+          "median": -7.602437494824005e-06,
+          "p95": 0.014914752492553187,
+          "max": 0.049437563349525065
+        },
+        "common_accepted_improved_more_than_1mm": 21,
+        "common_accepted_worsened_more_than_1mm": 38
+      }
+    },
+    "temporal_conservative": {
+      "scope": "full-map repeat-observation stability",
+      "variant": "temporal_conservative",
+      "queries_summary": {
+        "query_count": 100,
+        "attempted_initializations": 800,
+        "accepted_registrations": 286,
+        "acceptance_rate": 0.3575,
+        "all_starts_agree_queries": 16,
+        "all_starts_agree_fraction": 0.16,
+        "accepted_overlap_fraction": {
+          "count": 286,
+          "median": 0.5942492012779552,
+          "p95": 0.8538707061193522,
+          "max": 0.8641509433962264
+        },
+        "query_max_pairwise_translation_m": {
+          "count": 40,
+          "median": 0.0025457665163467107,
+          "p95": 1.0274677771370655,
+          "max": 2.2015323884751457
+        },
+        "query_max_pairwise_yaw_deg": {
+          "count": 40,
+          "median": 0.041640667710964654,
+          "p95": 9.448503960786336,
+          "max": 11.871038170084388
+        },
+        "by_perturbation": {
+          "0.25": {
+            "attempted": 400,
+            "accepted": 150
+          },
+          "0.5": {
+            "attempted": 400,
+            "accepted": 136
+          }
+        },
+        "point_to_line_fit_rmse_m": {
+          "count": 286,
+          "median": 0.011440382260450887,
+          "p95": 0.07014643686360093,
+          "max": 0.0964472402871616
+        },
+        "euclidean_fit_rmse_m": {
+          "count": 286,
+          "median": 0.020209452265872938,
+          "p95": 0.08495696065688982,
+          "max": 0.10783690717475906
+        }
+      },
+      "elapsed_s": 229.65700000000652,
+      "pcd_path": "outputs\\fin301\\temporal_filter\\lidar_scan_map_clean_temporal_conservative.pcd",
+      "pcd_sha256": "b6127d9999bad48bf0d560a41230143130c6a6523345fd48be24d4f1b12d99f3",
+      "pcd_points": 47679,
+      "protocol_sha256": "d31faa51f300366ac228352aa90c90151b886a1651b43e7122355dbb90e2e57a",
+      "quality_gates": {
+        "minimum_overlap": 0.5,
+        "maximum_point_to_line_rmse_m": 0.1,
+        "maximum_condition": 5000.0,
+        "agreement_translation_m": 0.15,
+        "agreement_yaw_deg": 3.0,
+        "icp_distance_m": 0.8,
+        "icp_iterations": 45
+      },
+      "temporal_exclusion_applied": false,
+      "crosspass_metrics_computed": false,
+      "absolute_accuracy_validated": false,
+      "saved_original_reused_without_rerun": true,
+      "paired_against_original": {
+        "accepted_trial_gains": 26,
+        "accepted_trial_losses": 23,
+        "accepted_gain_scan_initialization_ids": [
+          [
+            1602,
+            6
+          ],
+          [
+            1602,
+            7
+          ],
+          [
+            2136,
+            5
+          ],
+          [
+            3561,
+            6
+          ],
+          [
+            7121,
+            7
+          ],
+          [
+            8189,
+            6
+          ],
+          [
+            10326,
+            1
+          ],
+          [
+            11393,
+            6
+          ],
+          [
+            11571,
+            5
+          ],
+          [
+            11571,
+            6
+          ],
+          [
+            11749,
+            6
+          ],
+          [
+            11927,
+            5
+          ],
+          [
+            11927,
+            6
+          ],
+          [
+            13173,
+            0
+          ],
+          [
+            13173,
+            1
+          ],
+          [
+            13173,
+            2
+          ],
+          [
+            13173,
+            3
+          ],
+          [
+            13173,
+            4
+          ],
+          [
+            13173,
+            5
+          ],
+          [
+            13173,
+            6
+          ],
+          [
+            13173,
+            7
+          ],
+          [
+            13529,
+            6
+          ],
+          [
+            15309,
+            4
+          ],
+          [
+            17268,
+            2
+          ],
+          [
+            17268,
+            5
+          ],
+          [
+            17268,
+            6
+          ]
+        ],
+        "accepted_loss_scan_initialization_ids": [
+          [
+            1424,
+            7
+          ],
+          [
+            1781,
+            4
+          ],
+          [
+            2314,
+            7
+          ],
+          [
+            5163,
+            6
+          ],
+          [
+            5341,
+            6
+          ],
+          [
+            6408,
+            5
+          ],
+          [
+            6587,
+            6
+          ],
+          [
+            10681,
+            0
+          ],
+          [
+            10681,
+            1
+          ],
+          [
+            10681,
+            2
+          ],
+          [
+            10681,
+            3
+          ],
+          [
+            10681,
+            4
+          ],
+          [
+            10681,
+            6
+          ],
+          [
+            10681,
+            7
+          ],
+          [
+            10859,
+            7
+          ],
+          [
+            12283,
+            4
+          ],
+          [
+            12283,
+            7
+          ],
+          [
+            16733,
+            2
+          ],
+          [
+            17089,
+            0
+          ],
+          [
+            17089,
+            7
+          ],
+          [
+            17268,
+            0
+          ],
+          [
+            17268,
+            3
+          ],
+          [
+            17624,
+            2
+          ]
+        ],
+        "stable_query_gains": 6,
+        "stable_query_losses": 1,
+        "stable_gain_scan_ids": [
+          8189,
+          11571,
+          11927,
+          12106,
+          13173,
+          13529
+        ],
+        "stable_loss_scan_ids": [
+          1424
+        ],
+        "common_accepted_fit_rmse_delta_m": {
+          "count": 260,
+          "median": -3.410379617596604e-14,
+          "p95": 0.0015899561216601822,
+          "max": 0.08380442640358474
+        },
+        "common_accepted_improved_more_than_1mm": 18,
+        "common_accepted_worsened_more_than_1mm": 19
+      }
+    },
+    "temporal_static": {
+      "scope": "full-map repeat-observation stability",
+      "variant": "temporal_static",
+      "queries_summary": {
+        "query_count": 100,
+        "attempted_initializations": 800,
+        "accepted_registrations": 271,
+        "acceptance_rate": 0.33875,
+        "all_starts_agree_queries": 18,
+        "all_starts_agree_fraction": 0.18,
+        "accepted_overlap_fraction": {
+          "count": 271,
+          "median": 0.5598455598455598,
+          "p95": 0.830864948941638,
+          "max": 0.8613138686131386
+        },
+        "query_max_pairwise_translation_m": {
+          "count": 38,
+          "median": 1.770330916265195e-07,
+          "p95": 0.019428822935786686,
+          "max": 0.025766462248624077
+        },
+        "query_max_pairwise_yaw_deg": {
+          "count": 38,
+          "median": 2.8704923345713727e-06,
+          "p95": 0.2444549563600369,
+          "max": 0.4237433365710427
+        },
+        "by_perturbation": {
+          "0.25": {
+            "attempted": 400,
+            "accepted": 147
+          },
+          "0.5": {
+            "attempted": 400,
+            "accepted": 124
+          }
+        },
+        "point_to_line_fit_rmse_m": {
+          "count": 271,
+          "median": 0.011684514872425252,
+          "p95": 0.022682489350388496,
+          "max": 0.06329485505555286
+        },
+        "euclidean_fit_rmse_m": {
+          "count": 271,
+          "median": 0.02001759294974312,
+          "p95": 0.04942553216686413,
+          "max": 0.08100099717084108
+        }
+      },
+      "elapsed_s": 194.82800000000861,
+      "pcd_path": "outputs\\fin301\\temporal_filter\\lidar_scan_map_clean_temporal_static.pcd",
+      "pcd_sha256": "081e24ee8d713ba18b1c4303943820cb22035861ea1dbfbc69208590f9e751ae",
+      "pcd_points": 39614,
+      "protocol_sha256": "d31faa51f300366ac228352aa90c90151b886a1651b43e7122355dbb90e2e57a",
+      "quality_gates": {
+        "minimum_overlap": 0.5,
+        "maximum_point_to_line_rmse_m": 0.1,
+        "maximum_condition": 5000.0,
+        "agreement_translation_m": 0.15,
+        "agreement_yaw_deg": 3.0,
+        "icp_distance_m": 0.8,
+        "icp_iterations": 45
+      },
+      "temporal_exclusion_applied": false,
+      "crosspass_metrics_computed": false,
+      "absolute_accuracy_validated": false,
+      "saved_original_reused_without_rerun": true,
+      "paired_against_original": {
+        "accepted_trial_gains": 36,
+        "accepted_trial_losses": 48,
+        "accepted_gain_scan_initialization_ids": [
+          [
+            1602,
+            7
+          ],
+          [
+            2136,
+            5
+          ],
+          [
+            8189,
+            6
+          ],
+          [
+            10326,
+            1
+          ],
+          [
+            11216,
+            6
+          ],
+          [
+            11393,
+            6
+          ],
+          [
+            11571,
+            6
+          ],
+          [
+            11749,
+            6
+          ],
+          [
+            11927,
+            5
+          ],
+          [
+            11927,
+            6
+          ],
+          [
+            13529,
+            6
+          ],
+          [
+            13707,
+            5
+          ],
+          [
+            13886,
+            4
+          ],
+          [
+            15309,
+            4
+          ],
+          [
+            15488,
+            0
+          ],
+          [
+            15488,
+            1
+          ],
+          [
+            15488,
+            2
+          ],
+          [
+            15488,
+            3
+          ],
+          [
+            15488,
+            4
+          ],
+          [
+            15488,
+            6
+          ],
+          [
+            15488,
+            7
+          ],
+          [
+            16378,
+            1
+          ],
+          [
+            16378,
+            2
+          ],
+          [
+            16378,
+            3
+          ],
+          [
+            16378,
+            5
+          ],
+          [
+            16378,
+            6
+          ],
+          [
+            16378,
+            7
+          ],
+          [
+            16556,
+            5
+          ],
+          [
+            17268,
+            2
+          ],
+          [
+            17268,
+            5
+          ],
+          [
+            17268,
+            6
+          ],
+          [
+            17446,
+            1
+          ],
+          [
+            17446,
+            2
+          ],
+          [
+            17446,
+            5
+          ],
+          [
+            17624,
+            5
+          ],
+          [
+            17624,
+            7
+          ]
+        ],
+        "accepted_loss_scan_initialization_ids": [
+          [
+            1602,
+            5
+          ],
+          [
+            1781,
+            4
+          ],
+          [
+            2314,
+            7
+          ],
+          [
+            5163,
+            6
+          ],
+          [
+            5341,
+            6
+          ],
+          [
+            6408,
+            5
+          ],
+          [
+            6587,
+            6
+          ],
+          [
+            6943,
+            1
+          ],
+          [
+            6943,
+            5
+          ],
+          [
+            6943,
+            6
+          ],
+          [
+            7121,
+            0
+          ],
+          [
+            7121,
+            4
+          ],
+          [
+            8723,
+            0
+          ],
+          [
+            8723,
+            1
+          ],
+          [
+            8723,
+            2
+          ],
+          [
+            8723,
+            3
+          ],
+          [
+            8723,
+            4
+          ],
+          [
+            8723,
+            5
+          ],
+          [
+            8723,
+            6
+          ],
+          [
+            8723,
+            7
+          ],
+          [
+            11037,
+            1
+          ],
+          [
+            11037,
+            2
+          ],
+          [
+            11037,
+            3
+          ],
+          [
+            11037,
+            4
+          ],
+          [
+            11037,
+            5
+          ],
+          [
+            11037,
+            6
+          ],
+          [
+            11037,
+            7
+          ],
+          [
+            12283,
+            4
+          ],
+          [
+            12283,
+            5
+          ],
+          [
+            12283,
+            6
+          ],
+          [
+            12639,
+            4
+          ],
+          [
+            14953,
+            0
+          ],
+          [
+            14953,
+            1
+          ],
+          [
+            14953,
+            2
+          ],
+          [
+            14953,
+            3
+          ],
+          [
+            14953,
+            4
+          ],
+          [
+            14953,
+            5
+          ],
+          [
+            14953,
+            6
+          ],
+          [
+            14953,
+            7
+          ],
+          [
+            16912,
+            7
+          ],
+          [
+            17089,
+            0
+          ],
+          [
+            17089,
+            2
+          ],
+          [
+            17089,
+            4
+          ],
+          [
+            17089,
+            6
+          ],
+          [
+            17268,
+            0
+          ],
+          [
+            17268,
+            3
+          ],
+          [
+            17268,
+            7
+          ],
+          [
+            17446,
+            6
+          ]
+        ],
+        "stable_query_gains": 9,
+        "stable_query_losses": 2,
+        "stable_gain_scan_ids": [
+          2136,
+          8189,
+          10859,
+          11927,
+          12106,
+          13529,
+          13707,
+          13886,
+          16556
+        ],
+        "stable_loss_scan_ids": [
+          8723,
+          14953
+        ],
+        "common_accepted_fit_rmse_delta_m": {
+          "count": 235,
+          "median": 6.608057900752383e-05,
+          "p95": 0.01094112817562573,
+          "max": 0.029163026800038565
+        },
+        "common_accepted_improved_more_than_1mm": 19,
+        "common_accepted_worsened_more_than_1mm": 42
+      }
+    }
+  },
+  "paired_comparisons": {
+    "temporal_conservative": {
+      "against_original": {
+        "accepted_trial_gains": 26,
+        "accepted_trial_losses": 23,
+        "accepted_gain_scan_initialization_ids": [
+          [
+            1602,
+            6
+          ],
+          [
+            1602,
+            7
+          ],
+          [
+            2136,
+            5
+          ],
+          [
+            3561,
+            6
+          ],
+          [
+            7121,
+            7
+          ],
+          [
+            8189,
+            6
+          ],
+          [
+            10326,
+            1
+          ],
+          [
+            11393,
+            6
+          ],
+          [
+            11571,
+            5
+          ],
+          [
+            11571,
+            6
+          ],
+          [
+            11749,
+            6
+          ],
+          [
+            11927,
+            5
+          ],
+          [
+            11927,
+            6
+          ],
+          [
+            13173,
+            0
+          ],
+          [
+            13173,
+            1
+          ],
+          [
+            13173,
+            2
+          ],
+          [
+            13173,
+            3
+          ],
+          [
+            13173,
+            4
+          ],
+          [
+            13173,
+            5
+          ],
+          [
+            13173,
+            6
+          ],
+          [
+            13173,
+            7
+          ],
+          [
+            13529,
+            6
+          ],
+          [
+            15309,
+            4
+          ],
+          [
+            17268,
+            2
+          ],
+          [
+            17268,
+            5
+          ],
+          [
+            17268,
+            6
+          ]
+        ],
+        "accepted_loss_scan_initialization_ids": [
+          [
+            1424,
+            7
+          ],
+          [
+            1781,
+            4
+          ],
+          [
+            2314,
+            7
+          ],
+          [
+            5163,
+            6
+          ],
+          [
+            5341,
+            6
+          ],
+          [
+            6408,
+            5
+          ],
+          [
+            6587,
+            6
+          ],
+          [
+            10681,
+            0
+          ],
+          [
+            10681,
+            1
+          ],
+          [
+            10681,
+            2
+          ],
+          [
+            10681,
+            3
+          ],
+          [
+            10681,
+            4
+          ],
+          [
+            10681,
+            6
+          ],
+          [
+            10681,
+            7
+          ],
+          [
+            10859,
+            7
+          ],
+          [
+            12283,
+            4
+          ],
+          [
+            12283,
+            7
+          ],
+          [
+            16733,
+            2
+          ],
+          [
+            17089,
+            0
+          ],
+          [
+            17089,
+            7
+          ],
+          [
+            17268,
+            0
+          ],
+          [
+            17268,
+            3
+          ],
+          [
+            17624,
+            2
+          ]
+        ],
+        "stable_query_gains": 6,
+        "stable_query_losses": 1,
+        "stable_gain_scan_ids": [
+          8189,
+          11571,
+          11927,
+          12106,
+          13173,
+          13529
+        ],
+        "stable_loss_scan_ids": [
+          1424
+        ],
+        "common_accepted_fit_rmse_delta_m": {
+          "count": 260,
+          "median": -3.410379617596604e-14,
+          "p95": 0.0015899561216601822,
+          "max": 0.08380442640358474
+        },
+        "common_accepted_improved_more_than_1mm": 18,
+        "common_accepted_worsened_more_than_1mm": 19,
+        "newly_zero_accepted_scan_ids": [
+          2314,
+          5163,
+          5341,
+          6408,
+          6587,
+          10681
+        ],
+        "recovered_nonzero_scan_ids": [
+          3561,
+          13173,
+          15309
+        ]
+      },
+      "against_occupancy_supported": {
+        "accepted_trial_gains": 62,
+        "accepted_trial_losses": 108,
+        "accepted_gain_scan_initialization_ids": [
+          [
+            1424,
+            0
+          ],
+          [
+            1424,
+            1
+          ],
+          [
+            1424,
+            2
+          ],
+          [
+            1424,
+            3
+          ],
+          [
+            1424,
+            4
+          ],
+          [
+            1424,
+            5
+          ],
+          [
+            1424,
+            6
+          ],
+          [
+            1602,
+            0
+          ],
+          [
+            1602,
+            1
+          ],
+          [
+            1602,
+            2
+          ],
+          [
+            1602,
+            3
+          ],
+          [
+            1602,
+            4
+          ],
+          [
+            1602,
+            5
+          ],
+          [
+            1602,
+            6
+          ],
+          [
+            1602,
+            7
+          ],
+          [
+            1781,
+            0
+          ],
+          [
+            1781,
+            1
+          ],
+          [
+            1781,
+            2
+          ],
+          [
+            1781,
+            3
+          ],
+          [
+            1781,
+            5
+          ],
+          [
+            1781,
+            6
+          ],
+          [
+            1781,
+            7
+          ],
+          [
+            1958,
+            0
+          ],
+          [
+            1958,
+            1
+          ],
+          [
+            1958,
+            2
+          ],
+          [
+            1958,
+            3
+          ],
+          [
+            1958,
+            4
+          ],
+          [
+            1958,
+            5
+          ],
+          [
+            2136,
+            0
+          ],
+          [
+            2136,
+            1
+          ],
+          [
+            2136,
+            2
+          ],
+          [
+            2136,
+            3
+          ],
+          [
+            2136,
+            4
+          ],
+          [
+            2136,
+            5
+          ],
+          [
+            2136,
+            6
+          ],
+          [
+            2136,
+            7
+          ],
+          [
+            3561,
+            6
+          ],
+          [
+            8723,
+            0
+          ],
+          [
+            8723,
+            1
+          ],
+          [
+            8723,
+            2
+          ],
+          [
+            8723,
+            3
+          ],
+          [
+            8723,
+            4
+          ],
+          [
+            8723,
+            5
+          ],
+          [
+            8723,
+            6
+          ],
+          [
+            8723,
+            7
+          ],
+          [
+            10859,
+            5
+          ],
+          [
+            11037,
+            0
+          ],
+          [
+            11037,
+            1
+          ],
+          [
+            11037,
+            2
+          ],
+          [
+            11037,
+            3
+          ],
+          [
+            11037,
+            4
+          ],
+          [
+            11037,
+            5
+          ],
+          [
+            11037,
+            6
+          ],
+          [
+            11037,
+            7
+          ],
+          [
+            11571,
+            5
+          ],
+          [
+            12283,
+            5
+          ],
+          [
+            13173,
+            4
+          ],
+          [
+            13173,
+            5
+          ],
+          [
+            15309,
+            4
+          ],
+          [
+            16556,
+            1
+          ],
+          [
+            17268,
+            7
+          ],
+          [
+            17624,
+            3
+          ]
+        ],
+        "accepted_loss_scan_initialization_ids": [
+          [
+            6943,
+            0
+          ],
+          [
+            6943,
+            2
+          ],
+          [
+            6943,
+            3
+          ],
+          [
+            6943,
+            4
+          ],
+          [
+            6943,
+            7
+          ],
+          [
+            7121,
+            6
+          ],
+          [
+            7298,
+            0
+          ],
+          [
+            7298,
+            1
+          ],
+          [
+            7298,
+            2
+          ],
+          [
+            7298,
+            3
+          ],
+          [
+            7298,
+            4
+          ],
+          [
+            7298,
+            5
+          ],
+          [
+            7298,
+            6
+          ],
+          [
+            7298,
+            7
+          ],
+          [
+            7654,
+            0
+          ],
+          [
+            7654,
+            1
+          ],
+          [
+            7654,
+            2
+          ],
+          [
+            7654,
+            3
+          ],
+          [
+            7654,
+            4
+          ],
+          [
+            7654,
+            5
+          ],
+          [
+            7654,
+            6
+          ],
+          [
+            7654,
+            7
+          ],
+          [
+            7833,
+            0
+          ],
+          [
+            7833,
+            1
+          ],
+          [
+            7833,
+            2
+          ],
+          [
+            7833,
+            3
+          ],
+          [
+            7833,
+            4
+          ],
+          [
+            7833,
+            5
+          ],
+          [
+            7833,
+            6
+          ],
+          [
+            7833,
+            7
+          ],
+          [
+            9079,
+            0
+          ],
+          [
+            9079,
+            1
+          ],
+          [
+            9079,
+            2
+          ],
+          [
+            9079,
+            3
+          ],
+          [
+            9079,
+            4
+          ],
+          [
+            9079,
+            5
+          ],
+          [
+            9079,
+            6
+          ],
+          [
+            9079,
+            7
+          ],
+          [
+            9257,
+            0
+          ],
+          [
+            9257,
+            1
+          ],
+          [
+            9257,
+            2
+          ],
+          [
+            9257,
+            3
+          ],
+          [
+            9257,
+            4
+          ],
+          [
+            9257,
+            5
+          ],
+          [
+            9257,
+            6
+          ],
+          [
+            9257,
+            7
+          ],
+          [
+            9434,
+            0
+          ],
+          [
+            9434,
+            1
+          ],
+          [
+            9434,
+            2
+          ],
+          [
+            9434,
+            3
+          ],
+          [
+            9434,
+            4
+          ],
+          [
+            9434,
+            5
+          ],
+          [
+            9434,
+            6
+          ],
+          [
+            9434,
+            7
+          ],
+          [
+            9613,
+            0
+          ],
+          [
+            9613,
+            2
+          ],
+          [
+            9613,
+            3
+          ],
+          [
+            9613,
+            4
+          ],
+          [
+            9613,
+            7
+          ],
+          [
+            9791,
+            0
+          ],
+          [
+            9791,
+            1
+          ],
+          [
+            9791,
+            2
+          ],
+          [
+            9791,
+            3
+          ],
+          [
+            9791,
+            4
+          ],
+          [
+            9791,
+            5
+          ],
+          [
+            9791,
+            6
+          ],
+          [
+            9791,
+            7
+          ],
+          [
+            9969,
+            0
+          ],
+          [
+            9969,
+            1
+          ],
+          [
+            9969,
+            2
+          ],
+          [
+            9969,
+            3
+          ],
+          [
+            9969,
+            4
+          ],
+          [
+            9969,
+            6
+          ],
+          [
+            9969,
+            7
+          ],
+          [
+            10147,
+            0
+          ],
+          [
+            10147,
+            1
+          ],
+          [
+            10147,
+            2
+          ],
+          [
+            10147,
+            3
+          ],
+          [
+            10147,
+            4
+          ],
+          [
+            10147,
+            5
+          ],
+          [
+            10147,
+            6
+          ],
+          [
+            10147,
+            7
+          ],
+          [
+            10326,
+            5
+          ],
+          [
+            10503,
+            0
+          ],
+          [
+            10503,
+            1
+          ],
+          [
+            10503,
+            2
+          ],
+          [
+            10503,
+            3
+          ],
+          [
+            10503,
+            4
+          ],
+          [
+            10503,
+            5
+          ],
+          [
+            10503,
+            6
+          ],
+          [
+            10503,
+            7
+          ],
+          [
+            10681,
+            0
+          ],
+          [
+            10681,
+            2
+          ],
+          [
+            10681,
+            3
+          ],
+          [
+            10681,
+            4
+          ],
+          [
+            10681,
+            7
+          ],
+          [
+            10859,
+            7
+          ],
+          [
+            12639,
+            5
+          ],
+          [
+            13707,
+            5
+          ],
+          [
+            16733,
+            2
+          ],
+          [
+            17089,
+            0
+          ],
+          [
+            17089,
+            7
+          ],
+          [
+            17446,
+            1
+          ],
+          [
+            17446,
+            2
+          ],
+          [
+            17446,
+            5
+          ],
+          [
+            17624,
+            2
+          ],
+          [
+            17624,
+            5
+          ],
+          [
+            17624,
+            6
+          ]
+        ],
+        "stable_query_gains": 3,
+        "stable_query_losses": 16,
+        "stable_gain_scan_ids": [
+          8723,
+          11571,
+          13173
+        ],
+        "stable_loss_scan_ids": [
+          6943,
+          7121,
+          7298,
+          7654,
+          7833,
+          9079,
+          9257,
+          9434,
+          9791,
+          10147,
+          10326,
+          10503,
+          12639,
+          13707,
+          17089,
+          17446
+        ],
+        "common_accepted_fit_rmse_delta_m": {
+          "count": 224,
+          "median": -0.00010993658055467263,
+          "p95": 0.0014438672558706395,
+          "max": 0.08021380453388641
+        },
+        "common_accepted_improved_more_than_1mm": 44,
+        "common_accepted_worsened_more_than_1mm": 20,
+        "newly_zero_accepted_scan_ids": [
+          7298,
+          7654,
+          7833,
+          9079,
+          9257,
+          9434,
+          9613,
+          9791,
+          9969,
+          10147,
+          10503,
+          10681
+        ],
+        "recovered_nonzero_scan_ids": [
+          1424,
+          1602,
+          1781,
+          1958,
+          2136,
+          3561,
+          8723,
+          11037,
+          15309
+        ]
+      }
+    },
+    "temporal_static": {
+      "against_original": {
+        "accepted_trial_gains": 36,
+        "accepted_trial_losses": 48,
+        "accepted_gain_scan_initialization_ids": [
+          [
+            1602,
+            7
+          ],
+          [
+            2136,
+            5
+          ],
+          [
+            8189,
+            6
+          ],
+          [
+            10326,
+            1
+          ],
+          [
+            11216,
+            6
+          ],
+          [
+            11393,
+            6
+          ],
+          [
+            11571,
+            6
+          ],
+          [
+            11749,
+            6
+          ],
+          [
+            11927,
+            5
+          ],
+          [
+            11927,
+            6
+          ],
+          [
+            13529,
+            6
+          ],
+          [
+            13707,
+            5
+          ],
+          [
+            13886,
+            4
+          ],
+          [
+            15309,
+            4
+          ],
+          [
+            15488,
+            0
+          ],
+          [
+            15488,
+            1
+          ],
+          [
+            15488,
+            2
+          ],
+          [
+            15488,
+            3
+          ],
+          [
+            15488,
+            4
+          ],
+          [
+            15488,
+            6
+          ],
+          [
+            15488,
+            7
+          ],
+          [
+            16378,
+            1
+          ],
+          [
+            16378,
+            2
+          ],
+          [
+            16378,
+            3
+          ],
+          [
+            16378,
+            5
+          ],
+          [
+            16378,
+            6
+          ],
+          [
+            16378,
+            7
+          ],
+          [
+            16556,
+            5
+          ],
+          [
+            17268,
+            2
+          ],
+          [
+            17268,
+            5
+          ],
+          [
+            17268,
+            6
+          ],
+          [
+            17446,
+            1
+          ],
+          [
+            17446,
+            2
+          ],
+          [
+            17446,
+            5
+          ],
+          [
+            17624,
+            5
+          ],
+          [
+            17624,
+            7
+          ]
+        ],
+        "accepted_loss_scan_initialization_ids": [
+          [
+            1602,
+            5
+          ],
+          [
+            1781,
+            4
+          ],
+          [
+            2314,
+            7
+          ],
+          [
+            5163,
+            6
+          ],
+          [
+            5341,
+            6
+          ],
+          [
+            6408,
+            5
+          ],
+          [
+            6587,
+            6
+          ],
+          [
+            6943,
+            1
+          ],
+          [
+            6943,
+            5
+          ],
+          [
+            6943,
+            6
+          ],
+          [
+            7121,
+            0
+          ],
+          [
+            7121,
+            4
+          ],
+          [
+            8723,
+            0
+          ],
+          [
+            8723,
+            1
+          ],
+          [
+            8723,
+            2
+          ],
+          [
+            8723,
+            3
+          ],
+          [
+            8723,
+            4
+          ],
+          [
+            8723,
+            5
+          ],
+          [
+            8723,
+            6
+          ],
+          [
+            8723,
+            7
+          ],
+          [
+            11037,
+            1
+          ],
+          [
+            11037,
+            2
+          ],
+          [
+            11037,
+            3
+          ],
+          [
+            11037,
+            4
+          ],
+          [
+            11037,
+            5
+          ],
+          [
+            11037,
+            6
+          ],
+          [
+            11037,
+            7
+          ],
+          [
+            12283,
+            4
+          ],
+          [
+            12283,
+            5
+          ],
+          [
+            12283,
+            6
+          ],
+          [
+            12639,
+            4
+          ],
+          [
+            14953,
+            0
+          ],
+          [
+            14953,
+            1
+          ],
+          [
+            14953,
+            2
+          ],
+          [
+            14953,
+            3
+          ],
+          [
+            14953,
+            4
+          ],
+          [
+            14953,
+            5
+          ],
+          [
+            14953,
+            6
+          ],
+          [
+            14953,
+            7
+          ],
+          [
+            16912,
+            7
+          ],
+          [
+            17089,
+            0
+          ],
+          [
+            17089,
+            2
+          ],
+          [
+            17089,
+            4
+          ],
+          [
+            17089,
+            6
+          ],
+          [
+            17268,
+            0
+          ],
+          [
+            17268,
+            3
+          ],
+          [
+            17268,
+            7
+          ],
+          [
+            17446,
+            6
+          ]
+        ],
+        "stable_query_gains": 9,
+        "stable_query_losses": 2,
+        "stable_gain_scan_ids": [
+          2136,
+          8189,
+          10859,
+          11927,
+          12106,
+          13529,
+          13707,
+          13886,
+          16556
+        ],
+        "stable_loss_scan_ids": [
+          8723,
+          14953
+        ],
+        "common_accepted_fit_rmse_delta_m": {
+          "count": 235,
+          "median": 6.608057900752383e-05,
+          "p95": 0.01094112817562573,
+          "max": 0.029163026800038565
+        },
+        "common_accepted_improved_more_than_1mm": 19,
+        "common_accepted_worsened_more_than_1mm": 42,
+        "newly_zero_accepted_scan_ids": [
+          2314,
+          5163,
+          5341,
+          6408,
+          6587,
+          6943,
+          8723,
+          14953
+        ],
+        "recovered_nonzero_scan_ids": [
+          11216,
+          15309,
+          15488,
+          16378
+        ]
+      },
+      "against_occupancy_supported": {
+        "accepted_trial_gains": 60,
+        "accepted_trial_losses": 121,
+        "accepted_gain_scan_initialization_ids": [
+          [
+            1424,
+            0
+          ],
+          [
+            1424,
+            1
+          ],
+          [
+            1424,
+            2
+          ],
+          [
+            1424,
+            3
+          ],
+          [
+            1424,
+            4
+          ],
+          [
+            1424,
+            5
+          ],
+          [
+            1424,
+            6
+          ],
+          [
+            1424,
+            7
+          ],
+          [
+            1602,
+            0
+          ],
+          [
+            1602,
+            1
+          ],
+          [
+            1602,
+            2
+          ],
+          [
+            1602,
+            3
+          ],
+          [
+            1602,
+            4
+          ],
+          [
+            1602,
+            7
+          ],
+          [
+            1781,
+            0
+          ],
+          [
+            1781,
+            1
+          ],
+          [
+            1781,
+            2
+          ],
+          [
+            1781,
+            3
+          ],
+          [
+            1781,
+            5
+          ],
+          [
+            1781,
+            6
+          ],
+          [
+            1781,
+            7
+          ],
+          [
+            1958,
+            0
+          ],
+          [
+            1958,
+            1
+          ],
+          [
+            1958,
+            2
+          ],
+          [
+            1958,
+            3
+          ],
+          [
+            1958,
+            4
+          ],
+          [
+            1958,
+            5
+          ],
+          [
+            2136,
+            0
+          ],
+          [
+            2136,
+            1
+          ],
+          [
+            2136,
+            2
+          ],
+          [
+            2136,
+            3
+          ],
+          [
+            2136,
+            4
+          ],
+          [
+            2136,
+            5
+          ],
+          [
+            2136,
+            6
+          ],
+          [
+            2136,
+            7
+          ],
+          [
+            10681,
+            1
+          ],
+          [
+            10681,
+            6
+          ],
+          [
+            10859,
+            5
+          ],
+          [
+            11037,
+            0
+          ],
+          [
+            11216,
+            6
+          ],
+          [
+            12283,
+            7
+          ],
+          [
+            13886,
+            4
+          ],
+          [
+            15309,
+            4
+          ],
+          [
+            15488,
+            0
+          ],
+          [
+            15488,
+            1
+          ],
+          [
+            15488,
+            2
+          ],
+          [
+            15488,
+            3
+          ],
+          [
+            15488,
+            4
+          ],
+          [
+            15488,
+            6
+          ],
+          [
+            15488,
+            7
+          ],
+          [
+            16378,
+            1
+          ],
+          [
+            16378,
+            2
+          ],
+          [
+            16378,
+            3
+          ],
+          [
+            16378,
+            5
+          ],
+          [
+            16378,
+            6
+          ],
+          [
+            16378,
+            7
+          ],
+          [
+            16556,
+            1
+          ],
+          [
+            16556,
+            5
+          ],
+          [
+            17624,
+            3
+          ],
+          [
+            17624,
+            7
+          ]
+        ],
+        "accepted_loss_scan_initialization_ids": [
+          [
+            6943,
+            0
+          ],
+          [
+            6943,
+            1
+          ],
+          [
+            6943,
+            2
+          ],
+          [
+            6943,
+            3
+          ],
+          [
+            6943,
+            4
+          ],
+          [
+            6943,
+            5
+          ],
+          [
+            6943,
+            6
+          ],
+          [
+            6943,
+            7
+          ],
+          [
+            7121,
+            0
+          ],
+          [
+            7121,
+            4
+          ],
+          [
+            7121,
+            6
+          ],
+          [
+            7121,
+            7
+          ],
+          [
+            7298,
+            0
+          ],
+          [
+            7298,
+            1
+          ],
+          [
+            7298,
+            2
+          ],
+          [
+            7298,
+            3
+          ],
+          [
+            7298,
+            4
+          ],
+          [
+            7298,
+            5
+          ],
+          [
+            7298,
+            6
+          ],
+          [
+            7298,
+            7
+          ],
+          [
+            7654,
+            0
+          ],
+          [
+            7654,
+            1
+          ],
+          [
+            7654,
+            2
+          ],
+          [
+            7654,
+            3
+          ],
+          [
+            7654,
+            4
+          ],
+          [
+            7654,
+            5
+          ],
+          [
+            7654,
+            6
+          ],
+          [
+            7654,
+            7
+          ],
+          [
+            7833,
+            0
+          ],
+          [
+            7833,
+            1
+          ],
+          [
+            7833,
+            2
+          ],
+          [
+            7833,
+            3
+          ],
+          [
+            7833,
+            4
+          ],
+          [
+            7833,
+            5
+          ],
+          [
+            7833,
+            6
+          ],
+          [
+            7833,
+            7
+          ],
+          [
+            9079,
+            0
+          ],
+          [
+            9079,
+            1
+          ],
+          [
+            9079,
+            2
+          ],
+          [
+            9079,
+            3
+          ],
+          [
+            9079,
+            4
+          ],
+          [
+            9079,
+            5
+          ],
+          [
+            9079,
+            6
+          ],
+          [
+            9079,
+            7
+          ],
+          [
+            9257,
+            0
+          ],
+          [
+            9257,
+            1
+          ],
+          [
+            9257,
+            2
+          ],
+          [
+            9257,
+            3
+          ],
+          [
+            9257,
+            4
+          ],
+          [
+            9257,
+            5
+          ],
+          [
+            9257,
+            6
+          ],
+          [
+            9257,
+            7
+          ],
+          [
+            9434,
+            0
+          ],
+          [
+            9434,
+            1
+          ],
+          [
+            9434,
+            2
+          ],
+          [
+            9434,
+            3
+          ],
+          [
+            9434,
+            4
+          ],
+          [
+            9434,
+            5
+          ],
+          [
+            9434,
+            6
+          ],
+          [
+            9434,
+            7
+          ],
+          [
+            9613,
+            0
+          ],
+          [
+            9613,
+            2
+          ],
+          [
+            9613,
+            3
+          ],
+          [
+            9613,
+            4
+          ],
+          [
+            9613,
+            7
+          ],
+          [
+            9791,
+            0
+          ],
+          [
+            9791,
+            1
+          ],
+          [
+            9791,
+            2
+          ],
+          [
+            9791,
+            3
+          ],
+          [
+            9791,
+            4
+          ],
+          [
+            9791,
+            5
+          ],
+          [
+            9791,
+            6
+          ],
+          [
+            9791,
+            7
+          ],
+          [
+            9969,
+            0
+          ],
+          [
+            9969,
+            1
+          ],
+          [
+            9969,
+            2
+          ],
+          [
+            9969,
+            3
+          ],
+          [
+            9969,
+            4
+          ],
+          [
+            9969,
+            6
+          ],
+          [
+            9969,
+            7
+          ],
+          [
+            10147,
+            0
+          ],
+          [
+            10147,
+            1
+          ],
+          [
+            10147,
+            2
+          ],
+          [
+            10147,
+            3
+          ],
+          [
+            10147,
+            4
+          ],
+          [
+            10147,
+            5
+          ],
+          [
+            10147,
+            6
+          ],
+          [
+            10147,
+            7
+          ],
+          [
+            10326,
+            5
+          ],
+          [
+            10503,
+            0
+          ],
+          [
+            10503,
+            1
+          ],
+          [
+            10503,
+            2
+          ],
+          [
+            10503,
+            3
+          ],
+          [
+            10503,
+            4
+          ],
+          [
+            10503,
+            5
+          ],
+          [
+            10503,
+            6
+          ],
+          [
+            10503,
+            7
+          ],
+          [
+            12283,
+            6
+          ],
+          [
+            12639,
+            4
+          ],
+          [
+            12639,
+            5
+          ],
+          [
+            13173,
+            0
+          ],
+          [
+            13173,
+            1
+          ],
+          [
+            13173,
+            2
+          ],
+          [
+            13173,
+            3
+          ],
+          [
+            13173,
+            6
+          ],
+          [
+            13173,
+            7
+          ],
+          [
+            14953,
+            0
+          ],
+          [
+            14953,
+            1
+          ],
+          [
+            14953,
+            2
+          ],
+          [
+            14953,
+            3
+          ],
+          [
+            14953,
+            4
+          ],
+          [
+            14953,
+            5
+          ],
+          [
+            14953,
+            6
+          ],
+          [
+            14953,
+            7
+          ],
+          [
+            16912,
+            7
+          ],
+          [
+            17089,
+            0
+          ],
+          [
+            17089,
+            2
+          ],
+          [
+            17089,
+            4
+          ],
+          [
+            17089,
+            6
+          ],
+          [
+            17446,
+            6
+          ],
+          [
+            17624,
+            6
+          ]
+        ],
+        "stable_query_gains": 5,
+        "stable_query_losses": 16,
+        "stable_gain_scan_ids": [
+          1424,
+          2136,
+          10859,
+          13886,
+          16556
+        ],
+        "stable_loss_scan_ids": [
+          6943,
+          7121,
+          7298,
+          7654,
+          7833,
+          9079,
+          9257,
+          9434,
+          9791,
+          10147,
+          10326,
+          10503,
+          12639,
+          14953,
+          17089,
+          17446
+        ],
+        "common_accepted_fit_rmse_delta_m": {
+          "count": 211,
+          "median": -7.121054340207718e-05,
+          "p95": 0.010785926513100747,
+          "max": 0.029940627664054753
+        },
+        "common_accepted_improved_more_than_1mm": 38,
+        "common_accepted_worsened_more_than_1mm": 50,
+        "newly_zero_accepted_scan_ids": [
+          6943,
+          7298,
+          7654,
+          7833,
+          9079,
+          9257,
+          9434,
+          9613,
+          9791,
+          9969,
+          10147,
+          10503,
+          13173,
+          14953
+        ],
+        "recovered_nonzero_scan_ids": [
+          1424,
+          1602,
+          1781,
+          1958,
+          2136,
+          11037,
+          11216,
+          15309,
+          15488,
+          16378
+        ]
+      }
+    }
+  },
+  "temporal_evidence": {
+    "evidence_scans": 3526,
+    "epoch_count": 296,
+    "static_supported_points": 39614,
+    "conflicted_points": 2104,
+    "insufficient_points": 8065,
+    "query_nearest_evidence_time_s": {
+      "minimum": 0.032019709,
+      "median": 0.050399679,
+      "maximum": 0.06811992900000001
+    },
+    "selected_trajectory": "Current delivered one-loop corrected LiDAR trajectory",
+    "corrected_pose_array_sha256": "9ec26defad55bc01844300b9e106782fc51b6d38b4513042245f7e517acefc73",
+    "parameters": {
+      "epoch_seconds": 2.0,
+      "hit_distance_m": 0.12,
+      "free_guard_m": 0.2,
+      "free_fan_lateral_uncertainty_m": 0.1,
+      "minimum_range_m": 0.12,
+      "maximum_range_m": 12.0,
+      "conflict_minimum_free_epochs": 3,
+      "conflict_minimum_free_span_s": 4.0,
+      "conflict_minimum_free_fraction": 0.7,
+      "static_minimum_hit_epochs": 3,
+      "static_minimum_hit_span_s": 10.0,
+      "static_maximum_free_fraction": 0.3
+    },
+    "query_exclusion_scope": "Exact raw query IDs excluded; nearby observations remain, so this is not temporal holdout"
+  },
+  "source_paths": {
+    "summary_script": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\scripts\\summarize_temporal_validation.py",
+    "original_control": "outputs\\fin301\\temporal_filter\\validation\\original\\localization_evaluation.json",
+    "occupancy_control": "outputs\\fin301\\filtering\\exported_validation\\occupancy_supported\\localization_evaluation.json",
+    "exported_evaluator": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\scripts\\evaluate_exported_pcd_filtering.py",
+    "temporal_conservative_result": "outputs\\fin301\\temporal_filter\\validation\\temporal_conservative\\localization_evaluation.json",
+    "temporal_conservative_provenance": "outputs\\fin301\\temporal_filter\\validation\\temporal_conservative\\provenance.json",
+    "temporal_conservative_pcd": "outputs\\fin301\\temporal_filter\\lidar_scan_map_clean_temporal_conservative.pcd",
+    "temporal_static_result": "outputs\\fin301\\temporal_filter\\validation\\temporal_static\\localization_evaluation.json",
+    "temporal_static_provenance": "outputs\\fin301\\temporal_filter\\validation\\temporal_static\\provenance.json",
+    "temporal_static_pcd": "outputs\\fin301\\temporal_filter\\lidar_scan_map_clean_temporal_static.pcd",
+    "filter_report": "outputs\\fin301\\temporal_filter\\temporal_filter_report.json",
+    "temporal_module": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\indoor_mapping\\temporal_filter.py",
+    "temporal_exact_subset_io": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\indoor_mapping\\map_filter.py",
+    "temporal_script": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\scripts\\filter_temporal_map.py"
+  },
+  "source_sha256": {
+    "summary_script": "7e3caee49fc79bc69468c8adbe0748cf84d0fa111c215a97a146aa76ef22388c",
+    "original_control": "2e22cc1bc80f45068176178a5cace98e87f4cafe1cbdfe7a555c61428ffa53d4",
+    "occupancy_control": "f7e439f1ed9808c5e923fdc27e818cdf1a96f7f2e4c70c6ee21ea2c217a8eb3d",
+    "exported_evaluator": "4dcada6f59cc3ea334743fe8be42c647aa3cae07b1244ca704ce626205701541",
+    "temporal_conservative_result": "fa23fcad38cca93731bd004c61ff640a463a9a479741db80026a97bc7d17a4f0",
+    "temporal_conservative_provenance": "ef59eb383cce0adad1429248405b9a3217aece63ba2f07ab8f6e9da35c995bae",
+    "temporal_conservative_pcd": "b6127d9999bad48bf0d560a41230143130c6a6523345fd48be24d4f1b12d99f3",
+    "temporal_static_result": "53ae0acd77fcde838476a57e596a841dcdbf21a9f6c7d1ad95214545ebf24300",
+    "temporal_static_provenance": "cc7ec95a569434a561b23d163a3484dd3f5c048cffb8c8f5f09b3e17a9aea945",
+    "temporal_static_pcd": "081e24ee8d713ba18b1c4303943820cb22035861ea1dbfbc69208590f9e751ae",
+    "filter_report": "887ec2451b49f7333d0400f7cdb34918ed1d3a2495caec375b8c83f4263aa925",
+    "temporal_module": "72fbc07b2deba13a1fb0a3792064f99f24b805b1c57b1650c4a0e55471da4605",
+    "temporal_exact_subset_io": "bb4e5b0caf43574063cad86f177c4d76d0651855b0d685abc90ce3e9ac5d65d5",
+    "temporal_script": "2f6b1719d07f070dba9aef17872b1d16a4ac7637fc6811c5eea7497117fcfe0b"
+  },
+  "frozen_query_count": 100,
+  "initializations_per_query": 8,
+  "same_query_sources_seeds_initializations_and_gates": true,
+  "temporal_exclusion_applied": false,
+  "absolute_accuracy_validated": false,
+  "interpretation": [
+    "Temporal evidence classifies observed persistence, not semantic people or permanent structures.",
+    "Consecutive support epochs still share observations and are not independent physical measurements.",
+    "The exact-PCD targets and temporal-filter evidence include nearby observations; query-ID exclusion is not temporal independence.",
+    "All-eight stability and zero-success regressions must accompany conditional residual and spread.",
+    "Only exact LiDAR PCD targets are tested here; matched occupancy-grid interpretation and free-space safety are not evaluated.",
+    "Raw query scans can include transient returns; fewer accepted fits can reflect lost support or appropriate rejection, which this test cannot distinguish semantically.",
+    "Static-inspection quality and localization support are distinct selection objectives."
+  ]
+}

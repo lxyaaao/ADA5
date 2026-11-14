@@ -1,0 +1,24 @@
+# Local inputs and environments
+.venv/
+data/
+*.zip
+*.db3
+*.db3-shm
+*.db3-wal
+*.mcap
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mplconfig/
+**/.matplotlib/
+**/plot_cache/
+**/cache/
+*.egg-info/
+build/
+install/
+log/
+tmp/
+deliverables/
+outputs/ros_*/
+outputs/fin301/local_validation/
+outputs/fin301/reproduced_*/

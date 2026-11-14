@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "source_hash_checks": {
+    "source_pcd": true,
+    "scans": true,
+    "trajectory": true,
+    "scan_ids": true,
+    "protocol": true,
+    "module": true,
+    "exact_subset_io": true,
+    "script": true
+  },
+  "outputs": {
+    "conservative": {
+      "viewer_data": {
+        "lidar_point_count": 47679,
+        "visual_point_count": 29,
+        "points": 47708,
+        "trajectory_samples": 3526,
+        "trajectory_start_ns": "1793312142514555067",
+        "trajectory_end_ns": "1793312734347535255",
+        "yaml_image": "map.pgm",
+        "grid_resolution_m": 0.05,
+        "grid_origin_xy_yaw": [
+          -34.6,
+          -28.3,
+          0.0
+        ],
+        "max_component_difference_m": 2.0000000020559128e-06,
+        "max_base_lidar_transform_error": 3.552713678800501e-15
+      },
+      "grid_pixels_changed_to_unknown": 9,
+      "source_trajectory_camera_exact": true,
+      "pcd_exact_subset_hash": true
+    },
+    "static": {
+      "viewer_data": {
+        "lidar_point_count": 39614,
+        "visual_point_count": 29,
+        "points": 39643,
+        "trajectory_samples": 3526,
+        "trajectory_start_ns": "1793312142514555067",
+        "trajectory_end_ns": "1793312734347535255",
+        "yaml_image": "map.pgm",
+        "grid_resolution_m": 0.05,
+        "grid_origin_xy_yaw": [
+          -34.6,
+          -28.3,
+          0.0
+        ],
+        "max_component_difference_m": 1.0000000010279564e-06,
+        "max_base_lidar_transform_error": 3.552713678800501e-15
+      },
+      "grid_pixels_changed_to_unknown": 693,
+      "source_trajectory_camera_exact": true,
+      "pcd_exact_subset_hash": true
+    }
+  },
+  "python_tests_passed": 12,
+  "javascript_tests_passed": 22,
+  "browser_interaction_tested": false,
+  "absolute_accuracy_validated": false
+}

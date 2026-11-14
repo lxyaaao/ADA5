@@ -1,0 +1,35 @@
+{
+  "file": "map.pcd",
+  "format": "PCD 0.7 ASCII",
+  "fields": [
+    "x",
+    "y",
+    "z"
+  ],
+  "unit": "metre",
+  "frame_id": "map",
+  "origin_timestamp_ns": 1793312142514555067,
+  "origin": "First accepted LiDAR scan pose",
+  "axes": "Initial LiDAR x forward, y left, z up",
+  "z_definition": "LiDAR points use z=0 for the scan plane; visual points have triangulated height in that same local frame. This is sparse visual structure, not a dense 3D reconstruction.",
+  "geometry": "lidar_scan_plane_plus_triangulated_visual_landmarks",
+  "points": 49812,
+  "lidar_point_count": 49783,
+  "visual_point_count": 29,
+  "point_order": "LiDAR scan points first, followed by triangulated camera landmarks",
+  "components": [
+    "lidar_scan_map.pcd",
+    "visual_landmarks.pcd"
+  ],
+  "voxel_size_m": 0.03,
+  "visual_voxel_size_m": 0.05,
+  "localization_file": "lidar_scan_map.pcd",
+  "localization_note": "Use only the LiDAR scan plane for 2D scan localization; do not project visual XYZ into this plane.",
+  "source_scan_frame": "laser",
+  "base_to_lidar_se2": [
+    -0.082558,
+    -0.017229,
+    0.0
+  ],
+  "physical_reference_validation": "not available"
+}

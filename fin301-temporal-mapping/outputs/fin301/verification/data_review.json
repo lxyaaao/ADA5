@@ -1,0 +1,816 @@
+{
+  "status": "COMPLETE",
+  "source": "C:/Users/10469/Downloads/AutoDrivingProject2.2/data/fin301/fin301_0.db3",
+  "review_scope": "Read-only metadata, SQLite counts, manually decoded CDR header spot-checks and static calibration; no estimator input from odometry, IMU, dynamic TF or recorded map.",
+  "metadata_start_utc": "2026-10-29T22:15:41.754264+00:00",
+  "metadata_duration_s": 592.718981374,
+  "metadata_total_messages": 313349,
+  "actual_total_messages": 313349,
+  "counts": {
+    "/velocity_smoother/transition_event": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/tf": {
+      "metadata": 11799,
+      "sqlite": 11799
+    },
+    "/received_global_plan": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/plan_smoothed": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/particle_cloud": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/lookahead_point": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/local_costmap/published_footprint": {
+      "metadata": 5929,
+      "sqlite": 5929
+    },
+    "/local_costmap/local_costmap/transition_event": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/local_costmap/costmap_updates": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/smoother_server/transition_event": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/local_costmap/costmap_raw": {
+      "metadata": 2310,
+      "sqlite": 2310
+    },
+    "/lookahead_collision_arc": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/amcl/transition_event": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/parameter_events": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/cmd_vel": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/control_center/debug": {
+      "metadata": 593,
+      "sqlite": 593
+    },
+    "/events/write_split": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/amcl_pose": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/control_center/main_state": {
+      "metadata": 1225,
+      "sqlite": 1225
+    },
+    "/bond": {
+      "metadata": 47393,
+      "sqlite": 47393
+    },
+    "/controller_server/transition_event": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/rosout": {
+      "metadata": 1526,
+      "sqlite": 1526
+    },
+    "/cmd_vel_nav": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/control_center/selected_cmd": {
+      "metadata": 1225,
+      "sqlite": 1225
+    },
+    "/diagnostics": {
+      "metadata": 1186,
+      "sqlite": 1186
+    },
+    "/ackermann_cmd": {
+      "metadata": 17781,
+      "sqlite": 17781
+    },
+    "/local_costmap/costmap": {
+      "metadata": 2310,
+      "sqlite": 2310
+    },
+    "/global_costmap/global_costmap/transition_event": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/global_costmap/costmap_raw": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/global_costmap/costmap": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/global_costmap/costmap_updates": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/bt_navigator/transition_event": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/plan": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/planner_server/transition_event": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/global_costmap/published_footprint": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/behavior_server/transition_event": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/unsmoothed_plan": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/initialpose": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/goal_pose": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/enable_autonomous_control": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/teleop": {
+      "metadata": 8422,
+      "sqlite": 8422
+    },
+    "/control_center/emergency_stop": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/foxglove/waypoints/status": {
+      "metadata": 1,
+      "sqlite": 1
+    },
+    "/odom": {
+      "metadata": 11786,
+      "sqlite": 11786
+    },
+    "/behavior/speed_sign_markers": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/behavior/override_cmd": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/battery_state": {
+      "metadata": 592,
+      "sqlite": 592
+    },
+    "/behavior/stop_sign_markers": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/behavior/state": {
+      "metadata": 2712,
+      "sqlite": 2712
+    },
+    "/behavior/traffic_light_markers": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/behavior/cone_position": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/imu/data": {
+      "metadata": 16340,
+      "sqlite": 16340
+    },
+    "/behavior/traffic_light_position": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/behavior/cone_markers": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/rc_data": {
+      "metadata": 19571,
+      "sqlite": 19571
+    },
+    "/behavior/stop_sign_position": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/magnetometer_data": {
+      "metadata": 105730,
+      "sqlite": 105730
+    },
+    "/behavior/override_active": {
+      "metadata": 2712,
+      "sqlite": 2712
+    },
+    "/foxglove/waypoints/markers": {
+      "metadata": 1,
+      "sqlite": 1
+    },
+    "/behavior/speed_sign_position": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/tf_static": {
+      "metadata": 3,
+      "sqlite": 3
+    },
+    "/scan/raw": {
+      "metadata": 17628,
+      "sqlite": 17628
+    },
+    "/drive": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/scan": {
+      "metadata": 17570,
+      "sqlite": 17570
+    },
+    "/map": {
+      "metadata": 1,
+      "sqlite": 1
+    },
+    "/waypoint_follower/transition_event": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/map_server/transition_event": {
+      "metadata": 0,
+      "sqlite": 0
+    },
+    "/camera/camera/color/camera_info": {
+      "metadata": 5886,
+      "sqlite": 5886
+    },
+    "/camera/camera/color/image_raw/compressed": {
+      "metadata": 5879,
+      "sqlite": 5879
+    },
+    "/camera/camera/color/image_raw": {
+      "metadata": 5238,
+      "sqlite": 5238
+    }
+  },
+  "count_mismatches": [],
+  "sample_records": {
+    "/scan/raw": [
+      {
+        "record_id": 235,
+        "bag_timestamp_ns": 1793312142549820104,
+        "header_timestamp_ns": 1793312142514555067,
+        "frame": "laser",
+        "manual_cdr_header_matches_rosbags": true,
+        "beam_count": 1440,
+        "angle_min": -3.1415927410125732,
+        "angle_increment": 0.004363323096185923,
+        "range_min": 0.0,
+        "range_max": 100.0
+      },
+      {
+        "record_id": 251,
+        "bag_timestamp_ns": 1793312142581912952,
+        "header_timestamp_ns": 1793312142549033617,
+        "frame": "laser",
+        "manual_cdr_header_matches_rosbags": true,
+        "beam_count": 1440,
+        "angle_min": -3.1415927410125732,
+        "angle_increment": 0.004363323096185923,
+        "range_min": 0.0,
+        "range_max": 100.0
+      },
+      {
+        "record_id": 313337,
+        "bag_timestamp_ns": 1793312734447320298,
+        "header_timestamp_ns": 1793312734414739126,
+        "frame": "laser",
+        "manual_cdr_header_matches_rosbags": true,
+        "beam_count": 1440,
+        "angle_min": -3.1415927410125732,
+        "angle_increment": 0.004363323096185923,
+        "range_min": 0.0,
+        "range_max": 100.0
+      },
+      {
+        "record_id": 313319,
+        "bag_timestamp_ns": 1793312734415280496,
+        "header_timestamp_ns": 1793312734380236443,
+        "frame": "laser",
+        "manual_cdr_header_matches_rosbags": true,
+        "beam_count": 1440,
+        "angle_min": -3.1415927410125732,
+        "angle_increment": 0.004363323096185923,
+        "range_min": 0.0,
+        "range_max": 100.0
+      }
+    ],
+    "/scan": [
+      {
+        "record_id": 1104,
+        "bag_timestamp_ns": 1793312144498905321,
+        "header_timestamp_ns": 1793312144462417057,
+        "frame": "laser",
+        "manual_cdr_header_matches_rosbags": true,
+        "beam_count": 1440,
+        "angle_min": -3.1415927410125732,
+        "angle_increment": 0.004363323096185923,
+        "range_min": 0.0,
+        "range_max": 100.0
+      },
+      {
+        "record_id": 1121,
+        "bag_timestamp_ns": 1793312144530912410,
+        "header_timestamp_ns": 1793312144495878743,
+        "frame": "laser",
+        "manual_cdr_header_matches_rosbags": true,
+        "beam_count": 1440,
+        "angle_min": -3.1415927410125732,
+        "angle_increment": 0.004363323096185923,
+        "range_min": 0.0,
+        "range_max": 100.0
+      },
+      {
+        "record_id": 313338,
+        "bag_timestamp_ns": 1793312734447969942,
+        "header_timestamp_ns": 1793312734414739126,
+        "frame": "laser",
+        "manual_cdr_header_matches_rosbags": true,
+        "beam_count": 1440,
+        "angle_min": -3.1415927410125732,
+        "angle_increment": 0.004363323096185923,
+        "range_min": 0.0,
+        "range_max": 100.0
+      },
+      {
+        "record_id": 313321,
+        "bag_timestamp_ns": 1793312734416213592,
+        "header_timestamp_ns": 1793312734380236443,
+        "frame": "laser",
+        "manual_cdr_header_matches_rosbags": true,
+        "beam_count": 1440,
+        "angle_min": -3.1415927410125732,
+        "angle_increment": 0.004363323096185923,
+        "range_min": 0.0,
+        "range_max": 100.0
+      }
+    ],
+    "/camera/camera/color/image_raw/compressed": [
+      {
+        "record_id": 1636,
+        "bag_timestamp_ns": 1793312145583864862,
+        "header_timestamp_ns": 1793312145547223432,
+        "frame": "camera_link",
+        "manual_cdr_header_matches_rosbags": true
+      },
+      {
+        "record_id": 1682,
+        "bag_timestamp_ns": 1793312145684156420,
+        "header_timestamp_ns": 1793312145647379204,
+        "frame": "camera_link",
+        "manual_cdr_header_matches_rosbags": true
+      },
+      {
+        "record_id": 313324,
+        "bag_timestamp_ns": 1793312734418136416,
+        "header_timestamp_ns": 1793312734381625447,
+        "frame": "camera_link",
+        "manual_cdr_header_matches_rosbags": true
+      },
+      {
+        "record_id": 313270,
+        "bag_timestamp_ns": 1793312734318270263,
+        "header_timestamp_ns": 1793312734281692839,
+        "frame": "camera_link",
+        "manual_cdr_header_matches_rosbags": true
+      }
+    ],
+    "/camera/camera/color/camera_info": [
+      {
+        "record_id": 1637,
+        "bag_timestamp_ns": 1793312145584081454,
+        "header_timestamp_ns": 1793312145547223432,
+        "frame": "camera_link",
+        "manual_cdr_header_matches_rosbags": true,
+        "width": 640,
+        "height": 480,
+        "K": [
+          [
+            433.76863,
+            0.0,
+            311.07619
+          ],
+          [
+            0.0,
+            430.02557,
+            221.52648
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "D": [
+          -0.066549,
+          0.048809,
+          -0.000212,
+          -0.004628,
+          0.0
+        ],
+        "distortion_model": "plumb_bob"
+      },
+      {
+        "record_id": 1681,
+        "bag_timestamp_ns": 1793312145684113537,
+        "header_timestamp_ns": 1793312145647379204,
+        "frame": "camera_link",
+        "manual_cdr_header_matches_rosbags": true,
+        "width": 640,
+        "height": 480,
+        "K": [
+          [
+            433.76863,
+            0.0,
+            311.07619
+          ],
+          [
+            0.0,
+            430.02557,
+            221.52648
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "D": [
+          -0.066549,
+          0.048809,
+          -0.000212,
+          -0.004628,
+          0.0
+        ],
+        "distortion_model": "plumb_bob"
+      },
+      {
+        "record_id": 313323,
+        "bag_timestamp_ns": 1793312734418101060,
+        "header_timestamp_ns": 1793312734381625447,
+        "frame": "camera_link",
+        "manual_cdr_header_matches_rosbags": true,
+        "width": 640,
+        "height": 480,
+        "K": [
+          [
+            433.76863,
+            0.0,
+            311.07619
+          ],
+          [
+            0.0,
+            430.02557,
+            221.52648
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "D": [
+          -0.066549,
+          0.048809,
+          -0.000212,
+          -0.004628,
+          0.0
+        ],
+        "distortion_model": "plumb_bob"
+      },
+      {
+        "record_id": 313269,
+        "bag_timestamp_ns": 1793312734318215582,
+        "header_timestamp_ns": 1793312734281692839,
+        "frame": "camera_link",
+        "manual_cdr_header_matches_rosbags": true,
+        "width": 640,
+        "height": 480,
+        "K": [
+          [
+            433.76863,
+            0.0,
+            311.07619
+          ],
+          [
+            0.0,
+            430.02557,
+            221.52648
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "D": [
+          -0.066549,
+          0.048809,
+          -0.000212,
+          -0.004628,
+          0.0
+        ],
+        "distortion_model": "plumb_bob"
+      }
+    ]
+  },
+  "independent_tf_static": [
+    {
+      "record_id": 193,
+      "parent": "base_link",
+      "child": "laser",
+      "translation_xyz_m": [
+        -0.082558,
+        -0.017229,
+        0.034095
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "record_id": 1019,
+      "parent": "base_link",
+      "child": "imu_link",
+      "translation_xyz_m": [
+        0.041796,
+        -0.017758,
+        -0.063599
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "record_id": 1115,
+      "parent": "base_link",
+      "child": "camera_link",
+      "translation_xyz_m": [
+        0.12323,
+        -0.017229,
+        -0.053395
+      ],
+      "quaternion_xyzw": [
+        -0.49999999999662686,
+        0.5000018366025516,
+        -0.49999999999662686,
+        0.4999981633974483
+      ]
+    }
+  ],
+  "streams": {
+    "/scan/raw": {
+      "count": 17628,
+      "duplicates": 0,
+      "reversals": 0,
+      "first_header_ns": 1793312142514555067,
+      "last_header_ns": 1793312734414739126,
+      "header_span_s": 591.900184059,
+      "receipt_minus_header_median_ms": 34.094803,
+      "receipt_minus_header_p95_ms": 35.27200365,
+      "gap_count_1p5_median": 0
+    },
+    "/scan": {
+      "count": 17570,
+      "duplicates": 0,
+      "reversals": 0,
+      "first_header_ns": 1793312144462417057,
+      "last_header_ns": 1793312734414739126,
+      "header_span_s": 589.952322069,
+      "receipt_minus_header_median_ms": 34.7898875,
+      "receipt_minus_header_p95_ms": 36.23558645,
+      "gap_count_1p5_median": 0
+    },
+    "/camera/camera/color/image_raw/compressed": {
+      "count": 5879,
+      "duplicates": 0,
+      "reversals": 0,
+      "first_header_ns": 1793312145547223432,
+      "last_header_ns": 1793312734381625447,
+      "header_span_s": 588.834402015,
+      "receipt_minus_header_median_ms": 24.496442,
+      "receipt_minus_header_p95_ms": 48.52075969999999,
+      "gap_count_1p5_median": 15
+    }
+  },
+  "independently_recomputed_synchronization": {
+    "camera_to_raw": {
+      "median_ms": 8.397366,
+      "p95_ms": 15.8515102,
+      "max_ms": 17.228147,
+      "within_50ms_count": 5879,
+      "total": 5879,
+      "fraction_within_50ms": 1.0
+    },
+    "raw_to_camera": {
+      "median_ms": 25.124327,
+      "p95_ms": 48.9660302,
+      "max_ms": 3032.668365,
+      "within_50ms_count": 17050,
+      "total": 17628,
+      "fraction_within_50ms": 0.9672112548218743
+    }
+  },
+  "cache_checks": {
+    "shape": [
+      17628,
+      1440
+    ],
+    "ranges_dtype": "float32",
+    "timestamps_dtype": "int64",
+    "strictly_increasing_timestamps": true,
+    "source_range_spot_checks": [
+      {
+        "source_record_id": 235,
+        "cache_index": 0,
+        "all_1440_ranges_exact_match": true
+      },
+      {
+        "source_record_id": 251,
+        "cache_index": 1,
+        "all_1440_ranges_exact_match": true
+      },
+      {
+        "source_record_id": 313337,
+        "cache_index": 17627,
+        "all_1440_ranges_exact_match": true
+      },
+      {
+        "source_record_id": 313319,
+        "cache_index": 17626,
+        "all_1440_ranges_exact_match": true
+      }
+    ],
+    "all_image_manifest_paths_exist": true,
+    "raw_zero_negative_nan_count": 0,
+    "raw_positive_infinity_count": 9971191
+  },
+  "startup_offsets_s": {
+    "camera_after_raw": 3.032668365,
+    "filtered_scan_after_raw": 1.94786199,
+    "last_camera_before_last_raw": 0.033113679
+  },
+  "camera_info_cross_check": {
+    "message_count": 5886,
+    "unique_timestamps": 5886,
+    "camera_info_stamps_without_compressed_image": [
+      1793312192282576151,
+      1793312384490063937,
+      1793312421585314491,
+      1793312432602121729,
+      1793312472101583538,
+      1793312511209128474,
+      1793312569014274973,
+      1793312576282852400,
+      1793312678610082396,
+      1793312681913556729
+    ],
+    "compressed_image_stamps_without_camera_info": [
+      1793312514801341946,
+      1793312624407207480,
+      1793312678410208179
+    ]
+  },
+  "bad_images": [
+    {
+      "image_id": 2764,
+      "header_timestamp_ns": 1793312422285594020,
+      "path": "outputs\\fin301\\cache\\images\\frame_002764.jpg",
+      "bytes": 28888,
+      "sha256": "e95816ec6544baf6d91878364c0ee665ef3d8394f6b56b291a4e82553b42650c",
+      "source_bytes_exact_match": true,
+      "opencv_decodes": false,
+      "pillow_check": "OSError: image file is truncated (1 bytes not processed)"
+    },
+    {
+      "image_id": 3045,
+      "header_timestamp_ns": 1793312450479810596,
+      "path": "outputs\\fin301\\cache\\images\\frame_003045.jpg",
+      "bytes": 26700,
+      "sha256": "fb426686d47068997b339594b96f8fd099fd8d45992351d8511160f2372e34ee",
+      "source_bytes_exact_match": true,
+      "opencv_decodes": false,
+      "pillow_check": "OSError: image file is truncated (3 bytes not processed)"
+    }
+  ],
+  "calibration_comparison": {
+    "camera_K_unchanged": true,
+    "camera_D_unchanged": true,
+    "camera_dimensions_unchanged": true,
+    "T_camera_lidar_unchanged": true,
+    "physical_recalibration_verified": false,
+    "static_mount_comparison": [
+      {
+        "parent": "base_link",
+        "child": "laser",
+        "unchanged_recorded_values": true
+      },
+      {
+        "parent": "base_link",
+        "child": "imu_link",
+        "unchanged_recorded_values": true
+      },
+      {
+        "parent": "base_link",
+        "child": "camera_link",
+        "unchanged_recorded_values": true
+      }
+    ]
+  },
+  "new_scan_topic_overlap": {
+    "shared_unique_timestamps": 17570,
+    "identical_range_arrays": 0,
+    "different_range_arrays": 17570,
+    "raw_only_unique_timestamps": 58,
+    "scan_only_unique_timestamps": 0
+  },
+  "audit_sha256": "c752461a7180e4b58186be34beeb26ac87f6e283a7dc41b6063a2fbea1f5f69b",
+  "synchronization_coverage_notes": {
+    "raw_scans_before_first_camera": 91,
+    "raw_scans_before_first_camera_outside_50ms": 89,
+    "all_raw_scans_outside_50ms": 578,
+    "raw_to_camera_max_ms_inside_camera_coverage": 108.291024,
+    "raw_scans_after_last_camera": 1
+  },
+  "range_gate_check": {
+    "gate_m": [
+      0.12,
+      12.0
+    ],
+    "all_beams_usable_fraction": 0.6026515187328241,
+    "minimum_scan_usable_fraction": 0.45416666666666666,
+    "scan_duration_s_median": 0.03357578068971634,
+    "scan_duration_s_min": 0.029082313179969788,
+    "scan_duration_s_max": 0.03821554780006409
+  },
+  "visual_spot_checks": {
+    "inspected_image_ids": [
+      0,
+      5878
+    ],
+    "observations": [
+      "First image shows a low camera viewpoint, furniture legs and people; dynamic objects may affect sensor correspondence.",
+      "Last image is dominated by nearby cabinet/wall surfaces with limited texture; this is a spot observation, not an image-quality statistic."
+    ]
+  },
+  "concerns": [
+    "Use fin301 counts and timestamps; no duplicate scan timestamps/conflicts are present in this recording.",
+    "The first 3.032668365 s of raw LiDAR precede camera startup; enforce the timestamp association gate.",
+    "Two original compressed image payloads are truncated (IDs 2764 and 3045); skip them without image repair.",
+    "CameraInfo and compressed-image delivery are not one-to-one: 10 info stamps lack images, 3 image stamps lack info; intrinsics are constant across recorded CameraInfo.",
+    "Recorded calibration values equal the prior bag but remain physically unverified; use new bag calibration as provenance.",
+    "No independent physical ground truth or externally measured geometry has been supplied.",
+    "Recorded /map is a single unverified message from navigation context and is excluded from estimation."
+  ]
+}

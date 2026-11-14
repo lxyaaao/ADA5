@@ -1,0 +1,23 @@
+{
+  "images_checked": 5879,
+  "jpeg_eoi_at_end": 2965,
+  "jpeg_eoi_followed_by_one_zero_padding_byte": 2912,
+  "missing_eoi_image_ids": [
+    2764,
+    3045
+  ],
+  "known_decodable_images": 5877,
+  "source_format_issue": "A strict endswith(FFD9) check falsely rejects valid JPEG payloads with one trailing zero; full OpenCV audit confirms padding is valid.",
+  "padding_example_ids": [
+    4,
+    8,
+    13,
+    14,
+    22,
+    100,
+    200,
+    500,
+    1000,
+    2000
+  ]
+}

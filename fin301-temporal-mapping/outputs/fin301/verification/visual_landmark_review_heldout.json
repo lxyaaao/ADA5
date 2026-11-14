@@ -1,0 +1,5250 @@
+{
+  "status": "COMPLETE",
+  "source_sha256": {
+    "outputs/fin301/baseline/visual_landmark_evidence.csv": "a7372847029fd4b22b22e0d75eede2e30871e286f332cf48f5c040ca11deda61",
+    "outputs/fin301/baseline/trajectory_arrays.npz": "3230debb9fc84034343d9f1f78aad69f6c256f2e40e6c0ee4a8af08a166eabba"
+  },
+  "definition": "Landmark XYZ and LiDAR trajectory frozen. Frames about0.3s and0.6s after the fourth training view are held out from triangulation. LK forward/backward correspondence gate0.8px; original2px reprojection gate used only for evaluation, not fitting.",
+  "subsets": {
+    "all_points": {
+      "training_point_count": 93,
+      "fifth_view_tracked": 83,
+      "sixth_view_tracked": 70,
+      "both_heldout_views_within_2px": 10,
+      "fifth_view_predictive_error_px": {
+        "count": 83,
+        "min": 0.6103811279218709,
+        "median": 2.189036461309882,
+        "p95": 4.8334735481791204,
+        "max": 5.418178940233348
+      },
+      "sixth_view_predictive_error_px": {
+        "count": 70,
+        "min": 0.3743778924436592,
+        "median": 4.26443642440343,
+        "p95": 9.585855629858115,
+        "max": 12.367905420882622
+      }
+    },
+    "upward_world_rays": {
+      "training_point_count": 91,
+      "fifth_view_tracked": 81,
+      "sixth_view_tracked": 68,
+      "both_heldout_views_within_2px": 10,
+      "fifth_view_predictive_error_px": {
+        "count": 81,
+        "min": 0.6103811279218709,
+        "median": 2.1917625517918595,
+        "p95": 4.865512294887888,
+        "max": 5.418178940233348
+      },
+      "sixth_view_predictive_error_px": {
+        "count": 68,
+        "min": 0.3743778924436592,
+        "median": 4.26443642440343,
+        "p95": 9.58784261526113,
+        "max": 12.367905420882622
+      }
+    }
+  },
+  "groups": [
+    {
+      "training_image_ids": [
+        790,
+        793,
+        796,
+        799
+      ],
+      "heldout_image_ids": [
+        802,
+        805
+      ],
+      "training_points": 8,
+      "upward_points": 8,
+      "both_views_pass": 0,
+      "upward_both_pass": 0
+    },
+    {
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "heldout_image_ids": [
+        3769,
+        3772
+      ],
+      "training_points": 14,
+      "upward_points": 14,
+      "both_views_pass": 2,
+      "upward_both_pass": 2
+    },
+    {
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "heldout_image_ids": [
+        5516,
+        5519
+      ],
+      "training_points": 14,
+      "upward_points": 13,
+      "both_views_pass": 7,
+      "upward_both_pass": 7
+    },
+    {
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "heldout_image_ids": [
+        5536,
+        5539
+      ],
+      "training_points": 19,
+      "upward_points": 19,
+      "both_views_pass": 0,
+      "upward_both_pass": 0
+    },
+    {
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "heldout_image_ids": [
+        5546,
+        5549
+      ],
+      "training_points": 19,
+      "upward_points": 19,
+      "both_views_pass": 1,
+      "upward_both_pass": 1
+    },
+    {
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "heldout_image_ids": [
+        5556,
+        5559
+      ],
+      "training_points": 19,
+      "upward_points": 18,
+      "both_views_pass": 0,
+      "upward_both_pass": 0
+    }
+  ],
+  "reflection_candidate_landmark_89": {
+    "landmark_id": 89,
+    "training_image_ids": [
+      5544,
+      5547,
+      5550,
+      5553
+    ],
+    "xyz_m": [
+      -11.06347863027364,
+      -5.326405195583016,
+      -2.0783943615465024
+    ],
+    "heldout": [
+      {
+        "step": 1,
+        "image_id": 5556,
+        "timestamp_ns": 1793312702210190396,
+        "tracked": true,
+        "forward_backward_error_px": 0.3992048501968384,
+        "observed_uv": [
+          170.49456787109375,
+          364.6527404785156
+        ],
+        "predicted_uv": [
+          170.34925081376332,
+          362.99322764997305
+        ],
+        "predictive_error_px": 1.66586310219314,
+        "within_2px": true
+      },
+      {
+        "step": 2,
+        "image_id": 5559,
+        "timestamp_ns": 1793312702510224713,
+        "tracked": true,
+        "forward_backward_error_px": 0.5035353899002075,
+        "observed_uv": [
+          170.43170166015625,
+          364.24346923828125
+        ],
+        "predicted_uv": [
+          166.9902524723558,
+          368.1397000410723
+        ],
+        "predictive_error_px": 5.198479295027539,
+        "within_2px": false
+      }
+    ],
+    "upward_world_bearing_all_training_views": false,
+    "both_heldout_views_within_2px": false
+  },
+  "point_results": [
+    {
+      "landmark_id": 0,
+      "training_image_ids": [
+        790,
+        793,
+        796,
+        799
+      ],
+      "xyz_m": [
+        2.7342742896597207,
+        -5.629532148042857,
+        0.9984693349843143
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 802,
+          "timestamp_ns": 1793312225885124294,
+          "tracked": true,
+          "forward_backward_error_px": 0.03042861633002758,
+          "observed_uv": [
+            233.8662567138672,
+            47.4447021484375
+          ],
+          "predicted_uv": [
+            232.39039931696075,
+            45.885706282700056
+          ],
+          "predictive_error_px": 2.1467704035107897,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 805,
+          "timestamp_ns": 1793312226185265807,
+          "tracked": true,
+          "forward_backward_error_px": 0.04476235806941986,
+          "observed_uv": [
+            241.3929901123047,
+            35.93328094482422
+          ],
+          "predicted_uv": [
+            236.28165429272542,
+            30.43640714057824
+          ],
+          "predictive_error_px": 7.5060892267758,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 1,
+      "training_image_ids": [
+        790,
+        793,
+        796,
+        799
+      ],
+      "xyz_m": [
+        2.5575373556634076,
+        -5.746451603764162,
+        0.6151778871716914
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 802,
+          "timestamp_ns": 1793312225885124294,
+          "tracked": true,
+          "forward_backward_error_px": 0.04328712821006775,
+          "observed_uv": [
+            267.9429626464844,
+            107.24394989013672
+          ],
+          "predicted_uv": [
+            266.073181616368,
+            105.91050892282124
+          ],
+          "predictive_error_px": 2.29655087335297,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 805,
+          "timestamp_ns": 1793312226185265807,
+          "tracked": true,
+          "forward_backward_error_px": 0.03086130879819393,
+          "observed_uv": [
+            277.2592468261719,
+            100.143798828125
+          ],
+          "predicted_uv": [
+            272.85702023372494,
+            95.28417187325776
+          ],
+          "predictive_error_px": 6.557100968546938,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 2,
+      "training_image_ids": [
+        790,
+        793,
+        796,
+        799
+      ],
+      "xyz_m": [
+        2.7878723892020494,
+        -5.743386291702688,
+        0.6596886863196428
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 802,
+          "timestamp_ns": 1793312225885124294,
+          "tracked": true,
+          "forward_backward_error_px": 0.01608569547533989,
+          "observed_uv": [
+            243.94436645507812,
+            105.86058044433594
+          ],
+          "predicted_uv": [
+            241.26542365780978,
+            105.37823015843212
+          ],
+          "predictive_error_px": 2.7220206298533927,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 805,
+          "timestamp_ns": 1793312226185265807,
+          "tracked": true,
+          "forward_backward_error_px": 0.047029245644807816,
+          "observed_uv": [
+            252.05296325683594,
+            99.02078247070312
+          ],
+          "predicted_uv": [
+            246.1831208074417,
+            95.52094360496571
+          ],
+          "predictive_error_px": 6.8340268119781875,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 3,
+      "training_image_ids": [
+        790,
+        793,
+        796,
+        799
+      ],
+      "xyz_m": [
+        2.799971216412338,
+        -5.684875497810179,
+        1.1213493991941614
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 802,
+          "timestamp_ns": 1793312225885124294,
+          "tracked": true,
+          "forward_backward_error_px": 0.10614684969186783,
+          "observed_uv": [
+            233.86756896972656,
+            34.522247314453125
+          ],
+          "predicted_uv": [
+            232.96507119343454,
+            32.362521388174855
+          ],
+          "predictive_error_px": 2.34070893381697,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 805,
+          "timestamp_ns": 1793312226185265807,
+          "tracked": true,
+          "forward_backward_error_px": 0.2170422375202179,
+          "observed_uv": [
+            241.2891387939453,
+            23.170188903808594
+          ],
+          "predicted_uv": [
+            237.1015699012588,
+            16.335198011454906
+          ],
+          "predictive_error_px": 8.015786532184691,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 4,
+      "training_image_ids": [
+        790,
+        793,
+        796,
+        799
+      ],
+      "xyz_m": [
+        3.1669358305253104,
+        -5.56142753527475,
+        1.469777928192071
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 802,
+          "timestamp_ns": 1793312225885124294,
+          "tracked": false,
+          "forward_backward_error_px": 2.216672420501709,
+          "observed_uv": [
+            186.3924560546875,
+            -8.0660400390625
+          ],
+          "predicted_uv": [
+            184.16150354568478,
+            -8.198210942400408
+          ],
+          "predictive_error_px": 2.234864256529843,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 805,
+          "timestamp_ns": 1793312226185265807,
+          "tracked": false,
+          "reason": "previous_tracking_failure"
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 5,
+      "training_image_ids": [
+        790,
+        793,
+        796,
+        799
+      ],
+      "xyz_m": [
+        2.7051028062264124,
+        -5.741282184652934,
+        1.196473607489495
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 802,
+          "timestamp_ns": 1793312225885124294,
+          "tracked": true,
+          "forward_backward_error_px": 0.046541713178157806,
+          "observed_uv": [
+            247.96701049804688,
+            21.864652633666992
+          ],
+          "predicted_uv": [
+            249.61995070677796,
+            19.247909197799572
+          ],
+          "predictive_error_px": 3.095086031566034,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 805,
+          "timestamp_ns": 1793312226185265807,
+          "tracked": true,
+          "forward_backward_error_px": 0.038538191467523575,
+          "observed_uv": [
+            255.6970672607422,
+            10.027451515197754
+          ],
+          "predicted_uv": [
+            255.0640048089654,
+            1.7916405681451124
+          ],
+          "predictive_error_px": 8.260105932943098,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 6,
+      "training_image_ids": [
+        790,
+        793,
+        796,
+        799
+      ],
+      "xyz_m": [
+        2.9606149161939923,
+        -5.679297122258608,
+        1.2771789716762942
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 802,
+          "timestamp_ns": 1793312225885124294,
+          "tracked": true,
+          "forward_backward_error_px": 0.01918845809996128,
+          "observed_uv": [
+            218.11993408203125,
+            17.873476028442383
+          ],
+          "predicted_uv": [
+            217.07587259575578,
+            16.126887347417636
+          ],
+          "predictive_error_px": 2.0348553776147096,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 805,
+          "timestamp_ns": 1793312226185265807,
+          "tracked": false,
+          "forward_backward_error_px": 1.5946121215820312,
+          "observed_uv": [
+            224.83091735839844,
+            5.560306072235107
+          ],
+          "predicted_uv": [
+            220.22000686462724,
+            -0.3465226569676645
+          ],
+          "predictive_error_px": 7.4934051817384475,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 7,
+      "training_image_ids": [
+        790,
+        793,
+        796,
+        799
+      ],
+      "xyz_m": [
+        2.2004823835180765,
+        -5.86745612050433,
+        0.556666354116165
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 802,
+          "timestamp_ns": 1793312225885124294,
+          "tracked": true,
+          "forward_backward_error_px": 0.4307408928871155,
+          "observed_uv": [
+            321.19036865234375,
+            111.639892578125
+          ],
+          "predicted_uv": [
+            324.43089048602457,
+            109.21543276027278
+          ],
+          "predictive_error_px": 4.047096139572436,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 805,
+          "timestamp_ns": 1793312226185265807,
+          "tracked": true,
+          "forward_backward_error_px": 0.7713233828544617,
+          "observed_uv": [
+            332.7984924316406,
+            103.71253204345703
+          ],
+          "predicted_uv": [
+            336.7789324490592,
+            97.83564577340249
+          ],
+          "predictive_error_px": 7.098006407676929,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 8,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -10.658921289560864,
+        -5.800233916390244,
+        1.0552818917438442
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.00936171505600214,
+          "observed_uv": [
+            241.1656951904297,
+            57.256011962890625
+          ],
+          "predicted_uv": [
+            239.69369242507233,
+            56.474531255842635
+          ],
+          "predictive_error_px": 1.6665846023253486,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.011435936205089092,
+          "observed_uv": [
+            247.3386993408203,
+            46.730411529541016
+          ],
+          "predicted_uv": [
+            245.15554696226178,
+            43.27272692586328
+          ],
+          "predictive_error_px": 4.0892220686233,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 9,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -10.628211968218492,
+        -5.964663459283272,
+        1.137749660034423
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.01427497249096632,
+          "observed_uv": [
+            228.53170776367188,
+            51.42192459106445
+          ],
+          "predicted_uv": [
+            226.1586392316123,
+            51.589454033528824
+          ],
+          "predictive_error_px": 2.3789746471838975,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.008481539785861969,
+          "observed_uv": [
+            234.43092346191406,
+            40.70745086669922
+          ],
+          "predicted_uv": [
+            230.79623205153945,
+            38.72074502469658
+          ],
+          "predictive_error_px": 4.142219423364533,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 10,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -11.217298786640526,
+        -5.345033454846651,
+        0.6749708957435852
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.009352358989417553,
+          "observed_uv": [
+            340.9699401855469,
+            108.78656768798828
+          ],
+          "predicted_uv": [
+            345.2644872245752,
+            108.38082773215451
+          ],
+          "predictive_error_px": 4.313671195418917,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.013825172558426857,
+          "observed_uv": [
+            351.6610107421875,
+            101.60386657714844
+          ],
+          "predicted_uv": [
+            359.55826930742194,
+            98.43232143903082
+          ],
+          "predictive_error_px": 8.510310887933896,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 11,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -11.122578210625385,
+        -5.183224643964643,
+        0.9183920256814709
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.017978299409151077,
+          "observed_uv": [
+            344.2066345214844,
+            63.29539108276367
+          ],
+          "predicted_uv": [
+            349.07025054024393,
+            62.52816195071787
+          ],
+          "predictive_error_px": 4.923758860768298,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.004572714678943157,
+          "observed_uv": [
+            355.07318115234375,
+            51.77569580078125
+          ],
+          "predicted_uv": [
+            364.03478495272975,
+            47.57285104279231
+          ],
+          "predictive_error_px": 9.898194114829632,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 12,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -10.997648561732824,
+        -4.818952608374356,
+        1.1613641514905235
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": false,
+          "forward_backward_error_px": 17.235342025756836,
+          "observed_uv": [
+            363.447998046875,
+            -12.19869613647461
+          ],
+          "predicted_uv": [
+            372.47199338932967,
+            -5.774491908829731
+          ],
+          "predictive_error_px": 11.077133740238667,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": false,
+          "reason": "previous_tracking_failure"
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 13,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -11.368932365055722,
+        -6.460106641593188,
+        1.7028210086429958
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.01386079378426075,
+          "observed_uv": [
+            280.2423400878906,
+            26.91693878173828
+          ],
+          "predicted_uv": [
+            281.8193015837743,
+            26.065883609283645
+          ],
+          "predictive_error_px": 1.7919549285798007,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.012905973009765148,
+          "observed_uv": [
+            288.0030822753906,
+            17.683055877685547
+          ],
+          "predicted_uv": [
+            290.6283485357854,
+            14.251460726553404
+          ],
+          "predictive_error_px": 4.320632849391482,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 14,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -9.796383175054522,
+        -10.722665073875318,
+        2.47581103754937
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.12605179846286774,
+          "observed_uv": [
+            55.13902282714844,
+            55.37140655517578
+          ],
+          "predicted_uv": [
+            54.64772890906187,
+            56.39607878932392
+          ],
+          "predictive_error_px": 1.1363638947903072,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.053089894354343414,
+          "observed_uv": [
+            59.49238204956055,
+            51.750972747802734
+          ],
+          "predicted_uv": [
+            58.493549139674315,
+            52.532808172094974
+          ],
+          "predictive_error_px": 1.26843754775315,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": true
+    },
+    {
+      "landmark_id": 15,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -11.159116148091451,
+        -5.473880065424709,
+        0.6336680084799912
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.042139772325754166,
+          "observed_uv": [
+            324.0421447753906,
+            118.42739868164062
+          ],
+          "predicted_uv": [
+            326.9695527964092,
+            117.08974395658772
+          ],
+          "predictive_error_px": 3.2185459271198997,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.5642520785331726,
+          "observed_uv": [
+            333.6304016113281,
+            113.24126434326172
+          ],
+          "predicted_uv": [
+            339.5638942081799,
+            108.22839006712447
+          ],
+          "predictive_error_px": 7.767576385543506,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 16,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -10.446631340796074,
+        -9.145227499118974,
+        1.6418790233270835
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.04678027331829071,
+          "observed_uv": [
+            119.77234649658203,
+            88.93144989013672
+          ],
+          "predicted_uv": [
+            118.40252885018288,
+            90.64242116372685
+          ],
+          "predictive_error_px": 2.1917625517918595,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.012295964173972607,
+          "observed_uv": [
+            124.59235382080078,
+            84.5305404663086
+          ],
+          "predicted_uv": [
+            122.10354496049001,
+            86.3197125852152
+          ],
+          "predictive_error_px": 3.0651764083383757,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 17,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -9.747726220619148,
+        -10.572098253047455,
+        2.597511459917525
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.010957521386444569,
+          "observed_uv": [
+            51.83253860473633,
+            43.08958435058594
+          ],
+          "predicted_uv": [
+            51.48143901225035,
+            44.52597701417764
+          ],
+          "predictive_error_px": 1.478680089763804,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.0025323268491774797,
+          "observed_uv": [
+            55.913902282714844,
+            38.91401672363281
+          ],
+          "predicted_uv": [
+            55.093428423047186,
+            40.26487815809989
+          ],
+          "predictive_error_px": 1.5805075037874365,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": true
+    },
+    {
+      "landmark_id": 18,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -9.303115905060992,
+        -10.706860561478754,
+        2.312483360725776
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.3250427842140198,
+          "observed_uv": [
+            14.988608360290527,
+            58.53681564331055
+          ],
+          "predicted_uv": [
+            15.616878165010974,
+            59.93531376737394
+          ],
+          "predictive_error_px": 1.5331405514604002,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.31032517552375793,
+          "observed_uv": [
+            16.199783325195312,
+            53.283599853515625
+          ],
+          "predicted_uv": [
+            18.683975415072553,
+            56.21076413101915
+          ],
+          "predictive_error_px": 3.8392057833491244,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 19,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -11.212817737792133,
+        -6.381803556522189,
+        1.5480249016919456
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.2475024312734604,
+          "observed_uv": [
+            269.9143981933594,
+            36.58526611328125
+          ],
+          "predicted_uv": [
+            270.71818499948955,
+            35.54804805976025
+          ],
+          "predictive_error_px": 1.312209785155882,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.013019263744354248,
+          "observed_uv": [
+            277.56573486328125,
+            27.474435806274414
+          ],
+          "predicted_uv": [
+            278.85024261153313,
+            23.89721551067143
+          ],
+          "predictive_error_px": 3.8008505888278514,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 20,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -10.452616316624905,
+        -9.401073395815576,
+        2.043472937071415
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.011246506124734879,
+          "observed_uv": [
+            116.12974548339844,
+            67.20420837402344
+          ],
+          "predicted_uv": [
+            115.68363452865114,
+            66.46451144830019
+          ],
+          "predictive_error_px": 0.8638093110576976,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.006246736738830805,
+          "observed_uv": [
+            120.79530334472656,
+            64.00637817382812
+          ],
+          "predicted_uv": [
+            119.59403194442652,
+            61.628639344881236
+          ],
+          "predictive_error_px": 2.6639622587154927,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 21,
+      "training_image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "xyz_m": [
+        -11.328990537545616,
+        -5.394476956244543,
+        1.117102574536581
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 3769,
+          "timestamp_ns": 1793312523094234816,
+          "tracked": true,
+          "forward_backward_error_px": 0.02178116701543331,
+          "observed_uv": [
+            347.72271728515625,
+            49.9536018371582
+          ],
+          "predicted_uv": [
+            353.14015649203105,
+            49.86407268992741
+          ],
+          "predictive_error_px": 5.418178940233348,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 3772,
+          "timestamp_ns": 1793312523398113058,
+          "tracked": true,
+          "forward_backward_error_px": 0.020165659487247467,
+          "observed_uv": [
+            358.6195983886719,
+            38.14573287963867
+          ],
+          "predicted_uv": [
+            367.8064027100259,
+            35.37756434001028
+          ],
+          "predictive_error_px": 9.594797064171681,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 22,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -13.410494341061082,
+        -10.2103050012597,
+        0.4305924529067555
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.024654293432831764,
+          "observed_uv": [
+            216.91400146484375,
+            151.706787109375
+          ],
+          "predicted_uv": [
+            217.18567607465667,
+            152.68659593265528
+          ],
+          "predictive_error_px": 1.0167755031445675,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.0014515110524371266,
+          "observed_uv": [
+            215.768310546875,
+            151.59027099609375
+          ],
+          "predicted_uv": [
+            214.97314860540303,
+            152.05008033437582
+          ],
+          "predictive_error_px": 0.9185353236195521,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": true
+    },
+    {
+      "landmark_id": 23,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -12.889053973898042,
+        -10.44799370028623,
+        1.491917510919234
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.03318239748477936,
+          "observed_uv": [
+            290.9322814941406,
+            17.624767303466797
+          ],
+          "predicted_uv": [
+            293.58969737730973,
+            18.331490241423808
+          ],
+          "predictive_error_px": 2.7497848074265807,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.016552122309803963,
+          "observed_uv": [
+            290.5301208496094,
+            17.318851470947266
+          ],
+          "predicted_uv": [
+            292.1135587770767,
+            16.596526253011604
+          ],
+          "predictive_error_px": 1.7404106959588241,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 24,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -12.962428056331994,
+        -10.288551412749502,
+        1.17786180467701
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.006329583935439587,
+          "observed_uv": [
+            274.0009460449219,
+            62.35765075683594
+          ],
+          "predicted_uv": [
+            275.61461103435755,
+            62.6546602684501
+          ],
+          "predictive_error_px": 1.640770961505513,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.0017245849594473839,
+          "observed_uv": [
+            273.4325256347656,
+            61.791351318359375
+          ],
+          "predicted_uv": [
+            273.98969502253016,
+            61.31423870570731
+          ],
+          "predictive_error_px": 0.7335353923387621,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": true
+    },
+    {
+      "landmark_id": 25,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -12.708690288699046,
+        -10.357677327624446,
+        1.632575160663079
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.025606101378798485,
+          "observed_uv": [
+            304.4540100097656,
+            10.410367012023926
+          ],
+          "predicted_uv": [
+            307.409817940631,
+            11.387280545844021
+          ],
+          "predictive_error_px": 3.113062893153224,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.0018776527140289545,
+          "observed_uv": [
+            304.1482238769531,
+            10.29256820678711
+          ],
+          "predicted_uv": [
+            306.0657989739363,
+            9.698517427883672
+          ],
+          "predictive_error_px": 2.0074836438899815,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 26,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -12.523315392209135,
+        -9.799769474648178,
+        1.6414135739393767
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.07835778594017029,
+          "observed_uv": [
+            291.5016174316406,
+            38.3323860168457
+          ],
+          "predicted_uv": [
+            293.3991441571689,
+            39.59196812882186
+          ],
+          "predictive_error_px": 2.277532605892701,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.016731465235352516,
+          "observed_uv": [
+            291.248046875,
+            38.66265869140625
+          ],
+          "predicted_uv": [
+            291.9865546989686,
+            38.31881693643092
+          ],
+          "predictive_error_px": 0.8146293381209119,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 27,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -13.04505631239073,
+        -10.584209492963538,
+        0.8642692818556843
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.004468096885830164,
+          "observed_uv": [
+            282.8878173828125,
+            90.32584381103516
+          ],
+          "predicted_uv": [
+            284.2343085039464,
+            90.37108839260475
+          ],
+          "predictive_error_px": 1.3472510573214844,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.0030800935346633196,
+          "observed_uv": [
+            282.291748046875,
+            90.00975036621094
+          ],
+          "predicted_uv": [
+            282.639098638985,
+            89.16260581685663
+          ],
+          "predictive_error_px": 0.9155906953108905,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": true
+    },
+    {
+      "landmark_id": 28,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -12.779109555688915,
+        -10.478621071939383,
+        1.5034373310332658
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.037332866340875626,
+          "observed_uv": [
+            304.5276794433594,
+            17.998401641845703
+          ],
+          "predicted_uv": [
+            307.83523058340603,
+            18.85766120147278
+          ],
+          "predictive_error_px": 3.4173412962176384,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.004948199260979891,
+          "observed_uv": [
+            304.1535339355469,
+            17.819992065429688
+          ],
+          "predicted_uv": [
+            306.4841469254052,
+            17.15963376555223
+          ],
+          "predictive_error_px": 2.422360417591349,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 29,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -13.15837950049307,
+        -10.408099014195425,
+        1.0085974344322075
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.008990602567791939,
+          "observed_uv": [
+            258.079833984375,
+            74.3212890625
+          ],
+          "predicted_uv": [
+            259.4176946208557,
+            74.9195020305493
+          ],
+          "predictive_error_px": 1.4655135065180565,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.0033619236201047897,
+          "observed_uv": [
+            257.4139099121094,
+            74.04467010498047
+          ],
+          "predicted_uv": [
+            257.60830100192294,
+            73.590218498372
+          ],
+          "predictive_error_px": 0.4942814568117309,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": true
+    },
+    {
+      "landmark_id": 30,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -12.708630839182925,
+        -10.541342293862868,
+        1.4970560456852755
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.06791944801807404,
+          "observed_uv": [
+            316.22015380859375,
+            18.171913146972656
+          ],
+          "predicted_uv": [
+            319.82105810508256,
+            18.7558552498879
+          ],
+          "predictive_error_px": 3.647944644869029,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.005465044640004635,
+          "observed_uv": [
+            315.7646789550781,
+            17.892187118530273
+          ],
+          "predicted_uv": [
+            318.5699245188106,
+            17.06234692936519
+          ],
+          "predictive_error_px": 2.9254123491217716,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 31,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -12.926080243025597,
+        -10.523784287167127,
+        0.9836828374989772
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.006101917941123247,
+          "observed_uv": [
+            292.5528564453125,
+            78.99370574951172
+          ],
+          "predicted_uv": [
+            294.4314732488739,
+            79.2967475630642
+          ],
+          "predictive_error_px": 1.9029018459669365,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.010577323846518993,
+          "observed_uv": [
+            292.044189453125,
+            78.65580749511719
+          ],
+          "predicted_uv": [
+            292.9463952554622,
+            78.04177601651088
+          ],
+          "predictive_error_px": 1.0913340306663202,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": true
+    },
+    {
+      "landmark_id": 32,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -12.857183992254885,
+        -10.020908965627987,
+        1.3615909331880929
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.003304540878161788,
+          "observed_uv": [
+            270.8764343261719,
+            53.18698501586914
+          ],
+          "predicted_uv": [
+            272.2322442434882,
+            53.703433828730624
+          ],
+          "predictive_error_px": 1.4508411037047875,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.0025673366617411375,
+          "observed_uv": [
+            270.3013000488281,
+            52.58906555175781
+          ],
+          "predicted_uv": [
+            270.6201045749318,
+            52.3927941058306
+          ],
+          "predictive_error_px": 0.3743778924436592,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": true
+    },
+    {
+      "landmark_id": 33,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -13.009037226564649,
+        -10.591994003323268,
+        0.7789262845467331
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.0376131609082222,
+          "observed_uv": [
+            287.6131591796875,
+            102.62521362304688
+          ],
+          "predicted_uv": [
+            289.159609034094,
+            102.49747375308114
+          ],
+          "predictive_error_px": 1.5517166708432037,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.0035508829168975353,
+          "observed_uv": [
+            286.9677429199219,
+            102.51444244384766
+          ],
+          "predicted_uv": [
+            287.6109705052741,
+            101.40632517894313
+          ],
+          "predictive_error_px": 1.281274989741681,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": true
+    },
+    {
+      "landmark_id": 34,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -10.917892432150543,
+        -11.405479919298044,
+        -0.10876721712894305
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.3313499987125397,
+          "observed_uv": [
+            555.7354736328125,
+            222.1483917236328
+          ],
+          "predicted_uv": [
+            556.464099004103,
+            224.02824996284465
+          ],
+          "predictive_error_px": 2.0161254750686655,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.07087916135787964,
+          "observed_uv": [
+            556.0391235351562,
+            222.6382293701172
+          ],
+          "predicted_uv": [
+            556.760429663266,
+            224.0445679114135
+          ],
+          "predictive_error_px": 1.5805285898028347,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": false,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 35,
+      "training_image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "xyz_m": [
+        -12.747989914773834,
+        -10.31956670598085,
+        1.5012787179600433
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5516,
+          "timestamp_ns": 1793312698182996961,
+          "tracked": true,
+          "forward_backward_error_px": 0.10569427907466888,
+          "observed_uv": [
+            297.9601135253906,
+            26.52110481262207
+          ],
+          "predicted_uv": [
+            300.9067545556697,
+            27.729146772471694
+          ],
+          "predictive_error_px": 3.1846599093280594,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5519,
+          "timestamp_ns": 1793312698482785000,
+          "tracked": true,
+          "forward_backward_error_px": 0.024324864149093628,
+          "observed_uv": [
+            297.6241760253906,
+            26.725404739379883
+          ],
+          "predicted_uv": [
+            299.5089685912413,
+            26.167272855237883
+          ],
+          "predictive_error_px": 1.965694334422779,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 36,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.781571481563482,
+        -10.44634357057751,
+        0.4396994462346528
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.0068756891414523125,
+          "observed_uv": [
+            281.9599609375,
+            124.75099182128906
+          ],
+          "predicted_uv": [
+            278.2504824656512,
+            123.7233714148463
+          ],
+          "predictive_error_px": 3.8491861779923404,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": true,
+          "forward_backward_error_px": 0.03650989383459091,
+          "observed_uv": [
+            277.1865539550781,
+            118.74382019042969
+          ],
+          "predicted_uv": [
+            270.0483831026692,
+            113.98610941848386
+          ],
+          "predictive_error_px": 8.578420303742957,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 37,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.827103903635091,
+        -10.042120144738046,
+        1.2825383448182937
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": false,
+          "forward_backward_error_px": 112.5755844116211,
+          "observed_uv": [
+            238.73361206054688,
+            -97.00784301757812
+          ],
+          "predicted_uv": [
+            238.7029258871893,
+            -0.23289593966029543
+          ],
+          "predictive_error_px": 96.77495194302621,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": false,
+          "reason": "previous_tracking_failure"
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 38,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.27866118730253,
+        -9.90931295921413,
+        0.9248701665077863
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.019264305010437965,
+          "observed_uv": [
+            302.4161682128906,
+            79.74827575683594
+          ],
+          "predicted_uv": [
+            302.2603739984042,
+            79.15811197952007
+          ],
+          "predictive_error_px": 0.6103811279218709,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": true,
+          "forward_backward_error_px": 0.0372396819293499,
+          "observed_uv": [
+            297.9280090332031,
+            72.94963073730469
+          ],
+          "predicted_uv": [
+            296.83339717690967,
+            68.73988844301016
+          ],
+          "predictive_error_px": 4.349724738453039,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 39,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.775704505368028,
+        -10.231790995373485,
+        0.6920340651929215
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.008795008063316345,
+          "observed_uv": [
+            264.41339111328125,
+            88.4087905883789
+          ],
+          "predicted_uv": [
+            260.571572266614,
+            87.76311037725765
+          ],
+          "predictive_error_px": 3.8956995502273126,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": true,
+          "forward_backward_error_px": 0.0034636526834219694,
+          "observed_uv": [
+            258.41156005859375,
+            79.96917724609375
+          ],
+          "predicted_uv": [
+            251.05118447089995,
+            75.49922738599818
+          ],
+          "predictive_error_px": 8.611363454394848,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 40,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -13.283469476985047,
+        -10.284689655748569,
+        0.42438045722401296
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": false,
+          "forward_backward_error_px": 1.1087360382080078,
+          "observed_uv": [
+            176.26895141601562,
+            119.91011810302734
+          ],
+          "predicted_uv": [
+            175.08141772382143,
+            120.37651980232557
+          ],
+          "predictive_error_px": 1.2758396510551988,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": false,
+          "reason": "previous_tracking_failure"
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 41,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -13.260194145919312,
+        -10.27518096533816,
+        0.46361718647251354
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.18673354387283325,
+          "observed_uv": [
+            180.79119873046875,
+            114.94447326660156
+          ],
+          "predicted_uv": [
+            179.14769680688397,
+            113.68724224835456
+          ],
+          "predictive_error_px": 2.069233772696853,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": true,
+          "forward_backward_error_px": 0.4400603473186493,
+          "observed_uv": [
+            171.01742553710938,
+            107.61460876464844
+          ],
+          "predicted_uv": [
+            159.9578092487452,
+            102.07836707429136
+          ],
+          "predictive_error_px": 12.367905420882622,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 42,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.875466039321068,
+        -10.271233209750726,
+        0.9776308810558175
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.005022299010306597,
+          "observed_uv": [
+            252.77110290527344,
+            34.14045715332031
+          ],
+          "predicted_uv": [
+            247.99004721108574,
+            32.967100479911664
+          ],
+          "predictive_error_px": 4.922931995666529,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": true,
+          "forward_backward_error_px": 0.0015675018075853586,
+          "observed_uv": [
+            245.6503448486328,
+            21.014835357666016
+          ],
+          "predicted_uv": [
+            237.09010431910806,
+            15.056956259140094
+          ],
+          "predictive_error_px": 10.429479434562886,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 43,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.432208678212492,
+        -9.886653532473092,
+        0.9082769246740924
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.01031516958028078,
+          "observed_uv": [
+            283.91796875,
+            78.74642944335938
+          ],
+          "predicted_uv": [
+            281.777507857664,
+            78.28783616241844
+          ],
+          "predictive_error_px": 2.189036461309882,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": true,
+          "forward_backward_error_px": 0.004620365332812071,
+          "observed_uv": [
+            279.2710876464844,
+            71.22128295898438
+          ],
+          "predicted_uv": [
+            274.7706053435626,
+            67.48181082437458
+          ],
+          "predictive_error_px": 5.851324021487397,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 44,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.722105822193612,
+        -10.107695272164083,
+        1.2490880607782358
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": false,
+          "forward_backward_error_px": 51.20508575439453,
+          "observed_uv": [
+            262.872802734375,
+            -45.752342224121094
+          ],
+          "predicted_uv": [
+            259.0141620312332,
+            5.438712625056098
+          ],
+          "predictive_error_px": 51.336275718515175,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": false,
+          "reason": "previous_tracking_failure"
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 45,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.083946693829224,
+        -9.614425303341521,
+        1.1957775221625127
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.09712576121091843,
+          "observed_uv": [
+            302.69952392578125,
+            60.72409439086914
+          ],
+          "predicted_uv": [
+            302.51602476897517,
+            60.14077276419218
+          ],
+          "predictive_error_px": 0.6115031158527318,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": true,
+          "forward_backward_error_px": 0.11183664202690125,
+          "observed_uv": [
+            298.2742004394531,
+            52.96620559692383
+          ],
+          "predicted_uv": [
+            297.22776224288106,
+            49.66596834907176
+          ],
+          "predictive_error_px": 3.462166776941167,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 46,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.81800454089945,
+        -10.254286641390554,
+        0.8967277862124209
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.01255111489444971,
+          "observed_uv": [
+            260.0357360839844,
+            51.270179748535156
+          ],
+          "predicted_uv": [
+            255.8184663911979,
+            50.29044410587957
+          ],
+          "predictive_error_px": 4.329577992274211,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": true,
+          "forward_backward_error_px": 0.05682633817195892,
+          "observed_uv": [
+            253.49716186523438,
+            40.02991485595703
+          ],
+          "predicted_uv": [
+            245.78177149334846,
+            34.35964303805281
+          ],
+          "predictive_error_px": 9.574927210141535,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 47,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.385628475934904,
+        -9.96843651560586,
+        0.8615172247560867
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.5841066241264343,
+          "observed_uv": [
+            294.7957763671875,
+            83.85769653320312
+          ],
+          "predicted_uv": [
+            293.8128926306572,
+            83.0379448061052
+          ],
+          "predictive_error_px": 1.2798645762797778,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": true,
+          "forward_backward_error_px": 0.49538901448249817,
+          "observed_uv": [
+            290.02667236328125,
+            77.3119888305664
+          ],
+          "predicted_uv": [
+            287.69395099056857,
+            72.46485134674421
+          ],
+          "predictive_error_px": 5.379250021126059,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 48,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.12874325918976,
+        -10.43973391678686,
+        1.2257716050850733
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.021120276302099228,
+          "observed_uv": [
+            365.4023742675781,
+            14.939082145690918
+          ],
+          "predicted_uv": [
+            368.1129193231556,
+            14.218394587658963
+          ],
+          "predictive_error_px": 2.804718355667393,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": false,
+          "forward_backward_error_px": 0.7554039359092712,
+          "observed_uv": [
+            363.53466796875,
+            2.1906166076660156
+          ],
+          "predicted_uv": [
+            367.9255217914569,
+            -2.5852357538566935
+          ],
+          "predictive_error_px": 6.487554475412276,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 49,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.280552116432865,
+        -9.793258555224428,
+        1.0343316871319668
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.06009606271982193,
+          "observed_uv": [
+            294.3923645019531,
+            69.06546783447266
+          ],
+          "predicted_uv": [
+            293.31300933886575,
+            68.66814181784628
+          ],
+          "predictive_error_px": 1.150163263007279,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": true,
+          "forward_backward_error_px": 0.4731186330318451,
+          "observed_uv": [
+            289.7862548828125,
+            61.51409912109375
+          ],
+          "predicted_uv": [
+            287.2844444298552,
+            57.82728809537491
+          ],
+          "predictive_error_px": 4.4555169264506524,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 50,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.779756309091105,
+        -10.085052930939076,
+        1.2778979035154105
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": false,
+          "forward_backward_error_px": 45.17930221557617,
+          "observed_uv": [
+            255.76771545410156,
+            -45.17951965332031
+          ],
+          "predicted_uv": [
+            248.83687754670564,
+            -0.24788550591048875
+          ],
+          "predictive_error_px": 45.46304280682586,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": false,
+          "reason": "previous_tracking_failure"
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 51,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.639907836314622,
+        -10.366195462142468,
+        0.5127986350340734
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.06956911832094193,
+          "observed_uv": [
+            293.9934997558594,
+            117.78312683105469
+          ],
+          "predicted_uv": [
+            292.8931002671831,
+            116.83006886628392
+          ],
+          "predictive_error_px": 1.455746722095559,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": true,
+          "forward_backward_error_px": 0.5712050795555115,
+          "observed_uv": [
+            289.0243225097656,
+            112.6235580444336
+          ],
+          "predicted_uv": [
+            286.3123450386282,
+            107.1215706682807
+          ],
+          "predictive_error_px": 6.13405957676502,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 52,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.813088538996745,
+        -10.248112299467664,
+        1.041987075495182
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": false,
+          "forward_backward_error_px": 74.51992797851562,
+          "observed_uv": [
+            258.17938232421875,
+            -48.93220520019531
+          ],
+          "predicted_uv": [
+            256.1259711772018,
+            26.100372176545363
+          ],
+          "predictive_error_px": 75.06066989532714,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": false,
+          "reason": "previous_tracking_failure"
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 53,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.313435155544799,
+        -9.97676007349339,
+        0.8343571522097668
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": true,
+          "forward_backward_error_px": 0.23241697251796722,
+          "observed_uv": [
+            303.40283203125,
+            89.11372375488281
+          ],
+          "predicted_uv": [
+            303.39358824788945,
+            88.48790421511703
+          ],
+          "predictive_error_px": 0.6258878045492472,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": true,
+          "forward_backward_error_px": 0.6096629500389099,
+          "observed_uv": [
+            299.5841064453125,
+            82.84912109375
+          ],
+          "predicted_uv": [
+            298.0209944725154,
+            78.47703852259227
+          ],
+          "predictive_error_px": 4.643105108493982,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 54,
+      "training_image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "xyz_m": [
+        -12.895396802044688,
+        -10.048113848186084,
+        1.2223893787810938
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5536,
+          "timestamp_ns": 1793312700186662872,
+          "tracked": false,
+          "forward_backward_error_px": 117.27845001220703,
+          "observed_uv": [
+            229.1435546875,
+            -95.89501953125
+          ],
+          "predicted_uv": [
+            228.65305253088331,
+            5.83752372130067
+          ],
+          "predictive_error_px": 101.73372572061704,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5539,
+          "timestamp_ns": 1793312700486543353,
+          "tracked": false,
+          "reason": "previous_tracking_failure"
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 55,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -7.2256202188498895,
+        -8.54063055436559,
+        1.215730246275552
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.007607528008520603,
+          "observed_uv": [
+            519.2469482421875,
+            133.64749145507812
+          ],
+          "predicted_uv": [
+            519.6956503282138,
+            135.59579629913534
+          ],
+          "predictive_error_px": 1.9993062115096742,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.029439721256494522,
+          "observed_uv": [
+            522.3554077148438,
+            130.3948974609375
+          ],
+          "predicted_uv": [
+            523.421136847878,
+            132.89049805691582
+          ],
+          "predictive_error_px": 2.713632421615938,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 56,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -12.13570202946506,
+        -9.371566084006696,
+        0.6958913644382352
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.0018690770957618952,
+          "observed_uv": [
+            262.2579650878906,
+            104.68073272705078
+          ],
+          "predicted_uv": [
+            258.00519128602707,
+            103.83172668685216
+          ],
+          "predictive_error_px": 4.3366918574082165,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.004034738056361675,
+          "observed_uv": [
+            256.3560485839844,
+            97.5091781616211
+          ],
+          "predicted_uv": [
+            250.39911463143662,
+            94.09175530751769
+          ],
+          "predictive_error_px": 6.867593543503031,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 57,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -11.912266850247507,
+        -9.042500516264107,
+        1.212933159824315
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.02652219869196415,
+          "observed_uv": [
+            266.53179931640625,
+            51.892112731933594
+          ],
+          "predicted_uv": [
+            263.01463248594143,
+            50.83610218868537
+          ],
+          "predictive_error_px": 3.6722773289572403,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.07217918336391449,
+          "observed_uv": [
+            261.25567626953125,
+            42.34031295776367
+          ],
+          "predicted_uv": [
+            256.44331101544634,
+            38.64482222281393
+          ],
+          "predictive_error_px": 6.067578686001782,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 58,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -12.264598322381532,
+        -9.39662500358357,
+        0.987302210664229
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.00585444550961256,
+          "observed_uv": [
+            246.3136444091797,
+            55.97342300415039
+          ],
+          "predicted_uv": [
+            242.1971388389381,
+            55.14870546653512
+          ],
+          "predictive_error_px": 4.198306459357191,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.011377778835594654,
+          "observed_uv": [
+            238.35894775390625,
+            44.862640380859375
+          ],
+          "predicted_uv": [
+            233.07138824950263,
+            40.92618001199526
+          ],
+          "predictive_error_px": 6.591965241735339,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 59,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -11.727456686496057,
+        -9.083070133829695,
+        1.2434217503556648
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.10130108892917633,
+          "observed_uv": [
+            287.5260009765625,
+            52.11643981933594
+          ],
+          "predicted_uv": [
+            286.5766162268518,
+            50.80056043744136
+          ],
+          "predictive_error_px": 1.6226120764614391,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.13008879125118256,
+          "observed_uv": [
+            282.5540771484375,
+            42.8154411315918
+          ],
+          "predicted_uv": [
+            281.75386931971707,
+            38.95574411219263
+          ],
+          "predictive_error_px": 3.9417754439724564,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 60,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -12.038786317909173,
+        -9.323111304277274,
+        0.7594443689276387
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.012393521144986153,
+          "observed_uv": [
+            271.0219421386719,
+            99.19207763671875
+          ],
+          "predicted_uv": [
+            267.1019212200872,
+            98.47092392891211
+          ],
+          "predictive_error_px": 3.985803140199557,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.03349204361438751,
+          "observed_uv": [
+            266.1260681152344,
+            91.61534118652344
+          ],
+          "predicted_uv": [
+            260.40380643758874,
+            88.66260651418199
+          ],
+          "predictive_error_px": 6.439170812511437,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 61,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -8.036592322121663,
+        -8.84448663834172,
+        0.4192540736846647
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.045203786343336105,
+          "observed_uv": [
+            510.3653259277344,
+            182.11827087402344
+          ],
+          "predicted_uv": [
+            510.91916800054526,
+            183.76542918702114
+          ],
+          "predictive_error_px": 1.7377777618823682,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": false,
+          "forward_backward_error_px": 24.93816375732422,
+          "observed_uv": [
+            514.4534912109375,
+            183.68128967285156
+          ],
+          "predicted_uv": [
+            515.2796448807918,
+            182.39756748341418
+          ],
+          "predictive_error_px": 1.5265885319455437,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 62,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -11.789650489949235,
+        -8.99738777668602,
+        1.2459327124157578
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.06771024316549301,
+          "observed_uv": [
+            276.3541564941406,
+            52.851985931396484
+          ],
+          "predicted_uv": [
+            273.92042239586954,
+            52.13197252909296
+          ],
+          "predictive_error_px": 2.538007281428499,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.10505396127700806,
+          "observed_uv": [
+            271.21490478515625,
+            43.37889862060547
+          ],
+          "predicted_uv": [
+            268.24241593280595,
+            40.469896148785125
+          ],
+          "predictive_error_px": 4.159084677955433,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 63,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -11.418596066149412,
+        -8.703453929616325,
+        1.626240307578364
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.025474028661847115,
+          "observed_uv": [
+            293.3917236328125,
+            31.199108123779297
+          ],
+          "predicted_uv": [
+            292.8224976538412,
+            30.27266425092685
+          ],
+          "predictive_error_px": 1.0873437656425298,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": false,
+          "forward_backward_error_px": 4.216300964355469,
+          "observed_uv": [
+            284.25836181640625,
+            21.208776473999023
+          ],
+          "predicted_uv": [
+            288.67552573412684,
+            18.84324257558839
+          ],
+          "predictive_error_px": 5.0106973267742365,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 64,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -11.658957126468595,
+        -8.893479199000955,
+        1.349308223278718
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.02362755872309208,
+          "observed_uv": [
+            282.7152099609375,
+            48.34766387939453
+          ],
+          "predicted_uv": [
+            281.12753042452056,
+            47.42566455059216
+          ],
+          "predictive_error_px": 1.835976326826994,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.044997695833444595,
+          "observed_uv": [
+            277.7025451660156,
+            39.123374938964844
+          ],
+          "predicted_uv": [
+            276.07385596367936,
+            36.04315416339605
+          ],
+          "predictive_error_px": 3.4843060347868877,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 65,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -6.348965006510227,
+        -7.795204033803314,
+        3.7389589772270235
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.1454210728406906,
+          "observed_uv": [
+            501.3808898925781,
+            7.404031753540039
+          ],
+          "predicted_uv": [
+            502.7744809642103,
+            7.862991764277552
+          ],
+          "predictive_error_px": 1.4672219894716159,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": false,
+          "forward_backward_error_px": 19.80547523498535,
+          "observed_uv": [
+            500.331298828125,
+            -11.12701416015625
+          ],
+          "predicted_uv": [
+            505.0434017897693,
+            2.2103167183171877
+          ],
+          "predictive_error_px": 14.145257483800638,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 66,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -11.622595158680774,
+        -8.592693029239017,
+        1.5468447910270102
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.06941404938697815,
+          "observed_uv": [
+            269.1878356933594,
+            37.08550262451172
+          ],
+          "predicted_uv": [
+            266.5392327616288,
+            37.545663354283676
+          ],
+          "predictive_error_px": 2.688279261385632,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.028824543580412865,
+          "observed_uv": [
+            263.8443298339844,
+            27.826501846313477
+          ],
+          "predicted_uv": [
+            260.77259039967817,
+            26.380762034289063
+          ],
+          "predictive_error_px": 3.3949590213055916,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 67,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -11.333348197739078,
+        -8.855581536795386,
+        1.6052050440361378
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.051241450011730194,
+          "observed_uv": [
+            310.75518798828125,
+            29.869731903076172
+          ],
+          "predicted_uv": [
+            310.62113572313274,
+            28.99246519243684
+          ],
+          "predictive_error_px": 0.8874496556917478,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.09369315952062607,
+          "observed_uv": [
+            306.51971435546875,
+            20.401453018188477
+          ],
+          "predicted_uv": [
+            307.5316055744746,
+            17.302278877099155
+          ],
+          "predictive_error_px": 3.2601846873908693,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 68,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -11.744288973154115,
+        -9.111259388997318,
+        1.1452109935341315
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.1838265061378479,
+          "observed_uv": [
+            287.751953125,
+            62.51947021484375
+          ],
+          "predicted_uv": [
+            286.7239979148334,
+            61.66289844152931
+          ],
+          "predictive_error_px": 1.3380609541227024,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.25931107997894287,
+          "observed_uv": [
+            283.0073547363281,
+            53.90183639526367
+          ],
+          "predicted_uv": [
+            281.885608670757,
+            50.43752368416503
+          ],
+          "predictive_error_px": 3.6413976432001958,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 69,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -13.313332263302181,
+        -10.269973971620137,
+        0.026462368477299183
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": false,
+          "forward_backward_error_px": 2.4378998279571533,
+          "observed_uv": [
+            82.05599975585938,
+            174.15963745117188
+          ],
+          "predicted_uv": [
+            77.29589171952048,
+            187.64686735725928
+          ],
+          "predictive_error_px": 14.302587145592808,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": false,
+          "reason": "previous_tracking_failure"
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 70,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -12.082586900054878,
+        -8.390919391058143,
+        1.6924986773547392
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.267426073551178,
+          "observed_uv": [
+            212.7790069580078,
+            16.915184020996094
+          ],
+          "predicted_uv": [
+            208.0083726054063,
+            15.959015748418778
+          ],
+          "predictive_error_px": 4.865512294887888,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.6395763158798218,
+          "observed_uv": [
+            205.31137084960938,
+            7.405305862426758
+          ],
+          "predicted_uv": [
+            198.40101567002426,
+            2.953205133843653
+          ],
+          "predictive_error_px": 8.220353374732072,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 71,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -7.324064523000709,
+        -8.578644503408738,
+        1.3059443035144433
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.13481122255325317,
+          "observed_uv": [
+            518.314453125,
+            127.00432586669922
+          ],
+          "predicted_uv": [
+            518.6998234692237,
+            128.3772570705059
+          ],
+          "predictive_error_px": 1.4259910212175717,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.04287762567400932,
+          "observed_uv": [
+            521.35107421875,
+            123.90083312988281
+          ],
+          "predicted_uv": [
+            522.4946577720704,
+            125.39796077339166
+          ],
+          "predictive_error_px": 1.8839252969221367,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": true
+    },
+    {
+      "landmark_id": 72,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -11.769800149185153,
+        -8.965772979827506,
+        1.1776225086113845
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.1344151347875595,
+          "observed_uv": [
+            276.42059326171875,
+            62.785396575927734
+          ],
+          "predicted_uv": [
+            274.02234237256823,
+            62.421472720533956
+          ],
+          "predictive_error_px": 2.4257056498750873,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": false,
+          "forward_backward_error_px": 1.1800258159637451,
+          "observed_uv": [
+            270.9983215332031,
+            55.12913513183594
+          ],
+          "predicted_uv": [
+            268.3826716966274,
+            51.58010530042034
+          ],
+          "predictive_error_px": 4.4087681739751625,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 73,
+      "training_image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "xyz_m": [
+        -11.075877702942213,
+        -8.713691508995437,
+        1.3043801171965645
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5546,
+          "timestamp_ns": 1793312701186358056,
+          "tracked": true,
+          "forward_backward_error_px": 0.027716094627976418,
+          "observed_uv": [
+            323.2858581542969,
+            74.01805114746094
+          ],
+          "predicted_uv": [
+            324.31145478399714,
+            73.14091478683511
+          ],
+          "predictive_error_px": 1.3495245985103244,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5549,
+          "timestamp_ns": 1793312701486299170,
+          "tracked": true,
+          "forward_backward_error_px": 0.04498309642076492,
+          "observed_uv": [
+            318.7962341308594,
+            67.43759155273438
+          ],
+          "predicted_uv": [
+            322.02746019461847,
+            64.7415830183333
+          ],
+          "predictive_error_px": 4.208239999415376,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 74,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -10.80332700503177,
+        -8.853242666240071,
+        1.1233438140734173
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.01837373711168766,
+          "observed_uv": [
+            353.393310546875,
+            67.2415771484375
+          ],
+          "predicted_uv": [
+            357.4498561579564,
+            66.35564431005216
+          ],
+          "predictive_error_px": 4.152160797574342,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": true,
+          "forward_backward_error_px": 0.0031626946292817593,
+          "observed_uv": [
+            358.6205749511719,
+            53.08149337768555
+          ],
+          "predicted_uv": [
+            362.3462750516126,
+            55.3530599504258
+          ],
+          "predictive_error_px": 4.363582923792683,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 75,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -11.032579430442015,
+        -9.010223870053492,
+        0.9366357593993211
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.008957731537520885,
+          "observed_uv": [
+            344.9260559082031,
+            80.08901977539062
+          ],
+          "predicted_uv": [
+            348.95784017802737,
+            78.79584913438731
+          ],
+          "predictive_error_px": 4.234096681129888,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": true,
+          "forward_backward_error_px": 0.00540049048140645,
+          "observed_uv": [
+            349.8228454589844,
+            66.54127502441406
+          ],
+          "predicted_uv": [
+            353.4796813250809,
+            67.73185437059774
+          ],
+          "predictive_error_px": 3.8457675087203347,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 76,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -7.306689486343365,
+        -8.551033092981433,
+        1.2481103684975936
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.16013863682746887,
+          "observed_uv": [
+            533.1150512695312,
+            124.01265716552734
+          ],
+          "predicted_uv": [
+            534.1290928198966,
+            122.17023940060338
+          ],
+          "predictive_error_px": 2.103041484701352,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": true,
+          "forward_backward_error_px": 0.1748267114162445,
+          "observed_uv": [
+            545.498779296875,
+            116.3920669555664
+          ],
+          "predicted_uv": [
+            545.2116855548848,
+            117.9898637079905
+          ],
+          "predictive_error_px": 1.6233845135231904,
+          "within_2px": true
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 77,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -10.927511852148772,
+        -9.016139838025502,
+        0.9832813460189244
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.0162810068577528,
+          "observed_uv": [
+            355.8633117675781,
+            76.10713195800781
+          ],
+          "predicted_uv": [
+            360.28590997671716,
+            75.20021749294781
+          ],
+          "predictive_error_px": 4.514628308777468,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": true,
+          "forward_backward_error_px": 0.055123958736658096,
+          "observed_uv": [
+            361.3619079589844,
+            62.02798843383789
+          ],
+          "predicted_uv": [
+            365.614095297062,
+            64.0800849342111
+          ],
+          "predictive_error_px": 4.721461342100753,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 78,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -11.106061940276055,
+        -9.211599698939741,
+        1.290963090908383
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.0311739444732666,
+          "observed_uv": [
+            355.6451721191406,
+            18.068880081176758
+          ],
+          "predicted_uv": [
+            360.39880736588117,
+            16.91671386942312
+          ],
+          "predictive_error_px": 4.891271311076575,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": false,
+          "forward_backward_error_px": 0.919350802898407,
+          "observed_uv": [
+            360.7290344238281,
+            -1.3835582733154297
+          ],
+          "predicted_uv": [
+            366.01278176551523,
+            -0.0591855936831962
+          ],
+          "predictive_error_px": 5.447196431683164,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 79,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -11.486028977897774,
+        -8.292648452553312,
+        1.0311085625226348
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.006141567602753639,
+          "observed_uv": [
+            244.78656005859375,
+            79.67355346679688
+          ],
+          "predicted_uv": [
+            244.03221623822327,
+            79.49532682154171
+          ],
+          "predictive_error_px": 0.7751124669427275,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": true,
+          "forward_backward_error_px": 0.004942175466567278,
+          "observed_uv": [
+            245.43789672851562,
+            66.44341278076172
+          ],
+          "predicted_uv": [
+            241.0292305736553,
+            69.69285904634648
+          ],
+          "predictive_error_px": 5.476790875862774,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 80,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -5.121469892521235,
+        -8.645105559630055,
+        3.233095047062621
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.020532151684165,
+          "observed_uv": [
+            598.3794555664062,
+            19.876850128173828
+          ],
+          "predicted_uv": [
+            602.5074845882966,
+            20.180941022212266
+          ],
+          "predictive_error_px": 4.1392142826152725,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": true,
+          "forward_backward_error_px": 0.022479962557554245,
+          "observed_uv": [
+            612.3569946289062,
+            7.552435398101807
+          ],
+          "predicted_uv": [
+            614.936680483174,
+            12.763170604037384
+          ],
+          "predictive_error_px": 5.814339213795964,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 81,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -4.019421981937608,
+        -8.170928084194927,
+        3.1029218764514868
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.17020373046398163,
+          "observed_uv": [
+            591.7584228515625,
+            52.540016174316406
+          ],
+          "predicted_uv": [
+            596.2235867384916,
+            53.38882190188343
+          ],
+          "predictive_error_px": 4.54512482780024,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": true,
+          "forward_backward_error_px": 0.08323507010936737,
+          "observed_uv": [
+            604.3585815429688,
+            42.0267448425293
+          ],
+          "predicted_uv": [
+            606.9898348052775,
+            48.05673947024846
+          ],
+          "predictive_error_px": 6.579082682314638,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 82,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -11.870740286885251,
+        -8.657161847382483,
+        1.3088639156483803
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.0024886915925890207,
+          "observed_uv": [
+            218.9505615234375,
+            13.616437911987305
+          ],
+          "predicted_uv": [
+            218.37280250805912,
+            13.004648972816312
+          ],
+          "predictive_error_px": 0.8414815422473383,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": false,
+          "forward_backward_error_px": 46.44647216796875,
+          "observed_uv": [
+            210.2427978515625,
+            -48.59645080566406
+          ],
+          "predicted_uv": [
+            212.29531375825172,
+            -4.089008708541542
+          ],
+          "predictive_error_px": 44.55474411974472,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 83,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -3.7496284764464862,
+        -7.894382780543231,
+        3.460283051296021
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.024644168093800545,
+          "observed_uv": [
+            582.0684204101562,
+            43.19029235839844
+          ],
+          "predicted_uv": [
+            585.7214074076314,
+            43.115515610339
+          ],
+          "predictive_error_px": 3.653752258401367,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": true,
+          "forward_backward_error_px": 0.03416232019662857,
+          "observed_uv": [
+            594.579833984375,
+            32.907684326171875
+          ],
+          "predicted_uv": [
+            595.742826208741,
+            37.73156215092445
+          ],
+          "predictive_error_px": 4.962091109812011,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 84,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -11.392438521678212,
+        -8.191547059129231,
+        1.591101788136978
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.011167695745825768,
+          "observed_uv": [
+            250.42506408691406,
+            18.52713394165039
+          ],
+          "predicted_uv": [
+            248.549236070324,
+            17.87493042126951
+          ],
+          "predictive_error_px": 1.9859758759414397,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": false,
+          "forward_backward_error_px": 0.31445246934890747,
+          "observed_uv": [
+            251.18161010742188,
+            1.7098007202148438
+          ],
+          "predicted_uv": [
+            246.05298682080934,
+            4.499676236077079
+          ],
+          "predictive_error_px": 5.838337281280686,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 85,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -8.327106843272674,
+        -8.961239628474585,
+        0.6744742290627598
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.11810089647769928,
+          "observed_uv": [
+            523.5579833984375,
+            151.75965881347656
+          ],
+          "predicted_uv": [
+            527.6657693519968,
+            153.43121116380837
+          ],
+          "predictive_error_px": 4.434861068867759,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": false,
+          "forward_backward_error_px": 0.975202202796936,
+          "observed_uv": [
+            537.0215454101562,
+            143.9325408935547
+          ],
+          "predicted_uv": [
+            540.2327711494196,
+            150.00287471632458
+          ],
+          "predictive_error_px": 6.867381121531816,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 86,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -11.220694782689538,
+        -8.153549812810285,
+        1.6620858527116813
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.026041580364108086,
+          "observed_uv": [
+            264.66448974609375,
+            17.625085830688477
+          ],
+          "predicted_uv": [
+            264.3827351941029,
+            17.04524092024363
+          ],
+          "predictive_error_px": 0.6446749163232232,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": false,
+          "forward_backward_error_px": 3.6676461696624756,
+          "observed_uv": [
+            264.5188903808594,
+            -2.499739646911621
+          ],
+          "predicted_uv": [
+            263.0522730788655,
+            4.1102208002013185
+          ],
+          "predictive_error_px": 6.770712179889597,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 87,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -11.25393955403819,
+        -8.179245858025025,
+        1.5983607997096356
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.07994800806045532,
+          "observed_uv": [
+            262.89129638671875,
+            22.726085662841797
+          ],
+          "predicted_uv": [
+            262.5160127450907,
+            22.173966156973165
+          ],
+          "predictive_error_px": 0.6675880169942012,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": false,
+          "forward_backward_error_px": 0.4562772810459137,
+          "observed_uv": [
+            263.95892333984375,
+            5.148195743560791
+          ],
+          "predicted_uv": [
+            261.02863571656377,
+            9.408999670754952
+          ],
+          "predictive_error_px": 5.171173528430565,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 88,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -7.161310145233869,
+        -8.45903871058411,
+        0.9947454344889499
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.2165905237197876,
+          "observed_uv": [
+            528.5103149414062,
+            142.66346740722656
+          ],
+          "predicted_uv": [
+            532.6920857331615,
+            143.1644393660394
+          ],
+          "predictive_error_px": 4.211671860234901,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": true,
+          "forward_backward_error_px": 0.022898685187101364,
+          "observed_uv": [
+            541.0745239257812,
+            135.302978515625
+          ],
+          "predicted_uv": [
+            543.4642419178268,
+            139.95901625338763
+          ],
+          "predictive_error_px": 5.2334920939059515,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 89,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -11.06347863027364,
+        -5.326405195583016,
+        -2.0783943615465024
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.3992048501968384,
+          "observed_uv": [
+            170.49456787109375,
+            364.6527404785156
+          ],
+          "predicted_uv": [
+            170.34925081376332,
+            362.99322764997305
+          ],
+          "predictive_error_px": 1.66586310219314,
+          "within_2px": true
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": true,
+          "forward_backward_error_px": 0.5035353899002075,
+          "observed_uv": [
+            170.43170166015625,
+            364.24346923828125
+          ],
+          "predicted_uv": [
+            166.9902524723558,
+            368.1397000410723
+          ],
+          "predictive_error_px": 5.198479295027539,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": false,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 90,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -4.3783579106495045,
+        -8.240220434007805,
+        3.7973840182002836
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.6977563500404358,
+          "observed_uv": [
+            589.457763671875,
+            12.068023681640625
+          ],
+          "predicted_uv": [
+            592.612348486976,
+            9.575338545320136
+          ],
+          "predictive_error_px": 4.0205577404756605,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": false,
+          "forward_backward_error_px": 0.034465499222278595,
+          "observed_uv": [
+            601.4547119140625,
+            1.9884634017944336
+          ],
+          "predicted_uv": [
+            603.6700009037977,
+            2.5410773363799706
+          ],
+          "predictive_error_px": 2.2831748660013123,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 91,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -10.4757692572071,
+        -8.490330327580462,
+        1.3977213209335486
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": false,
+          "forward_backward_error_px": 4.615105628967285,
+          "observed_uv": [
+            353.5707092285156,
+            60.53201675415039
+          ],
+          "predicted_uv": [
+            356.5299625679642,
+            55.66079194029092
+          ],
+          "predictive_error_px": 5.699650122086257,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": false,
+          "reason": "previous_tracking_failure"
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    },
+    {
+      "landmark_id": 92,
+      "training_image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "xyz_m": [
+        -11.071974942826705,
+        -9.046849102927982,
+        0.86135979877595
+      ],
+      "heldout": [
+        {
+          "step": 1,
+          "image_id": 5556,
+          "timestamp_ns": 1793312702210190396,
+          "tracked": true,
+          "forward_backward_error_px": 0.01312335953116417,
+          "observed_uv": [
+            344.53997802734375,
+            88.08818054199219
+          ],
+          "predicted_uv": [
+            348.2985307421176,
+            86.86461370151719
+          ],
+          "predictive_error_px": 3.952699624667132,
+          "within_2px": false
+        },
+        {
+          "step": 2,
+          "image_id": 5559,
+          "timestamp_ns": 1793312702510224713,
+          "tracked": true,
+          "forward_backward_error_px": 0.005080993287265301,
+          "observed_uv": [
+            349.4854431152344,
+            74.96634674072266
+          ],
+          "predicted_uv": [
+            352.8240490900278,
+            76.21669146261868
+          ],
+          "predictive_error_px": 3.5650598562295834,
+          "within_2px": false
+        }
+      ],
+      "upward_world_bearing_all_training_views": true,
+      "both_heldout_views_within_2px": false
+    }
+  ],
+  "interpretation": "Predictive image consistency is not absolute pose accuracy or proof of real physical surfaces; no pose or landmark fitting performed using held-out views.",
+  "signed_error_by_training_group": {
+    "(790, 793, 796, 799)": [
+      {
+        "step": 1,
+        "count": 7,
+        "median_signed_du_dv_px": [
+          1.0440614862754671,
+          1.7465886810247468
+        ],
+        "component_p05_px": [
+          -2.7642473461958956,
+          0.7376774903273187
+        ],
+        "component_p95_px": [
+          2.4361942671227546,
+          2.559058350462861
+        ],
+        "fraction_positive_du_dv": [
+          0.7142857142857143,
+          1.0
+        ],
+        "median_residual_norm_px": 2.34070893381697,
+        "median_after_removing_group_median_px": 0.923311322590611,
+        "median_fb_px": 0.04328712821006775,
+        "fb_error_vs_predictive_error_correlation": 0.843808713890617
+      },
+      {
+        "step": 2,
+        "count": 6,
+        "median_signed_du_dv_px": [
+          4.294897742566718,
+          5.68688003715026
+        ],
+        "component_p05_px": [
+          -2.827064400119731,
+          3.839785888019872
+        ],
+        "component_p95_px": [
+          5.680215791940498,
+          7.885605933377903
+        ],
+        "fraction_positive_du_dv": [
+          0.8333333333333334,
+          1.0
+        ],
+        "median_residual_norm_px": 7.302047817226365,
+        "median_after_removing_group_median_px": 1.9241116576051653,
+        "median_fb_px": 0.04589580185711384,
+        "fb_error_vs_predictive_error_correlation": -0.09098673439177928
+      }
+    ],
+    "(3757, 3760, 3763, 3766)": [
+      {
+        "step": 1,
+        "count": 13,
+        "median_signed_du_dv_px": [
+          -0.6282698047204462,
+          0.40573995583376643
+        ],
+        "component_p05_px": [
+          -5.085145294005656,
+          -1.5462241075910754
+        ],
+        "component_p95_px": [
+          1.8324290720382395,
+          1.1573927221337608
+        ],
+        "fraction_positive_du_dv": [
+          0.46153846153846156,
+          0.6153846153846154
+        ],
+        "median_residual_norm_px": 1.7919549285798007,
+        "median_after_removing_group_median_px": 2.1336180494044057,
+        "median_fb_px": 0.017978299409151077,
+        "fb_error_vs_predictive_error_correlation": -0.3598083794579759
+      },
+      {
+        "step": 2,
+        "count": 13,
+        "median_signed_du_dv_px": [
+          -1.2845077482518832,
+          2.768168539628391
+        ],
+        "component_p05_px": [
+          -9.051684008773213,
+          -2.2443689823453723
+        ],
+        "component_p95_px": [
+          2.9471618803363056,
+          4.5268565652482655
+        ],
+        "fraction_positive_du_dv": [
+          0.46153846153846156,
+          0.6923076923076923
+        ],
+        "median_residual_norm_px": 4.0892220686233,
+        "median_after_removing_group_median_px": 4.980883888429057,
+        "median_fb_px": 0.012905973009765148,
+        "fb_error_vs_predictive_error_correlation": 0.18764867840397656
+      }
+    ],
+    "(5504, 5507, 5510, 5513)": [
+      {
+        "step": 1,
+        "count": 14,
+        "median_signed_du_dv_px": [
+          -1.746140896498531,
+          -0.6524679530031534
+        ],
+        "component_p05_px": [
+          -3.4102247448014085,
+          -1.4766787565086474
+        ],
+        "component_p95_px": [
+          -0.5686926047733409,
+          0.015299976467773688
+        ],
+        "fraction_positive_du_dv": [
+          0.0,
+          0.07142857142857142
+        ],
+        "median_residual_norm_px": 1.959513660517801,
+        "median_after_removing_group_median_px": 0.8591230973130298,
+        "median_fb_px": 0.02939424943178892,
+        "fb_error_vs_predictive_error_correlation": 0.17034581075437472
+      },
+      {
+        "step": 2,
+        "count": 14,
+        "median_signed_du_dv_px": [
+          -0.7299069760391603,
+          0.5760913315227185
+        ],
+        "component_p05_px": [
+          -2.4967343907142605,
+          -0.7910945593370584
+        ],
+        "component_p95_px": [
+          0.151952471136374,
+          0.9384849997968849
+        ],
+        "fraction_positive_du_dv": [
+          0.07142857142857142,
+          0.8571428571428571
+        ],
+        "median_residual_norm_px": 1.1863045102040006,
+        "median_after_removing_group_median_px": 0.7128355818421974,
+        "median_fb_px": 0.004249541088938713,
+        "fb_error_vs_predictive_error_correlation": 0.15618835934409503
+      }
+    ],
+    "(5524, 5527, 5530, 5533)": [
+      {
+        "step": 1,
+        "count": 13,
+        "median_signed_du_dv_px": [
+          1.1003994886762598,
+          0.7206875580319547
+        ],
+        "component_p05_px": [
+          -1.0786717522146658,
+          0.43408637521511084
+        ],
+        "component_p95_px": [
+          4.4427840933469716,
+          1.2069064113439878
+        ],
+        "fraction_positive_du_dv": [
+          0.9230769230769231,
+          1.0
+        ],
+        "median_residual_norm_px": 2.069233772696853,
+        "median_after_removing_group_median_px": 1.0725768659944996,
+        "median_fb_px": 0.021120276302099228,
+        "fb_error_vs_predictive_error_correlation": -0.4274791502119556
+      },
+      {
+        "step": 2,
+        "count": 12,
+        "median_signed_du_dv_px": [
+          3.606229887029599,
+          4.613830316020696
+        ],
+        "component_p05_px": [
+          1.072933709418831,
+          3.5128528256787916
+        ],
+        "component_p95_px": [
+          9.684959621002486,
+          5.799695094183987
+        ],
+        "fraction_positive_du_dv": [
+          1.0,
+          1.0
+        ],
+        "median_residual_norm_px": 5.9926917991262085,
+        "median_after_removing_group_median_px": 2.7105392778160398,
+        "median_fb_px": 0.08433149009943008,
+        "fb_error_vs_predictive_error_correlation": -0.23038026184261093
+      }
+    ],
+    "(5534, 5537, 5540, 5543)": [
+      {
+        "step": 1,
+        "count": 18,
+        "median_signed_du_dv_px": [
+          1.3078173732917833,
+          0.8368617889069441
+        ],
+        "component_p05_px": [
+          -1.080795795990045,
+          -1.6923302926566308
+        ],
+        "component_p95_px": [
+          4.330452884474249,
+          1.0949908690451733
+        ],
+        "fraction_positive_du_dv": [
+          0.7222222222222222,
+          0.7222222222222222
+        ],
+        "median_residual_norm_px": 1.917641269168334,
+        "median_after_removing_group_median_px": 2.2769766244346,
+        "median_fb_px": 0.04822261817753315,
+        "fb_error_vs_predictive_error_correlation": 0.008318289994709129
+      },
+      {
+        "step": 2,
+        "count": 14,
+        "median_signed_du_dv_px": [
+          2.3005890273432783,
+          3.0896974583290557
+        ],
+        "component_p05_px": [
+          -1.8742584319739137,
+          -1.8465931768731614
+        ],
+        "component_p95_px": [
+          6.29063138201083,
+          4.116934494765763
+        ],
+        "fraction_positive_du_dv": [
+          0.7142857142857143,
+          0.8571428571428571
+        ],
+        "median_residual_norm_px": 4.0504300609639445,
+        "median_after_removing_group_median_px": 3.208583853715437,
+        "median_fb_px": 0.04499039612710476,
+        "fb_error_vs_predictive_error_correlation": 0.4198773746504567
+      }
+    ],
+    "(5544, 5547, 5550, 5553)": [
+      {
+        "step": 1,
+        "count": 18,
+        "median_signed_du_dv_px": [
+          -3.7057698561245047,
+          0.6319962297759361
+        ],
+        "component_p05_px": [
+          -4.508434590900796,
+          -0.9722177209817431
+        ],
+        "component_p95_px": [
+          0.9225664498034133,
+          1.9399578706334428
+        ],
+        "fraction_positive_du_dv": [
+          0.3333333333333333,
+          0.7777777777777778
+        ],
+        "median_residual_norm_px": 3.9866286825713964,
+        "median_after_removing_group_median_px": 1.8023889162857332,
+        "median_fb_px": 0.025342874228954315,
+        "fb_error_vs_predictive_error_correlation": 0.09558057159639666
+      },
+      {
+        "step": 2,
+        "count": 11,
+        "median_signed_du_dv_px": [
+          -2.579685854267723,
+          -3.2494462655847656
+        ],
+        "component_p05_px": [
+          -3.988943719259197,
+          -5.62036491682737
+        ],
+        "component_p95_px": [
+          3.925057671330393,
+          -1.2204620340398549
+        ],
+        "fraction_positive_du_dv": [
+          0.2727272727272727,
+          0.0
+        ],
+        "median_residual_norm_px": 4.962091109812011,
+        "median_after_removing_group_median_px": 2.138309316099395,
+        "median_fb_px": 0.022898685187101364,
+        "fb_error_vs_predictive_error_correlation": -0.03271284623353843
+      }
+    ]
+  },
+  "signed_error_interpretation": "Residual direction is examined descriptively only; coherent signed offsets can arise from calibration/planar-pose mismatch, baseline landmark depth uncertainty or coherent tracking error. No calibration, camera pose or landmark refit is performed.",
+  "baseline_snapshot": "outputs/fin301/baseline",
+  "baseline_reproduction_check": {
+    "command": "python -m indoor_mapping.visual_landmarks --cache outputs/fin301/cache --trajectory outputs/fin301/baseline/trajectory_arrays.npz --calibration outputs/fin301/audit/calibration.json --output outputs/fin301/verification/visual_landmark_review_baseline_reproduction --views 4 --allow-downward-rays",
+    "landmarks": 93,
+    "pcd_byte_identical": true,
+    "changed_shared_evidence_fields": [],
+    "source_sha256": "72265ba637901713bf6fb9dfddda342d82127d3bb2a90b5dd82e41a876e6f449"
+  }
+}

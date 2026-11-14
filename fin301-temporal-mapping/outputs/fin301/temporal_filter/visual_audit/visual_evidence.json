@@ -1,0 +1,232 @@
+{
+  "dataset": "fin301",
+  "status": "PHOTOGRAPHIC_PANELS_INSPECTED_QUALITATIVE_CONTEXT_ONLY",
+  "scope": "Scene persistence examples; no detector, no LiDAR semantic attribution, no map mutation",
+  "source_paths": {
+    "image_manifest": "outputs\\fin301\\cache\\images.csv",
+    "trajectory": "outputs\\fin301\\result\\trajectory_arrays.npz",
+    "original_pcd": "outputs\\fin301\\result\\lidar_scan_map.pcd",
+    "original_grid": "outputs\\fin301\\result\\map.pgm",
+    "original_yaml": "outputs\\fin301\\result\\map.yaml",
+    "calibration": "outputs\\fin301\\audit\\calibration.json",
+    "audit": "outputs\\fin301\\audit\\audit.json",
+    "scan_cache": "outputs\\fin301\\cache\\scans.npz",
+    "audit_script": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\scripts\\audit_temporal_evidence.py"
+  },
+  "source_sha256": {
+    "image_manifest": "2a12272e9f01b625a95df4302f31feab63c4bce7425c0d30ae68ef2af02cd99b",
+    "trajectory": "ea2e50efe96f1e8cb87ee600770c6326a30c876d9894f57dcc5abe0fac69aeed",
+    "original_pcd": "1a24cf7f9b160689f7961e0b7e3e17568410b3fcc26c80526c3e67907a573f22",
+    "original_grid": "90d706ad71b468b2cb177f7261a3fbac1cad4ef0d6c446c71243ab76a032d034",
+    "original_yaml": "82f29394d71b44da441d2312dfe3dc40c84ed914fc86a7461d32c63b05cdfde1",
+    "calibration": "2432f224e85aa32555bfe56c13e3ee036d0fda38939f46ba662354fef698ab6e",
+    "audit": "c752461a7180e4b58186be34beeb26ac87f6e283a7dc41b6063a2fbea1f5f69b",
+    "scan_cache": "7610683a4c4088a3f1682dbad5e1a799b274c8eed3e50da1ccaa3da10e2a0640",
+    "audit_script": "b2393da02e1df8c9057cdf6e4112429854be4db8abda7abfa65130e65c4151ce"
+  },
+  "sequences": [
+    {
+      "id": "near_stationary_people_and_stools",
+      "title": "People change posture; nearby stools persist",
+      "image_ids": [
+        0,
+        50,
+        100
+      ],
+      "observation": "People change arm and body posture among the white stools. The stool legs, seats, window frames and curtain remain visually consistent.",
+      "interpretation": "Near-stationary camera evidence distinguishes changing human posture from persistent thin furniture. It does not identify which individual LiDAR returns hit people.",
+      "frames": [
+        {
+          "image_id": 0,
+          "timestamp_ns": 1793312145547223432,
+          "relative_time_s": 3.032668365,
+          "path": "outputs\\fin301\\cache\\images\\frame_000000.jpg",
+          "sha256": "cc9b7232d90dabe72eae9871c689220af2b82bb8ceb92b72fc1a9b7f31679eb7",
+          "estimated_lidar_pose_xy_yaw": [
+            -0.0036621013886553003,
+            -0.00012200081531882925,
+            0.0012192004798881433
+          ],
+          "nearest_raw_scan_index": 90,
+          "nearest_raw_scan_timestamp_ns": 1793312145536932795,
+          "nearest_raw_scan_delta_ms": 10.290637
+        },
+        {
+          "image_id": 50,
+          "timestamp_ns": 1793312150555626813,
+          "relative_time_s": 8.041071746,
+          "path": "outputs\\fin301\\cache\\images\\frame_000050.jpg",
+          "sha256": "211387034f47383a2c9f153541d911d84208ad505104a33980b8b7c322276477",
+          "estimated_lidar_pose_xy_yaw": [
+            -0.007949611666273579,
+            -0.003382957209885845,
+            0.0018638646757069015
+          ],
+          "nearest_raw_scan_index": 239,
+          "nearest_raw_scan_timestamp_ns": 1793312150540027127,
+          "nearest_raw_scan_delta_ms": 15.599686
+        },
+        {
+          "image_id": 100,
+          "timestamp_ns": 1793312155564086719,
+          "relative_time_s": 13.049531652,
+          "path": "outputs\\fin301\\cache\\images\\frame_000100.jpg",
+          "sha256": "cfad815a33c92e4de08bb55407bbfc6a9f805d5bbc44e1bbd9f79ceb2f25d84b",
+          "estimated_lidar_pose_xy_yaw": [
+            -0.013839562235235397,
+            -0.004572572018847152,
+            0.003250211255660474
+          ],
+          "nearest_raw_scan_index": 389,
+          "nearest_raw_scan_timestamp_ns": 1793312155576876806,
+          "nearest_raw_scan_delta_ms": 12.790087
+        }
+      ],
+      "estimated_endpoint_translation_m": 0.011108028327356138,
+      "estimated_endpoint_yaw_change_deg": 0.11636834559734917,
+      "figure": "outputs\\fin301\\temporal_filter\\visual_audit\\near_stationary_people_and_stools.png"
+    },
+    {
+      "id": "doorway_person_and_occlusion",
+      "title": "Changing person posture beside a doorway",
+      "image_ids": [
+        5370,
+        5380,
+        5391
+      ],
+      "observation": "The visible person changes arm posture and reaches toward the wall/doorway. The vehicle is also translating and turning; the wall, door frame and floor reflections change viewpoint.",
+      "interpretation": "An image disappearance or missing laser return alone is not a free-space contradiction. A nearer occluder, different viewing direction, or insufficient ray coverage must remain unknown.",
+      "frames": [
+        {
+          "image_id": 5370,
+          "timestamp_ns": 1793312683617222945,
+          "relative_time_s": 541.102667878,
+          "path": "outputs\\fin301\\cache\\images\\frame_005370.jpg",
+          "sha256": "8f470515a716189d2fdea3ca1cca9b298822f760da5d4b027feba681481b09f3",
+          "estimated_lidar_pose_xy_yaw": [
+            -17.341342897655043,
+            -18.851928472710586,
+            1.4910629098214652
+          ],
+          "nearest_raw_scan_index": 16114,
+          "nearest_raw_scan_timestamp_ns": 1793312683617654455,
+          "nearest_raw_scan_delta_ms": 0.43151
+        },
+        {
+          "image_id": 5380,
+          "timestamp_ns": 1793312684617064770,
+          "relative_time_s": 542.102509703,
+          "path": "outputs\\fin301\\cache\\images\\frame_005380.jpg",
+          "sha256": "aebea3e304fab1daa0885008576288f09e9556d2b99578833b695a8eda68e265",
+          "estimated_lidar_pose_xy_yaw": [
+            -17.02003072438431,
+            -18.170575951708877,
+            1.0008559554070673
+          ],
+          "nearest_raw_scan_index": 16144,
+          "nearest_raw_scan_timestamp_ns": 1793312684620482874,
+          "nearest_raw_scan_delta_ms": 3.418104
+        },
+        {
+          "image_id": 5391,
+          "timestamp_ns": 1793312685704873465,
+          "relative_time_s": 543.190318398,
+          "path": "outputs\\fin301\\cache\\images\\frame_005391.jpg",
+          "sha256": "0d92cdb440e4d554dbea397e7a4d6a51d105e58963053ec89f34f01b781ae400",
+          "estimated_lidar_pose_xy_yaw": [
+            -16.639053438890627,
+            -17.451372834020322,
+            1.1510887785566595
+          ],
+          "nearest_raw_scan_index": 16176,
+          "nearest_raw_scan_timestamp_ns": 1793312685699303979,
+          "nearest_raw_scan_delta_ms": 5.569486
+        }
+      ],
+      "estimated_endpoint_translation_m": 1.566769472819377,
+      "estimated_endpoint_yaw_change_deg": -19.479082865100025,
+      "figure": "outputs\\fin301\\temporal_filter\\visual_audit\\doorway_person_and_occlusion.png"
+    },
+    {
+      "id": "persistent_bar_stools_and_windows",
+      "title": "Furniture and window structure persist as the vehicle moves",
+      "image_ids": [
+        4766,
+        4776,
+        4786
+      ],
+      "observation": "The bar stools, counter and large window frames persist across the short sequence. Thin supports and reflective surfaces are visible from a low camera height.",
+      "interpretation": "Sparse legs and edges can be real static structure. Density alone is not sufficient evidence for removal; limited or occluded temporal observations should not be treated as repeated free-space measurements.",
+      "frames": [
+        {
+          "image_id": 4766,
+          "timestamp_ns": 1793312622999107494,
+          "relative_time_s": 480.484552427,
+          "path": "outputs\\fin301\\cache\\images\\frame_004766.jpg",
+          "sha256": "c72450307f0834c832c60269f8da4392d82a66abfbcc43b7999893efb8625acb",
+          "estimated_lidar_pose_xy_yaw": [
+            -16.44808710989038,
+            -17.556593386300953,
+            -2.0829886908027304
+          ],
+          "nearest_raw_scan_index": 14309,
+          "nearest_raw_scan_timestamp_ns": 1793312623005957526,
+          "nearest_raw_scan_delta_ms": 6.850032
+        },
+        {
+          "image_id": 4776,
+          "timestamp_ns": 1793312624003265343,
+          "relative_time_s": 481.488710276,
+          "path": "outputs\\fin301\\cache\\images\\frame_004776.jpg",
+          "sha256": "9f33b866e3d521900309e9f0215b4d364a9af1e4257c89acf55404a78f03e7be",
+          "estimated_lidar_pose_xy_yaw": [
+            -16.855030547870932,
+            -18.220460301903376,
+            -2.1098941762966126
+          ],
+          "nearest_raw_scan_index": 14339,
+          "nearest_raw_scan_timestamp_ns": 1793312624013609645,
+          "nearest_raw_scan_delta_ms": 10.344302
+        },
+        {
+          "image_id": 4786,
+          "timestamp_ns": 1793312625011287527,
+          "relative_time_s": 482.49673246,
+          "path": "outputs\\fin301\\cache\\images\\frame_004786.jpg",
+          "sha256": "bac2306685413c22ffc815db10c16f154396cea75bd89aeb7b35865fff4858b7",
+          "estimated_lidar_pose_xy_yaw": [
+            -17.227521540362616,
+            -18.87296503402883,
+            -2.0706960287437273
+          ],
+          "nearest_raw_scan_index": 14369,
+          "nearest_raw_scan_timestamp_ns": 1793312625020699232,
+          "nearest_raw_scan_delta_ms": 9.411705
+        }
+      ],
+      "estimated_endpoint_translation_m": 1.5298210177492608,
+      "estimated_endpoint_yaw_change_deg": 0.7043176549614768,
+      "figure": "outputs\\fin301\\temporal_filter\\visual_audit\\persistent_bar_stools_and_windows.png"
+    }
+  ],
+  "limitations": [
+    "Qualitative human review of recorded photographs, not an automated person/object detector.",
+    "Camera field of view and height differ from the 360-degree laser scan plane. No removed LiDAR point is semantically labelled here.",
+    "Vehicle poses and interpolated image-time positions are estimates, not independent physical truth.",
+    "A moving person may remain still long enough to pass persistence checks; an observed static object may later move.",
+    "No image absence, occlusion, invalid range or unobserved direction should be counted as observed free space.",
+    "This audit does not claim that temporal filtering improves localization; paired frozen-query evaluation remains necessary."
+  ],
+  "temporal_filter_review": {
+    "status": "INDEPENDENT_MASK_AND_RAW_RAY_CHECKS_PASS_WITH_LIMITATIONS",
+    "report": "independent_temporal_review.md",
+    "checks": "independent_temporal_review.json",
+    "room_detail": "main_room_temporal_detail.png"
+  },
+  "manual_review": {
+    "all_three_rendered_panels_inspected": true,
+    "observations_supported_by_visible_sequences": true,
+    "semantic_lidar_labels_inferred": false,
+    "localization_improvement_claimed": false
+  }
+}

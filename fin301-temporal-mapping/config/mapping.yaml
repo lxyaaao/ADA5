@@ -1,0 +1,10 @@
+batch_mapping:
+  ros__parameters:
+    # Set these to absolute paths through the launch arguments.
+    cache_dir: ""
+    output_dir: ""
+    # All published artifacts use the pipeline's local metric map frame.
+    map_frame: map
+    process_cache: true
+    lidar_revisits: false
+    publish_period: 2.0

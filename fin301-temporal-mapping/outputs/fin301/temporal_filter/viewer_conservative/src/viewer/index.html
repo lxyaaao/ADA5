@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>fin301 · Offline Map Viewer</title>
+  <style>{{STYLE}}</style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand"><span class="brand-icon" aria-hidden="true">⌖</span><div><strong>fin301 <span>MAP VIEWER</span></strong><small>Indoor Localization & Mapping · Offline Viewer</small></div></div>
+    <div class="header-actions"><span class="local-badge"><i></i>Files stay on your device</span><button id="restoreBtn" class="button">Reset fin301</button><button id="importBtn" class="button primary">+ Import map</button><button id="helpBtn" class="icon-button" aria-label="Help">?</button></div>
+  </header>
+  <main class="app-body">
+    <aside class="sidebar" aria-label="Map settings">
+      <section class="dataset-section">
+        <p class="eyebrow">CURRENT MAP</p><h1 id="datasetTitle">fin301 Localization Map</h1>
+        <p id="sourceName" class="filename">lidar_scan_map.pcd</p>
+        <label id="pointFileLabel" class="pcd-select-label" hidden>Point cloud file<select id="pointFileSelect" aria-label="Select point cloud file"></select></label>
+        <div class="data-summary"><div><strong id="pointCount">—</strong><span>Point count</span></div><div><strong id="mapExtent">—</strong><span>XY extent · metres</span></div></div>
+        <p id="heightInfo" class="small-note">Reading map…</p>
+      </section>
+      <section>
+        <div class="section-heading"><h2>Layers</h2><span>Shared map frame</span></div>
+        <label class="layer"><span><input id="lidarToggle" type="checkbox" checked><i class="dot lidar"></i>Selected point cloud</span><small id="lidarCount">—</small></label>
+        <label class="layer"><span><input id="gridToggle" type="checkbox"><i class="dot occupancy"></i>Occupancy grid</span><small id="gridLabel">YAML + PGM</small></label>
+        <label class="layer"><span><input id="trajectoryToggle" type="checkbox" checked><i class="dot trajectory"></i>Vehicle trajectory</span><small id="trajectoryCount">—</small></label>
+        <label class="layer"><span><input id="visualToggle" type="checkbox"><i class="dot visual"></i>Camera landmarks</span><small id="visualCount">—</small></label>
+        <div class="slider-label"><label for="pointSize">Point size</label><output id="pointSizeValue">2.0 px</output></div>
+        <input id="pointSize" type="range" min="1" max="7" step="0.5" value="2" aria-label="Point size">
+        <p class="small-note">Camera landmarks retain their estimated height; they are not 2D scan-plane obstacles.</p>
+      </section>
+      <section>
+        <div class="section-heading"><h2>Planar distance</h2><span>Metres</span></div>
+        <button id="measureBtn" class="button full" aria-pressed="false">⌁ Measure two points</button>
+        <div id="measurementBox" class="measurement-box"><strong id="distanceValue">— <span>m</span></strong><p id="measurementHint">Enable measurement, then select a start and end point on the map.</p><div id="measurementCoords"></div></div>
+        <button id="clearMeasureBtn" class="text-button">Clear measurement</button>
+        <p class="small-note">Distances are map estimates, not physical reference measurements.</p>
+      </section>
+      <section>
+        <div class="section-heading"><h2>Map files</h2><span id="fileCount">—</span></div>
+        <div id="fileList" class="file-list"></div>
+        <p class="small-note" id="mapInfo">Loading map parameters…</p>
+      </section>
+      <footer class="sidebar-footer"><b>Coordinates in metres</b><br>Original orientation · Equal axis scale<br><span>Map appearance does not establish localization accuracy.</span></footer>
+    </aside>
+    <div class="workspace">
+      <div class="workspace-toolbar">
+        <div class="segmented" role="group" aria-label="View mode"><button id="topViewBtn" class="selected" aria-pressed="true">2D Top</button><button id="threeViewBtn" aria-pressed="false">3D Orbit</button></div>
+        <span id="viewHint" class="view-hint">Drag to pan · Scroll to zoom</span>
+        <button id="exportBtn" class="button export-button">↓ Export image</button>
+      </div>
+      <div id="viewport" class="viewport" tabindex="0" aria-label="Interactive map: drag and zoom; press M to measure or F to fit the map">
+        <canvas id="mapCanvas" aria-label="Map point cloud"></canvas><canvas id="overlayCanvas" aria-hidden="true"></canvas>
+        <div id="loading" class="loading"><span></span><strong>Loading local map</strong></div>
+        <div id="fatalError" class="fatal-error" hidden></div>
+        <div id="measurePrompt" class="measure-prompt" hidden>Select the first point · Esc to exit</div>
+        <div class="map-tools"><button id="zoomInBtn" title="Zoom in" aria-label="Zoom in">＋</button><button id="zoomOutBtn" title="Zoom out" aria-label="Zoom out">−</button><span></span><button id="fitBtn" title="Fit map (F)" aria-label="Fit map">⊡</button><button id="resetBtn" title="Reset view" aria-label="Reset view">↺</button></div>
+        <div class="map-bottom"><span id="coordinateReadout">X —　Y —</span><span id="viewModeLabel">Top view · z = 0</span></div>
+        <div id="dropHint" class="drop-hint" hidden>Drop PCD, YAML, PGM or trajectory CSV files here</div>
+      </div>
+      <section class="timeline" aria-label="Trajectory playback">
+        <button id="playBtn" class="play-button" aria-label="Play trajectory" disabled>▶</button>
+        <div class="timeline-main"><div class="timeline-heading"><strong>Trajectory playback <span id="poseLabel">—</span></strong><span id="timeLabel">0:00 / 0:00</span></div><input id="timelineSlider" type="range" min="0" max="1" step="1" value="0" aria-label="Trajectory frame" disabled></div>
+        <label class="speed-label">Speed<select id="speedSelect" aria-label="Playback speed"><option value="1">1×</option><option value="2">2×</option><option value="5" selected>5×</option><option value="10">10×</option></select></label>
+      </section>
+      <div class="status-bar"><span id="statusText" role="status">Initializing…</span><span>Offline · PCD / YAML / PGM / CSV</span></div>
+    </div>
+  </main>
+  <input id="fileInput" type="file" accept=".pcd,.yaml,.yml,.pgm,.png,.jpg,.jpeg,.csv" multiple hidden>
+  <div id="toast" class="toast" role="alert" hidden></div>
+  <dialog id="helpDialog"><div class="dialog-heading"><h2>Using the Map Viewer</h2><button id="closeHelpBtn" class="icon-button" aria-label="Close help">×</button></div>
+    <div class="help-grid"><b>Navigation</b><p>Top view: left-drag to pan. In 3D, left-drag to orbit; right-drag or Shift-drag to pan. Scroll to zoom. Press F to fit the map.</p><b>Measurement</b><p>Press M, then select two points to measure distance in the z=0 map plane. Clicks near visible scan-plane points snap to their XY coordinates. Press Esc to exit.</p><b>Trajectory</b><p>Drag the timeline to inspect vehicle poses. Click Play or press Space to replay the trajectory. Playback preserves the recorded time intervals and supports speed selection.</p><b>Import files</b><p>Select a PCD, a YAML file and its referenced PGM/PNG/JPEG together to display them in their shared frame. CSV imports support the project trajectory format. Importing a new point cloud alone clears unrelated layers from the previous map.</p><b>Formats</b><p>PCD: ASCII or uncompressed binary. PGM: P2 or P5. The binary_compressed PCD format is not supported. Map YAML uses ROS trinary format; select its image together with the configuration.</p><b>Data meaning</b><p>Coordinates and distances are in metres. Grid placement uses the YAML resolution, origin and yaw. Camera landmarks are experimental 3D points. Map measurements and trajectories have not been validated against independent position ground truth.</p></div>
+    <p class="dialog-note">Shortcuts: 2 Top · 3 Orbit · F Fit · M Measure · Space Play/Pause · Esc Cancel</p></dialog>
+  <script id="bundled-files" type="application/json">{{BUNDLE_JSON}}</script>
+  <script>{{IO_JS}}</script>
+  <script>{{RENDERER_JS}}</script>
+  <script>{{APP_JS}}</script>
+</body>
+</html>

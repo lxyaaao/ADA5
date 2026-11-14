@@ -1,0 +1,53 @@
+{
+  "file": "map.pcd",
+  "format": "PCD 0.7 ASCII",
+  "fields": [
+    "x",
+    "y",
+    "z"
+  ],
+  "unit": "metre",
+  "frame_id": "map",
+  "origin_timestamp_ns": 1793312142514555067,
+  "origin": "First accepted LiDAR scan pose",
+  "axes": "Initial LiDAR x forward, y left, z up",
+  "z_definition": "LiDAR points use z=0 for the scan plane; visual points have triangulated height in that same local frame. This is sparse visual structure, not a dense 3D reconstruction.",
+  "geometry": "lidar_scan_plane_plus_triangulated_visual_landmarks",
+  "points": 39643,
+  "lidar_point_count": 39614,
+  "visual_point_count": 29,
+  "point_order": "LiDAR scan points first, followed by triangulated camera landmarks",
+  "components": [
+    "lidar_scan_map.pcd",
+    "visual_landmarks.pcd"
+  ],
+  "voxel_size_m": 0.03,
+  "visual_voxel_size_m": 0.05,
+  "localization_file": "lidar_scan_map.pcd",
+  "localization_note": "Use only the LiDAR scan plane for 2D scan localization; do not project visual XYZ into this plane.",
+  "source_scan_frame": "laser",
+  "base_to_lidar_se2": [
+    -0.082558,
+    -0.017229,
+    0.0
+  ],
+  "physical_reference_validation": "not available",
+  "viewer_title": "fin301 - Static temporal map",
+  "temporal_filter": "Strict temporal support: retains repeated hits; also excludes insufficient evidence",
+  "camera_landmarks_temporally_filtered": false,
+  "trajectory_note": "Original delivered one-loop trajectory unchanged",
+  "grid_derivation": {
+    "method": "Original occupied cell centers without retained LiDAR point support are masked to unknown",
+    "support_distance_m": 0.1,
+    "unknown_pixel": 205,
+    "occupied_cells_original": 9144,
+    "occupied_cells_retained": 8451,
+    "occupied_cells_masked_to_unknown": 693,
+    "free_cells_preserved": 164855,
+    "original_unknown_cells_preserved": 595285,
+    "new_free_cells": 0,
+    "new_occupied_cells": 0,
+    "interpretation": "Conservative raster companion; no free-space inference from removed point endpoints"
+  },
+  "temporal_evidence": "../../temporal_filter_report.json"
+}

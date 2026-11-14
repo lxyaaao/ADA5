@@ -1,0 +1,80 @@
+[
+  {
+    "status": "PASS",
+    "html": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\outputs\\fin301\\temporal_filter\\viewer_original\\viewer.html",
+    "zip": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\deliverables\\fin301_temporal_original_viewer.zip",
+    "html_bytes": 5780908,
+    "zip_bytes": 2606926,
+    "packaged_files": 19,
+    "original_map_bytes_verified": true,
+    "validation": {
+      "lidar_point_count": 49783,
+      "visual_point_count": 29,
+      "points": 49812,
+      "trajectory_samples": 3526,
+      "trajectory_start_ns": "1793312142514555067",
+      "trajectory_end_ns": "1793312734347535255",
+      "yaml_image": "map.pgm",
+      "grid_resolution_m": 0.05,
+      "grid_origin_xy_yaw": [
+        -34.6,
+        -28.3,
+        0.0
+      ],
+      "max_component_difference_m": 2.0000000020559128e-06,
+      "max_base_lidar_transform_error": 3.552713678800501e-15
+    }
+  },
+  {
+    "status": "PASS",
+    "html": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\outputs\\fin301\\temporal_filter\\viewer_conservative\\viewer.html",
+    "zip": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\deliverables\\fin301_temporal_conservative_viewer.zip",
+    "html_bytes": 5620845,
+    "zip_bytes": 2527852,
+    "packaged_files": 19,
+    "original_map_bytes_verified": true,
+    "validation": {
+      "lidar_point_count": 47679,
+      "visual_point_count": 29,
+      "points": 47708,
+      "trajectory_samples": 3526,
+      "trajectory_start_ns": "1793312142514555067",
+      "trajectory_end_ns": "1793312734347535255",
+      "yaml_image": "map.pgm",
+      "grid_resolution_m": 0.05,
+      "grid_origin_xy_yaw": [
+        -34.6,
+        -28.3,
+        0.0
+      ],
+      "max_component_difference_m": 2.0000000020559128e-06,
+      "max_base_lidar_transform_error": 3.552713678800501e-15
+    }
+  },
+  {
+    "status": "PASS",
+    "html": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\outputs\\fin301\\temporal_filter\\viewer_static\\viewer.html",
+    "zip": "C:\\Users\\10469\\Downloads\\AutoDrivingProject2.2\\deliverables\\fin301_temporal_static_viewer.zip",
+    "html_bytes": 4996879,
+    "zip_bytes": 2220611,
+    "packaged_files": 19,
+    "original_map_bytes_verified": true,
+    "validation": {
+      "lidar_point_count": 39614,
+      "visual_point_count": 29,
+      "points": 39643,
+      "trajectory_samples": 3526,
+      "trajectory_start_ns": "1793312142514555067",
+      "trajectory_end_ns": "1793312734347535255",
+      "yaml_image": "map.pgm",
+      "grid_resolution_m": 0.05,
+      "grid_origin_xy_yaw": [
+        -34.6,
+        -28.3,
+        0.0
+      ],
+      "max_component_difference_m": 1.0000000010279564e-06,
+      "max_base_lidar_transform_error": 3.552713678800501e-15
+    }
+  }
+]

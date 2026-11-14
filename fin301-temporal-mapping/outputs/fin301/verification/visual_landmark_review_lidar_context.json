@@ -1,0 +1,189 @@
+{
+  "status": "PAIRED_FINAL_DEVELOPMENT_VALIDATION_REVIEW_COMPLETE",
+  "source_sha256": {
+    "outputs\\fin301\\verification\\localization_baseline\\localization_evaluation.json": "1ca13e4cff34b787313976378efcab60ae44c0807673ad44b1c0234e7fa8564d",
+    "outputs\\fin301\\verification\\localization_final\\localization_evaluation.json": "4fb24e8f858d3938b7b9bb2719103cb47d3347ee121ceae310ada5a9ec6b1df5"
+  },
+  "protocol_hash_equal": true,
+  "registration_hash_equal": true,
+  "evaluator_hash_equal": true,
+  "sections": {
+    "queries": {
+      "query_count": 100,
+      "newly_accepted_trials": [
+        [
+          11393,
+          4
+        ],
+        [
+          11571,
+          4
+        ],
+        [
+          12283,
+          0
+        ],
+        [
+          12283,
+          4
+        ],
+        [
+          12283,
+          7
+        ],
+        [
+          14419,
+          5
+        ],
+        [
+          15843,
+          7
+        ],
+        [
+          16378,
+          0
+        ],
+        [
+          16378,
+          1
+        ],
+        [
+          16378,
+          2
+        ],
+        [
+          16378,
+          3
+        ],
+        [
+          16378,
+          4
+        ],
+        [
+          16378,
+          5
+        ],
+        [
+          16378,
+          6
+        ],
+        [
+          16378,
+          7
+        ],
+        [
+          17446,
+          5
+        ],
+        [
+          17624,
+          5
+        ]
+      ],
+      "newly_rejected_trials": [
+        [
+          12639,
+          5
+        ],
+        [
+          14063,
+          5
+        ],
+        [
+          14242,
+          5
+        ],
+        [
+          14953,
+          4
+        ],
+        [
+          14953,
+          6
+        ],
+        [
+          15488,
+          6
+        ],
+        [
+          16022,
+          6
+        ],
+        [
+          16733,
+          5
+        ],
+        [
+          16912,
+          1
+        ],
+        [
+          16912,
+          5
+        ],
+        [
+          17089,
+          3
+        ],
+        [
+          17089,
+          7
+        ]
+      ],
+      "stability_gained_queries": [
+        11393,
+        11571,
+        11927,
+        12106,
+        14419,
+        15843,
+        16199,
+        16378,
+        17446,
+        17624
+      ],
+      "stability_lost_queries": [
+        14063,
+        14242,
+        14953,
+        15488,
+        16912,
+        17089
+      ],
+      "reference_scan_index_sets_changed": 0,
+      "common_accepted_point_to_line_rmse_delta_m": {
+        "count": 695,
+        "median": -5.225420685733839e-08,
+        "min": -0.07655613139325339,
+        "max": 0.014818111599037127,
+        "improved_more_than_1mm": 144,
+        "worsened_more_than_1mm": 46
+      }
+    },
+    "crosspass_queries": {
+      "query_count": 20,
+      "newly_accepted_trials": [],
+      "newly_rejected_trials": [],
+      "stability_gained_queries": [],
+      "stability_lost_queries": [],
+      "reference_scan_index_sets_changed": 0,
+      "common_accepted_point_to_line_rmse_delta_m": {
+        "count": 124,
+        "median": -1.1613161361376245e-08,
+        "min": -0.05290394347973579,
+        "max": 0.03618295149224429,
+        "improved_more_than_1mm": 24,
+        "worsened_more_than_1mm": 25
+      }
+    }
+  },
+  "interpretation": [
+    "Main-query aggregate robustness improves modestly, with 17 gained and 12 lost successful initializations and 10 gained versus 6 lost all-start-stable queries.",
+    "Earlier-pass acceptance and stability counts are unchanged; common-trial improvements and regressions are mixed. Aggregate median residual improvement is not a uniform paired improvement.",
+    "Frozen query identities, protocol and reference scan indices support a controlled internal comparison. Query scans are excluded from constraint search; spatial and temporal correlation within this single recording remains.",
+    "Selecting the final model after inspecting these evaluation results makes them development validation evidence, not an untouched final test.",
+    "Photographs support a revisit of the counter neighborhood qualitatively; repetitive glass and panels do not independently establish the metric loop.",
+    "No independent physical reference was provided. Camera landmarks have not demonstrated pose-accuracy improvement."
+  ],
+  "evaluator_source_alignment": "Baseline and final were rerun using identical evaluator, registration and protocol hashes."
+}

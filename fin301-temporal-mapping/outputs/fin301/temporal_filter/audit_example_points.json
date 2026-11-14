@@ -1,0 +1,166 @@
+{
+  "initial_room": [
+    {
+      "point_id": 35291,
+      "xy": [
+        0.392214,
+        -4.400796
+      ],
+      "hit_epochs": 14.0,
+      "free_epochs": 35.0,
+      "hit_span_s": 32.738685398,
+      "free_span_s": 121.38563544799999,
+      "free_fraction": 0.7142857142857143,
+      "first_hit_raw_scan": 1755,
+      "last_hit_raw_scan": 2730,
+      "first_free_raw_scan": 3115,
+      "last_free_raw_scan": 6730
+    },
+    {
+      "point_id": 35289,
+      "xy": [
+        0.404135,
+        -4.449181
+      ],
+      "hit_epochs": 14.0,
+      "free_epochs": 36.0,
+      "hit_span_s": 32.738685398,
+      "free_span_s": 121.38563544799999,
+      "free_fraction": 0.72,
+      "first_hit_raw_scan": 1755,
+      "last_hit_raw_scan": 2730,
+      "first_free_raw_scan": 3115,
+      "last_free_raw_scan": 6730
+    },
+    {
+      "point_id": 35290,
+      "xy": [
+        0.405267,
+        -4.42423
+      ],
+      "hit_epochs": 14.0,
+      "free_epochs": 35.0,
+      "hit_span_s": 32.738685398,
+      "free_span_s": 121.38563544799999,
+      "free_fraction": 0.7142857142857143,
+      "first_hit_raw_scan": 1755,
+      "last_hit_raw_scan": 2730,
+      "first_free_raw_scan": 3115,
+      "last_free_raw_scan": 6730
+    },
+    {
+      "point_id": 35133,
+      "xy": [
+        0.313252,
+        -4.336873
+      ],
+      "hit_epochs": 14.0,
+      "free_epochs": 33.0,
+      "hit_span_s": 32.738685398,
+      "free_span_s": 102.41286501699999,
+      "free_fraction": 0.7021276595744681,
+      "first_hit_raw_scan": 1755,
+      "last_hit_raw_scan": 2730,
+      "first_free_raw_scan": 3680,
+      "last_free_raw_scan": 6730
+    },
+    {
+      "point_id": 35134,
+      "xy": [
+        0.30966,
+        -4.31212
+      ],
+      "hit_epochs": 14.0,
+      "free_epochs": 33.0,
+      "hit_span_s": 32.570750727000004,
+      "free_span_s": 102.41286501699999,
+      "free_fraction": 0.7021276595744681,
+      "first_hit_raw_scan": 1755,
+      "last_hit_raw_scan": 2725,
+      "first_free_raw_scan": 3680,
+      "last_free_raw_scan": 6730
+    }
+  ],
+  "thin_furniture_area": [
+    {
+      "point_id": 4968,
+      "xy": [
+        -19.119915,
+        -20.894199
+      ],
+      "hit_epochs": 5.0,
+      "free_epochs": 12.0,
+      "hit_span_s": 24.848836043999995,
+      "free_span_s": 79.414405558,
+      "free_fraction": 0.7058823529411765,
+      "first_hit_raw_scan": 15035,
+      "last_hit_raw_scan": 15775,
+      "first_free_raw_scan": 14080,
+      "last_free_raw_scan": 16445
+    },
+    {
+      "point_id": 4936,
+      "xy": [
+        -19.146337,
+        -20.868515
+      ],
+      "hit_epochs": 4.0,
+      "free_epochs": 12.0,
+      "hit_span_s": 6.379431775000057,
+      "free_span_s": 79.414405558,
+      "free_fraction": 0.75,
+      "first_hit_raw_scan": 15585,
+      "last_hit_raw_scan": 15775,
+      "first_free_raw_scan": 14080,
+      "last_free_raw_scan": 16445
+    },
+    {
+      "point_id": 4969,
+      "xy": [
+        -19.111466,
+        -20.872933
+      ],
+      "hit_epochs": 4.0,
+      "free_epochs": 12.0,
+      "hit_span_s": 6.379431775000057,
+      "free_span_s": 79.414405558,
+      "free_fraction": 0.75,
+      "first_hit_raw_scan": 15585,
+      "last_hit_raw_scan": 15775,
+      "first_free_raw_scan": 14080,
+      "last_free_raw_scan": 16445
+    },
+    {
+      "point_id": 5510,
+      "xy": [
+        -18.651386,
+        -19.485662
+      ],
+      "hit_epochs": 4.0,
+      "free_epochs": 10.0,
+      "hit_span_s": 52.387609198999996,
+      "free_span_s": 78.742683823,
+      "free_fraction": 0.7142857142857143,
+      "first_hit_raw_scan": 14655,
+      "last_hit_raw_scan": 16215,
+      "first_free_raw_scan": 14095,
+      "last_free_raw_scan": 16440
+    },
+    {
+      "point_id": 5511,
+      "xy": [
+        -18.65798,
+        -19.365803
+      ],
+      "hit_epochs": 4.0,
+      "free_epochs": 10.0,
+      "hit_span_s": 52.387609198999996,
+      "free_span_s": 76.72874682999998,
+      "free_fraction": 0.7142857142857143,
+      "first_hit_raw_scan": 14655,
+      "last_hit_raw_scan": 16215,
+      "first_free_raw_scan": 14155,
+      "last_free_raw_scan": 16440
+    }
+  ]
+}

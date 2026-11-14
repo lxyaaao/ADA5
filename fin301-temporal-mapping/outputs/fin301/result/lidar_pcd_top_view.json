@@ -1,0 +1,19 @@
+{
+  "source_pcd": "outputs\\fin301\\result\\lidar_scan_map.pcd",
+  "source_sha256": "1a24cf7f9b160689f7961e0b7e3e17568410b3fcc26c80526c3e67907a573f22",
+  "point_count": 49783,
+  "points_plotted": 49783,
+  "xyz_min_m": [
+    -34.08524703979492,
+    -27.770763397216797,
+    0.0
+  ],
+  "xyz_max_m": [
+    10.741974830627441,
+    13.032455444335938,
+    0.0
+  ],
+  "equal_axis_scale": true,
+  "filtered_or_rotated": false,
+  "figure": "outputs\\fin301\\result\\lidar_pcd_top_view.png"
+}

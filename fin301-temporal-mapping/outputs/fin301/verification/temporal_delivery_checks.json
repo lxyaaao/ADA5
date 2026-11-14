@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "zip_sha256": "f38182aa84ef3e6c462a10bf5b239bdff09c7a38442cbcbd5b8d2b356d897dec",
+  "bytes": 22968734,
+  "manifest_members_verified": 255,
+  "comparison_links_verified": 13,
+  "english_self_contained_viewers": 3,
+  "pcd_yaml_pgm_in_both_variants": true,
+  "historical_control_dependencies_included": true,
+  "browser_interaction_tested": false
+}

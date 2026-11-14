@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "dataset": "fin301",
+  "entrypoint": "viewer.html",
+  "offline": true,
+  "map_files_are_original_bytes": true,
+  "original_map_files_preserved": [
+    "lidar_scan_map.pcd",
+    "visual_landmarks.pcd",
+    "map.pcd",
+    "map.yaml",
+    "trajectory.csv",
+    "map.pgm",
+    "map_metadata.json",
+    "metrics.json"
+  ],
+  "metadata_integer_encoding": "Integers outside JavaScript safe range become decimal strings only in embedded JSON; original JSON files are unchanged.",
+  "validation": {
+    "lidar_point_count": 39614,
+    "visual_point_count": 29,
+    "points": 39643,
+    "trajectory_samples": 3526,
+    "trajectory_start_ns": "1793312142514555067",
+    "trajectory_end_ns": "1793312734347535255",
+    "yaml_image": "map.pgm",
+    "grid_resolution_m": 0.05,
+    "grid_origin_xy_yaw": [
+      -34.6,
+      -28.3,
+      0.0
+    ],
+    "max_component_difference_m": 1.0000000010279564e-06,
+    "max_base_lidar_transform_error": 3.552713678800501e-15
+  },
+  "hash_algorithm": "SHA-256",
+  "manifest_note": "Each packaged file except this manifest is listed; no recursive self-hash.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6446,
+      "sha256": "5fefb0de2eead2a953ae65db62f1e14fc86c62e5f01f7a1edb549f00657ad754"
+    },
+    {
+      "path": "maps/lidar_scan_map.pcd",
+      "bytes": 1150737,
+      "sha256": "081e24ee8d713ba18b1c4303943820cb22035861ea1dbfbc69208590f9e751ae"
+    },
+    {
+      "path": "maps/map.pcd",
+      "bytes": 1151542,
+      "sha256": "e20426b0723b845e452280c551f77cdfaa600c2ece68a246a08b43852a0f54c3"
+    },
+    {
+      "path": "maps/map.pgm",
+      "bytes": 769299,
+      "sha256": "fc5350b6f7b35a00243686559a9e55b397e8fbf8c9c5245df17f10780a9a95b4"
+    },
+    {
+      "path": "maps/map.yaml",
+      "bytes": 137,
+      "sha256": "82f29394d71b44da441d2312dfe3dc40c84ed914fc86a7461d32c63b05cdfde1"
+    },
+    {
+      "path": "maps/map_metadata.json",
+      "bytes": 2108,
+      "sha256": "ace0553ecad9c990317c0ae7d3901c590beafe3c36111539e64cc2bf82e9834e"
+    },
+    {
+      "path": "maps/metrics.json",
+      "bytes": 6937,
+      "sha256": "30ab72c5e7bd826d3aeb188f79c33da7b13a205502c955e0882863091c43960b"
+    },
+    {
+      "path": "maps/trajectory.csv",
+      "bytes": 592216,
+      "sha256": "278fda09e04ecbe3ef03f4a78105922fbe083f6d681288061eafe1447681f285"
+    },
+    {
+      "path": "maps/visual_landmarks.pcd",
+      "bytes": 1046,
+      "sha256": "13fdc60f147ab284fb9d99cfc1bec074e450d97f461ee839b10866d4faef6ebe"
+    },
+    {
+      "path": "open_viewer.cmd",
+      "bytes": 40,
+      "sha256": "d897c1938f15ebac10a56ad5a95223143674c9c1097c05c81e37b5f783e83c3d"
+    },
+    {
+      "path": "src/scripts/build_viewer.py",
+      "bytes": 19893,
+      "sha256": "e26c84c907f3a24e9848860a02387595aa6fbdfb30f6f34ac07f6c238dc7d8ae"
+    },
+    {
+      "path": "src/viewer/README.md",
+      "bytes": 6446,
+      "sha256": "5fefb0de2eead2a953ae65db62f1e14fc86c62e5f01f7a1edb549f00657ad754"
+    },
+    {
+      "path": "src/viewer/app.js",
+      "bytes": 23885,
+      "sha256": "ae1f951d26d70ed52f0f9f9e40abd32cd2333903d2d0f4741765c71da34a490f"
+    },
+    {
+      "path": "src/viewer/index.html",
+      "bytes": 8338,
+      "sha256": "bf9d59326d1aee7fc5e8b963b9fb495a94e9ccf945d332c47de76c044c9930d6"
+    },
+    {
+      "path": "src/viewer/io.js",
+      "bytes": 22289,
+      "sha256": "dce74cdecec20e8b5ddad8c5adb0ffe57511919db962664d2965944888dfa9f2"
+    },
+    {
+      "path": "src/viewer/renderer.js",
+      "bytes": 24393,
+      "sha256": "ee63df0467f0a04f5a09e67d71ba925e59b6c761f043ccc35186de025a28a478"
+    },
+    {
+      "path": "src/viewer/style.css",
+      "bytes": 11588,
+      "sha256": "0212383d760f1d585f051774a4d3e49d6e0456aea045314769a92aec04204502"
+    },
+    {
+      "path": "viewer.html",
+      "bytes": 4996879,
+      "sha256": "525999ca2b31e427b96d6e2ed0cc3a8a17313ab94f6f76cc14681d13990201f9"
+    }
+  ]
+}

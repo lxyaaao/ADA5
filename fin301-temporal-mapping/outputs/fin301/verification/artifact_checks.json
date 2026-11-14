@@ -1,0 +1,143 @@
+{
+  "dataset": "fin301",
+  "verified_at_utc": "2026-11-06T00:33:05.467160+00:00",
+  "absolute_accuracy_validated": false,
+  "scope": "Artifact consistency and source provenance; no external physical reference or new ROS runtime test is asserted.",
+  "pcd_points": 49812,
+  "pcd_xyz_min_m": [
+    -34.08524703979492,
+    -27.770763397216797,
+    0.0
+  ],
+  "pcd_xyz_max_m": [
+    10.741974830627441,
+    13.032455444335938,
+    3.604275941848755
+  ],
+  "pcd_frame": "map",
+  "pcd_unit": "metre",
+  "lidar_z_plane_m": 0.0,
+  "geometry": "lidar_scan_plane_plus_triangulated_visual_landmarks",
+  "lidar_point_count": 49783,
+  "visual_point_count": 29,
+  "trajectory_poses": 3526,
+  "trajectory_frame": "base_link",
+  "trajectory_duration_s": 591.8329801880001,
+  "estimated_path_length_m": 236.68205761395137,
+  "visual_evidence_rows": 29,
+  "visual_distinct_camera_views": 12,
+  "visual_views_per_group": 6,
+  "visual_upward_world_ray_gate": true,
+  "visual_reprojection_recomputed_max_px": 1.926240203003585,
+  "visual_component_evidence_matches": true,
+  "estimator_source_hashes_match": true,
+  "input_topics": [
+    "/camera/camera/color/image_raw/compressed",
+    "/scan/raw",
+    "/tf_static"
+  ],
+  "input_scan_count": 17628,
+  "accepted_camera_lidar_loops": 0,
+  "graph_edges_checked": 430,
+  "accepted_lidar_revisits": 1,
+  "camera_pose_correction_attributed": false,
+  "lidar_loop_translation_residual_before_m": [
+    1.4301255878399861
+  ],
+  "lidar_loop_translation_residual_after_m": [
+    0.00039198620279558445
+  ],
+  "graph_weighted_rms_recomputed_before": 0.5053149731058727,
+  "graph_weighted_rms_recomputed_after": 0.01027961939573793,
+  "report_pages": 1,
+  "report_sources_match": true,
+  "report_snapshot_warnings": [],
+  "occupancy_dimensions": [
+    918,
+    838
+  ],
+  "occupancy_resolution_m": 0.05,
+  "passed": true,
+  "checks": [
+    {
+      "name": "required_artifacts",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "name": "pcd_structure_count_units_and_plane",
+      "passed": true
+    },
+    {
+      "name": "trajectory_timestamps_frames_and_metrics",
+      "passed": true
+    },
+    {
+      "name": "mixed_geometry_components_and_all_view_evidence",
+      "passed": true
+    },
+    {
+      "name": "sensor_provenance_and_estimator_source_hashes",
+      "passed": true
+    },
+    {
+      "name": "loop_counts_measurements_and_sensor_attribution",
+      "passed": true
+    },
+    {
+      "name": "report_pdf_and_manifest_sources",
+      "passed": true
+    },
+    {
+      "name": "occupancy_companion",
+      "passed": true
+    }
+  ],
+  "checked_file_sha256": {
+    "indoor_mapping/__init__.py": "212ace23d6efd1e4acbed212b2b8d2f300da147fd3c8850e05f20970c38c729a",
+    "indoor_mapping/bag_io.py": "8c6af92d98b78bce3aa5ea2c6e4c2320a055abe2788e99ce85666e05a79f15ff",
+    "indoor_mapping/figures.py": "1d523bf04bf3a8325c3febddbc9036d5cc9c3060af20664e1034e1157854a313",
+    "indoor_mapping/geometry.py": "921d6668154e17accc9a5ee4819db5b668e8a2644ed202d2cb14b0d7411037b7",
+    "indoor_mapping/graph.py": "b849c341107dfba175328610561d187337de4f286c2c249ec373a0dfc58a6c46",
+    "indoor_mapping/lidar_revisits.py": "1a229441e157f93e3018580095e086dd5a3674acaecca1cdb35b5c47880010e4",
+    "indoor_mapping/localization_map.py": "f321fd4a6b866956e3e65220b8191e697539aca7d2119a8240bd58146447cb83",
+    "indoor_mapping/occupancy.py": "be1064deb57f27f24a0b5a4f1ade57f2d557ba8ad012292f8f57f71887982657",
+    "indoor_mapping/pipeline.py": "c4fb02e4d54b33d7d24660c32503c1f460ab6697fc15fd6ca7f17364339f22f3",
+    "indoor_mapping/ros_node.py": "a8bd12fa3b72ef69396f4121497c3f3aa2eea24445dff33e12da23a62d699348",
+    "indoor_mapping/vision.py": "14eb873b523edcaeb937d7f1926c876bb5df4870d62d364fb27d10c6887576e3",
+    "indoor_mapping/visual_landmarks.py": "72265ba637901713bf6fb9dfddda342d82127d3bb2a90b5dd82e41a876e6f449",
+    "outputs/fin301/audit/audit.json": "c752461a7180e4b58186be34beeb26ac87f6e283a7dc41b6063a2fbea1f5f69b",
+    "outputs/fin301/audit/audit.md": "135c5a5fc5b40b265d1f013ea8763b0251f56e3c9f01266b1327e362634c3477",
+    "outputs/fin301/audit/calibration.json": "2432f224e85aa32555bfe56c13e3ee036d0fda38939f46ba662354fef698ab6e",
+    "outputs/fin301/audit/rosout.json": "cb61451cbb4b87d85e80d2452136102f349c4ec0f6d741d019eb167a71fb4a33",
+    "outputs/fin301/report/group_technical_report.pdf": "b9602d235cba14921b4b9824cac10b782e7c82890ffa5694519fe47c59d76c00",
+    "outputs/fin301/report/report_manifest.json": "1149f013650458e67065af925b17b2765266d8311c84c6cae4de9ec0f291f3b0",
+    "outputs/fin301/result/camera_landmarks.png": "e69f4aba26f324b635253bed13d6397a28165fae221352ccf7db1ec5b165d2c3",
+    "outputs/fin301/result/lidar_revisit_events.json": "29092e97a409ba3755599118334bd4efa883523515d251cbe926af9fe7bb1a54",
+    "outputs/fin301/result/lidar_scan_map.pcd": "1a24cf7f9b160689f7961e0b7e3e17568410b3fcc26c80526c3e67907a573f22",
+    "outputs/fin301/result/loop_events.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "outputs/fin301/result/map.pcd": "5e3ff75c4d53306db5066db8b55ce5e1631719c22d5857d548791fe62e22aae3",
+    "outputs/fin301/result/map.pgm": "90d706ad71b468b2cb177f7261a3fbac1cad4ef0d6c446c71243ab76a032d034",
+    "outputs/fin301/result/map.png": "f5fdef4ad3390e6689dac2c3be002ea92a6a62cb67ba3b5054bd36b393d816b1",
+    "outputs/fin301/result/map.yaml": "82f29394d71b44da441d2312dfe3dc40c84ed914fc86a7461d32c63b05cdfde1",
+    "outputs/fin301/result/map_metadata.json": "6bbaf22d4138330c45e85adaeab21fb51e77be2ea8c8581a37447a58f5aa3fee",
+    "outputs/fin301/result/metrics.json": "fbb0e8838b8c40409841486967c8efafc50ead80ddf31173384edfa65529e41f",
+    "outputs/fin301/result/pcd_preview.png": "e1ec7c70bfdfe85e4978ba8f499f82e4bdedf4260065015ab5fb302914edb6cc",
+    "outputs/fin301/result/pose_graph.json": "38173db13960c08e9045c706943dcbeed6d3806ff0d3618cb4f8ffa8f655db03",
+    "outputs/fin301/result/run_config.json": "aca5645b53a60ad0baebcb607bf8924aae503d7d00132b80d3b577a61dd06814",
+    "outputs/fin301/result/trajectory.csv": "278fda09e04ecbe3ef03f4a78105922fbe083f6d681288061eafe1447681f285",
+    "outputs/fin301/result/trajectory_arrays.npz": "ea2e50efe96f1e8cb87ee600770c6326a30c876d9894f57dcc5abe0fac69aeed",
+    "outputs/fin301/result/visual_landmark_evidence.csv": "b3f4fe5b3ec45143ecdf58ac18e92e7d4010c82fbd9e2eb20c815998e18c2640",
+    "outputs/fin301/result/visual_landmark_stats.json": "e88dd49da108b696f7567efec58d4bc544b8c35d2b371e05054c710879cfbcdc",
+    "outputs/fin301/result/visual_landmarks.pcd": "13fdc60f147ab284fb9d99cfc1bec074e450d97f461ee839b10866d4faef6ebe",
+    "outputs/fin301/verification/localization_final/localization_evaluation.json": "4fb24e8f858d3938b7b9bb2719103cb47d3347ee121ceae310ada5a9ec6b1df5",
+    "outputs/fin301/verification/localization_final/localization_quality.png": "c58fc0316c21edd992fc5a46cfb0733fc0f041e22581cbe78bc82555175cb06a",
+    "outputs/fin301/verification/localization_protocol.json": "d31faa51f300366ac228352aa90c90151b886a1651b43e7122355dbb90e2e57a",
+    "outputs/fin301/verification/map_selection.json": "5ffc70b666e76014bc1ec6ed2bbf69fa0f8747b08e753e9c821a939bc265f0e1",
+    "outputs/fin301/verification/ros_final_artifacts_test.txt": "c31b64bd2e28949539f79f5b7d58cb8305be45fcb5c9b748c37b28d55f37afaf",
+    "outputs/fin301/verification/ros_processing_final_test.txt": "9f7bb60f4890ef3bb24485651e187eee5863c897afee7172112dc4e584a5a5dd",
+    "outputs/fin301/verification/visual_landmark_review_final.json": "9c93bbe2a82d1a0e04787f6dcd9fe415ee71a7ede28f9330ffd3d0d10e57ee6a",
+    "outputs/fin301/verification/visual_landmark_review_heldout.json": "2df2538cea5fa490cbd53e4c5e130d04dfe3d21843a1bb6532c090d2e29fcbc8",
+    "scripts/build_report.py": "58584ed5d88b531adb3f9f74758eb5d7d3e02b63fdddff6725e6b6844bddae3b"
+  }
+}

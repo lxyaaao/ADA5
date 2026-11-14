@@ -1,0 +1,186 @@
+{
+  "keyframes": 430,
+  "associated_within_50ms": 412,
+  "association_p95_ms": 49.760541999999994,
+  "visually_verified_candidates": 0,
+  "accepted_camera_lidar_loops": 0,
+  "input_scan_count": 17628,
+  "tracked_scans": 3526,
+  "map_insertions": 780,
+  "pcd_points": 53793,
+  "geometry": "lidar_scan_plane_plus_triangulated_visual_landmarks",
+  "lidar_point_count": 53700,
+  "visual_point_count": 93,
+  "visual_landmarks": {
+    "accepted_landmarks": 93,
+    "raw_accepted_landmarks": 95,
+    "tracks_tested": 21870,
+    "groups_tested": 638,
+    "groups_accepted": 6,
+    "detected_features": 98283,
+    "rejections": {
+      "timestamp_selection": 4,
+      "pose_bracket": 1,
+      "baseline": 217,
+      "image": 0,
+      "tracking": 76413,
+      "invalid_triangulation": 0,
+      "depth": 5640,
+      "parallax": 12858,
+      "reprojection": 19208,
+      "feature_support": 333
+    },
+    "rejection_count_note": "tracking is a track count; geometry rejection counts overlap; group selection/support reasons count groups",
+    "reprojection_error_median_px": 1.6998768755489142,
+    "reprojection_error_p95_px": 1.962373824352188,
+    "reprojection_error_max_px": 1.9935288968985347,
+    "reprojection_px": {
+      "min": 0.7431164235029343,
+      "median": 1.6998768755489142,
+      "p95": 1.962373824352188,
+      "max": 1.9935288968985347
+    },
+    "parallax_deg": {
+      "min": 2.0245972621484154,
+      "median": 2.884153791924945,
+      "p95": 4.284815809441641,
+      "max": 6.312179969283772
+    },
+    "baseline_m": {
+      "min": 0.5772129957876836,
+      "median": 0.662918681734641,
+      "p95": 0.7038921029584551,
+      "max": 0.7038921029584551
+    },
+    "distinct_camera_views": 24,
+    "camera_image_ids": [
+      790,
+      793,
+      796,
+      799,
+      3757,
+      3760,
+      3763,
+      3766,
+      5504,
+      5507,
+      5510,
+      5513,
+      5524,
+      5527,
+      5530,
+      5533,
+      5534,
+      5537,
+      5540,
+      5543,
+      5544,
+      5547,
+      5550,
+      5553
+    ],
+    "observation_time_ns": {
+      "min": 1793312224685070067,
+      "max": 1793312701906363726
+    },
+    "parameters": {
+      "views_per_group": 4,
+      "frame_interval_s": 0.3,
+      "group_stride_s": 0.9,
+      "timestamp_selection_tolerance_s": 0.08,
+      "max_pose_bracket_gap_s": 0.5,
+      "min_baseline_m": 0.12,
+      "max_baseline_m": 1.5,
+      "min_parallax_deg": 2.0,
+      "min_depth_m": 0.4,
+      "max_depth_m": 12.0,
+      "max_reprojection_px": 2.0,
+      "max_forward_backward_error_px": 0.8,
+      "voxel_size_m": 0.05,
+      "min_landmarks_per_group": 8,
+      "min_image_hull_fraction": 0.01
+    },
+    "camera_pose_corrections_applied": false,
+    "pose_interpolation_method": "Integer nanosecond differences; linear XY and unwrapped yaw at image header timestamps; no extrapolation; maximum bracket gap 0.5 s",
+    "world_from_camera": "embed_SE2(world_from_lidar, z=0) @ inverse(T_camera_lidar)",
+    "coordinate_frame": "Initial LiDAR frame, metres; LiDAR scan plane z=0; negative z is valid",
+    "camera_origin_in_lidar_m": [
+      0.20578800000000003,
+      -2.723326424334251e-18,
+      -0.08748999999999998
+    ],
+    "calibration_path": "outputs\\fin301\\audit\\calibration.json",
+    "intrinsic_matrix": [
+      [
+        433.76863,
+        0.0,
+        311.07619
+      ],
+      [
+        0.0,
+        430.02557,
+        221.52648
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "distortion_coefficients": [
+      -0.066549,
+      0.048809,
+      -0.000212,
+      -0.004628,
+      0.0
+    ],
+    "assumptions": [
+      "Recorded calibration is used without independent physical validation.",
+      "Vehicle roll, pitch and LiDAR height are fixed by the planar trajectory model.",
+      "Geometrically consistent tracks are treated as static; some moving objects or reflections can remain.",
+      "Sparse triangulated heights are estimates, not a dense reconstruction or independently validated height measurements."
+    ],
+    "representative_image_ids": [
+      5544,
+      5547,
+      5550,
+      5553
+    ],
+    "representative_prevoxel_landmarks": 19,
+    "final_point_count": 93,
+    "accepted_before_voxel": 95,
+    "windows_total": 638,
+    "windows_accepted": 6,
+    "tracks_surviving_four_views": 21870
+  },
+  "camera_mapping_contribution": true,
+  "bag_scan_duration_s": 591.900184059,
+  "tracked_duration_s": 591.8329801880001,
+  "rejected_registrations": 0,
+  "lidar_icp_rmse_median_m": 0.009065127447938208,
+  "adjacent_scan_recoveries": 1,
+  "camera_constraints_applied": false,
+  "loop_translation_residual_before_m": [],
+  "loop_translation_residual_after_m": [],
+  "lidar_icp_rmse_p95_m": 0.01651863443124853,
+  "estimated_path_length_m": 236.68180382847632,
+  "endpoint_separation_before_m": 9.270503637431636,
+  "endpoint_separation_after_m": 9.270503637431636,
+  "max_camera_graph_correction_m": 5.0242958677880805e-15,
+  "vehicle_transform_available": true,
+  "base_to_lidar_se2": [
+    -0.082558,
+    -0.017229,
+    0.0
+  ],
+  "map_origin_description": "First accepted LiDAR pose; x forward, y left in initial scan frame; metres; z=0 scan plane projection",
+  "absolute_accuracy": "UNVALIDATED: no independent physical reference measurements supplied",
+  "uses_imu": false,
+  "uses_recorded_odometry": false,
+  "uses_recorded_map": false,
+  "graph": {
+    "success": true,
+    "message": "No accepted loop edges; odometry unchanged"
+  },
+  "elapsed_s": 79.6781210899353
+}

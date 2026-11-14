@@ -1,0 +1,319 @@
+{
+  "selected_localization_map": "outputs\\fin301\\result\\lidar_scan_map.pcd",
+  "selected_map_sha256": "1a24cf7f9b160689f7961e0b7e3e17568410b3fcc26c80526c3e67907a573f22",
+  "selected_configuration": "LiDAR odometry plus one validated partial-overlap revisit; unfiltered scan returns",
+  "camera_map": "Separate six-view upward-ray structural candidates; camera pose correction and accuracy improvement not demonstrated",
+  "evaluation_role": "Raw scans held out from mapping; development validation used for map selection, not an untouched final test set",
+  "absolute_localization_accuracy": "UNVALIDATED: no independent physical position reference",
+  "stability_definition": "All eight perturbed initializations accepted and mutually within 0.15 m and 3 degrees",
+  "paired_queries_gained_stability": 10,
+  "paired_queries_lost_stability": 6,
+  "comparisons": {
+    "baseline": {
+      "queries_summary": {
+        "query_count": 100,
+        "attempted_initializations": 800,
+        "accepted_registrations": 707,
+        "acceptance_rate": 0.88375,
+        "all_starts_agree_queries": 67,
+        "all_starts_agree_fraction": 0.67,
+        "heldout_point_to_line_rmse_m": {
+          "count": 707,
+          "median": 0.01858982963947788,
+          "p95": 0.07798170360048734,
+          "max": 0.09589793106164224
+        },
+        "heldout_euclidean_rmse_m": {
+          "count": 707,
+          "median": 0.02888240744384736,
+          "p95": 0.10405237145326529,
+          "max": 0.12613847910496243
+        },
+        "accepted_overlap_fraction": {
+          "count": 707,
+          "median": 0.7019607843137254,
+          "p95": 0.9104477611940298,
+          "max": 0.9713261648745519
+        },
+        "query_max_pairwise_translation_m": {
+          "count": 91,
+          "median": 1.1192026056946179e-11,
+          "p95": 0.5284455780170724,
+          "max": 1.443884326629834
+        },
+        "query_max_pairwise_yaw_deg": {
+          "count": 91,
+          "median": 2.3571428678261027e-10,
+          "p95": 3.445197189687724,
+          "max": 10.37381118755997
+        },
+        "by_perturbation": {
+          "0.25": {
+            "attempted": 400,
+            "accepted": 361
+          },
+          "0.5": {
+            "attempted": 400,
+            "accepted": 346
+          }
+        }
+      },
+      "crosspass_queries_summary": {
+        "query_count": 20,
+        "attempted_initializations": 160,
+        "accepted_registrations": 124,
+        "acceptance_rate": 0.775,
+        "all_starts_agree_queries": 11,
+        "all_starts_agree_fraction": 0.55,
+        "heldout_point_to_line_rmse_m": {
+          "count": 124,
+          "median": 0.029933033960839565,
+          "p95": 0.07485259746335264,
+          "max": 0.07485259762374304
+        },
+        "heldout_euclidean_rmse_m": {
+          "count": 124,
+          "median": 0.05398793563318108,
+          "p95": 0.1495000532514035,
+          "max": 0.14950010785988577
+        },
+        "accepted_overlap_fraction": {
+          "count": 124,
+          "median": 0.8018867924528302,
+          "p95": 0.8774509803921569,
+          "max": 0.8774509803921569
+        },
+        "query_max_pairwise_translation_m": {
+          "count": 17,
+          "median": 9.35220338358857e-11,
+          "p95": 1.7053753066384037e-07,
+          "max": 3.17536159817957e-07
+        },
+        "query_max_pairwise_yaw_deg": {
+          "count": 17,
+          "median": 8.844287673546156e-10,
+          "p95": 1.2246185178043118e-06,
+          "max": 1.4129045414680377e-06
+        },
+        "by_perturbation": {
+          "0.25": {
+            "attempted": 80,
+            "accepted": 64
+          },
+          "0.5": {
+            "attempted": 80,
+            "accepted": 60
+          }
+        }
+      }
+    },
+    "final": {
+      "queries_summary": {
+        "query_count": 100,
+        "attempted_initializations": 800,
+        "accepted_registrations": 712,
+        "acceptance_rate": 0.89,
+        "all_starts_agree_queries": 71,
+        "all_starts_agree_fraction": 0.71,
+        "heldout_point_to_line_rmse_m": {
+          "count": 712,
+          "median": 0.014739530100239671,
+          "p95": 0.07096728620465693,
+          "max": 0.0952094354168078
+        },
+        "heldout_euclidean_rmse_m": {
+          "count": 712,
+          "median": 0.024545057179753048,
+          "p95": 0.08893309081103501,
+          "max": 0.11442833865610409
+        },
+        "accepted_overlap_fraction": {
+          "count": 712,
+          "median": 0.75,
+          "p95": 0.9285714285714286,
+          "max": 0.9893238434163701
+        },
+        "query_max_pairwise_translation_m": {
+          "count": 92,
+          "median": 9.28478245390941e-14,
+          "p95": 0.009100080037929375,
+          "max": 1.0460621388416806
+        },
+        "query_max_pairwise_yaw_deg": {
+          "count": 92,
+          "median": 1.360581657329815e-12,
+          "p95": 0.17609705819182003,
+          "max": 3.6300220484418384
+        },
+        "by_perturbation": {
+          "0.25": {
+            "attempted": 400,
+            "accepted": 364
+          },
+          "0.5": {
+            "attempted": 400,
+            "accepted": 348
+          }
+        }
+      },
+      "crosspass_queries_summary": {
+        "query_count": 20,
+        "attempted_initializations": 160,
+        "accepted_registrations": 124,
+        "acceptance_rate": 0.775,
+        "all_starts_agree_queries": 11,
+        "all_starts_agree_fraction": 0.55,
+        "heldout_point_to_line_rmse_m": {
+          "count": 124,
+          "median": 0.02576940639352863,
+          "p95": 0.07485245267448802,
+          "max": 0.07485245283491677
+        },
+        "heldout_euclidean_rmse_m": {
+          "count": 124,
+          "median": 0.03960077563822412,
+          "p95": 0.14950052822993679,
+          "max": 0.14950058283683876
+        },
+        "accepted_overlap_fraction": {
+          "count": 124,
+          "median": 0.8018867924528302,
+          "p95": 0.8666666666666667,
+          "max": 0.8666666666666667
+        },
+        "query_max_pairwise_translation_m": {
+          "count": 17,
+          "median": 3.0359405436528116e-10,
+          "p95": 0.02033529731630204,
+          "max": 0.056466315092432925
+        },
+        "query_max_pairwise_yaw_deg": {
+          "count": 17,
+          "median": 1.8296617888321099e-09,
+          "p95": 0.4089866316364907,
+          "max": 1.45658866763199
+        },
+        "by_perturbation": {
+          "0.25": {
+            "attempted": 80,
+            "accepted": 64
+          },
+          "0.5": {
+            "attempted": 80,
+            "accepted": 60
+          }
+        }
+      }
+    },
+    "persistent": {
+      "queries_summary": {
+        "query_count": 100,
+        "attempted_initializations": 800,
+        "accepted_registrations": 620,
+        "acceptance_rate": 0.775,
+        "all_starts_agree_queries": 61,
+        "all_starts_agree_fraction": 0.61,
+        "heldout_point_to_line_rmse_m": {
+          "count": 620,
+          "median": 0.023795140569638645,
+          "p95": 0.08025412578385885,
+          "max": 0.09948520088475744
+        },
+        "heldout_euclidean_rmse_m": {
+          "count": 620,
+          "median": 0.04306087044834196,
+          "p95": 0.11238422378198644,
+          "max": 0.18779880651194936
+        },
+        "accepted_overlap_fraction": {
+          "count": 620,
+          "median": 0.7522371045882018,
+          "p95": 0.899641577060932,
+          "max": 0.9110320284697508
+        },
+        "query_max_pairwise_translation_m": {
+          "count": 81,
+          "median": 9.935092393758723e-11,
+          "p95": 0.8501119335280098,
+          "max": 1.5041626673377853
+        },
+        "query_max_pairwise_yaw_deg": {
+          "count": 81,
+          "median": 1.4988729700185191e-09,
+          "p95": 5.393937443970476,
+          "max": 14.381765018625252
+        },
+        "by_perturbation": {
+          "0.25": {
+            "attempted": 400,
+            "accepted": 317
+          },
+          "0.5": {
+            "attempted": 400,
+            "accepted": 303
+          }
+        }
+      },
+      "crosspass_queries_summary": {
+        "query_count": 20,
+        "attempted_initializations": 160,
+        "accepted_registrations": 96,
+        "acceptance_rate": 0.6,
+        "all_starts_agree_queries": 8,
+        "all_starts_agree_fraction": 0.4,
+        "heldout_point_to_line_rmse_m": {
+          "count": 96,
+          "median": 0.04527433332609078,
+          "p95": 0.09385472997230633,
+          "max": 0.09939733437782206
+        },
+        "heldout_euclidean_rmse_m": {
+          "count": 96,
+          "median": 0.06469398553168025,
+          "p95": 0.14743901098703704,
+          "max": 0.15393624042198656
+        },
+        "accepted_overlap_fraction": {
+          "count": 96,
+          "median": 0.7569200072555777,
+          "p95": 0.8327759197324415,
+          "max": 0.8360655737704918
+        },
+        "query_max_pairwise_translation_m": {
+          "count": 13,
+          "median": 2.3397941483976237e-11,
+          "p95": 0.552511654737204,
+          "max": 1.373657896055903
+        },
+        "query_max_pairwise_yaw_deg": {
+          "count": 13,
+          "median": 5.294709135165835e-10,
+          "p95": 0.0388354706090824,
+          "max": 0.045786497340843606
+        },
+        "by_perturbation": {
+          "0.25": {
+            "attempted": 80,
+            "accepted": 49
+          },
+          "0.5": {
+            "attempted": 80,
+            "accepted": 47
+          }
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "outputs\\fin301\\verification\\localization_baseline\\localization_evaluation.json": "1ca13e4cff34b787313976378efcab60ae44c0807673ad44b1c0234e7fa8564d",
+    "outputs\\fin301\\verification\\localization_final\\localization_evaluation.json": "4fb24e8f858d3938b7b9bb2719103cb47d3347ee121ceae310ada5a9ec6b1df5",
+    "outputs\\fin301\\verification\\localization_persistent\\localization_evaluation.json": "7384d5dea9ea72e805ba66d39cf4ebc68de7191c36d3e76afef7e135a8774fd8"
+  },
+  "limitations": [
+    "Reference maps and initial priors are estimated from the same recording, not physical truth.",
+    "Shared baseline initial poses and spatial selection may favor the baseline prior.",
+    "Aggregate improvement is not uniform; some queries lose stability.",
+    "Earlier-pass acceptance and stable-query counts are unchanged; paired residuals are mixed.",
+    "Camera XYZ must not be projected into the 2D localization scan map."
+  ]
+}

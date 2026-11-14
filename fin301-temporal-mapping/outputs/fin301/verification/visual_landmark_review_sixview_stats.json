@@ -1,0 +1,130 @@
+{
+  "status": "COMPLETE",
+  "experiment": "Six-view in-sample triangulation and validation; NOT held-out accuracy and no camera pose correction.",
+  "source_sha256": {
+    "outputs/fin301/audit/calibration.json": "2432f224e85aa32555bfe56c13e3ee036d0fda38939f46ba662354fef698ab6e",
+    "outputs/fin301/baseline/trajectory_arrays.npz": "3230debb9fc84034343d9f1f78aad69f6c256f2e40e6c0ee4a8af08a166eabba",
+    "indoor_mapping/visual_landmarks.py": "ad2fc2c1ab35c759c802bf923528d0f61e8d8496c2d463e6865982763b6e29e9"
+  },
+  "groups_tested": 638,
+  "groups_accepted": 2,
+  "detected_features": 104887,
+  "tracks_surviving_six_views": 14536,
+  "accepted_before_voxel": 27,
+  "accepted_landmarks": 26,
+  "windows": [
+    {
+      "image_ids": [
+        5514,
+        5517,
+        5520,
+        5523,
+        5526,
+        5529
+      ],
+      "timestamps_ns": [
+        1793312697982935651,
+        1793312698282920922,
+        1793312698582882309,
+        1793312698882722147,
+        1793312699186763753,
+        1793312699486614730
+      ],
+      "accepted_prevoxel_points": 18,
+      "baseline_m": 0.6455020392122207,
+      "minimum_hull_fraction": 0.028688303026321763
+    },
+    {
+      "image_ids": [
+        5534,
+        5537,
+        5540,
+        5543,
+        5546,
+        5549
+      ],
+      "timestamps_ns": [
+        1793312699986538054,
+        1793312700286531367,
+        1793312700586570830,
+        1793312700886447759,
+        1793312701186358056,
+        1793312701486299170
+      ],
+      "accepted_prevoxel_points": 9,
+      "baseline_m": 1.0593034359042885,
+      "minimum_hull_fraction": 0.026436267409879217
+    }
+  ],
+  "rejections": {
+    "timestamp_selection": 6,
+    "pose_bracket": 0,
+    "baseline": 189,
+    "image": 0,
+    "tracking": 90351,
+    "depth": 4018,
+    "parallax": 7604,
+    "reprojection": 13501,
+    "upward_rays": 7,
+    "feature_support": 287
+  },
+  "rejection_count_note": "Geometry failures overlap; tracking counts tracks; timestamp/pose/baseline/image/support count groups.",
+  "parameters": {
+    "views": 6,
+    "interval_s": 0.3,
+    "stride_s": 0.9,
+    "timestamp_tolerance_s": 0.08,
+    "baseline_m": [
+      0.12,
+      1.5
+    ],
+    "parallax_min_deg": 2,
+    "depth_m": [
+      0.4,
+      12
+    ],
+    "max_reprojection_px_all_six": 2,
+    "max_FB_px": 0.8,
+    "min_points_per_group": 8,
+    "min_hull_fraction_all_six": 0.01,
+    "voxel_m": 0.05,
+    "bearing_mask": "undistorted camera ray transformed to world has positive z in all six views"
+  },
+  "reprojection_px": {
+    "count": 26,
+    "min": 1.1695748058742665,
+    "median": 1.5249545244526703,
+    "p95": 1.9388674799213694,
+    "max": 1.9757997507880245
+  },
+  "parallax_deg": {
+    "count": 26,
+    "min": 2.0048520856688237,
+    "median": 3.0565051450094822,
+    "p95": 3.898987740887309,
+    "max": 4.608885817306516
+  },
+  "baseline_m": {
+    "count": 26,
+    "min": 0.6455020392122207,
+    "median": 0.6455020392122207,
+    "p95": 1.0593034359042885,
+    "max": 1.0593034359042885
+  },
+  "z_m": {
+    "count": 26,
+    "min": 0.4064201769001872,
+    "median": 1.0020067474642012,
+    "p95": 2.5488425034439786,
+    "max": 3.575163058655244
+  },
+  "negative_z_points": 0,
+  "elapsed_s": 15.998653888702393,
+  "limitations": [
+    "Camera map evidence only; no demonstrated localization gain.",
+    "All six views participate in validation, so their residual is an in-sample acceptance metric.",
+    "Upward rays exclude foreground floor views but do not eliminate window reflections or moving objects.",
+    "Recorded calibration and planar LiDAR poses remain unvalidated against an independent physical reference."
+  ],
+  "baseline_snapshot": "outputs/fin301/baseline"
+}

@@ -1,0 +1,32 @@
+{
+  "accepted_odometry_count": 3526,
+  "raw_ids_unique_sorted": true,
+  "times_equal_raw": true,
+  "raw_poses_equal_saved_lidar_only": true,
+  "protocol_odometry_ids_exact": true,
+  "main_query_count": 100,
+  "main_query_intersection": [],
+  "crosspass_query_count": 20,
+  "crosspass_intersection": [],
+  "nearest_accepted_odom_to_main_query_s": {
+    "min": 0.032019709,
+    "median": 0.050399679,
+    "p95": 0.06744553235,
+    "max": 0.068119929,
+    "within_5s": 100
+  },
+  "scope": "Input identity/near-time correlation audit only; no filter was fitted and no query scan was used for a constraint.",
+  "interpretation": "Query-ID disjointness does not imply temporal exclusion. A filter using all accepted observations is correlated with every frozen main query.",
+  "source_paths": {
+    "odometry": "outputs\\fin301\\result\\odometry.npz",
+    "trajectory": "outputs\\fin301\\result\\trajectory_arrays.npz",
+    "raw_scans": "outputs\\fin301\\cache\\scans.npz",
+    "protocol": "outputs\\fin301\\verification\\localization_protocol.json"
+  },
+  "source_sha256": {
+    "odometry": "1231a78c715f5f5248122f2f9240189ede7b4d7b3a6aeb50e1dd543c2555d31b",
+    "trajectory": "ea2e50efe96f1e8cb87ee600770c6326a30c876d9894f57dcc5abe0fac69aeed",
+    "raw_scans": "7610683a4c4088a3f1682dbad5e1a799b274c8eed3e50da1ccaa3da10e2a0640",
+    "protocol": "d31faa51f300366ac228352aa90c90151b886a1651b43e7122355dbb90e2e57a"
+  }
+}

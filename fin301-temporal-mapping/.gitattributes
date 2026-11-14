@@ -1,0 +1,7 @@
+# Preserve recorded source and artifact bytes for SHA-256 evidence.
+* -text
+*.pgm binary
+*.png binary
+*.pdf binary
+*.npz binary
+*.npy binary

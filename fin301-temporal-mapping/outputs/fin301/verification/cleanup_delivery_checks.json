@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "original_files_byte_identical": 8,
+  "filtered_counts": {
+    "lidar_scan_map_clean_conservative.pcd": 49685,
+    "lidar_scan_map_clean_balanced.pcd": 49545,
+    "lidar_scan_map_clean_radius_conservative.pcd": 48954,
+    "lidar_scan_map_clean_radius_balanced.pcd": 46338,
+    "lidar_scan_map_clean_occupancy_supported.pcd": 30165
+  },
+  "ascii_exact_subsets": true,
+  "zip_members": 125,
+  "zip_sha256": "d7673158bd10be230d9c39b2819a182038848906df909712787eb745c782454d",
+  "english_offline_bundle_verified": true,
+  "browser_interaction_tested": false
+}

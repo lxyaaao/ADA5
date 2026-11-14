@@ -1,0 +1,236 @@
+{
+  "status": "BASELINE_REVIEW_COMPLETE_WITH_PHYSICAL_AND_PREDICTIVE_LIMITATIONS",
+  "method": "Independent camera-pose interpolation and explicit Brown-Conrady projection; no estimator triangulation functions imported.",
+  "source_sha256": {
+    "outputs/fin301/baseline/visual_landmark_evidence.csv": "a7372847029fd4b22b22e0d75eede2e30871e286f332cf48f5c040ca11deda61",
+    "outputs/fin301/baseline/visual_landmark_stats.json": "eec42483de26d050630cee4efa4cbe699bc7a51f50bf0aa0aa91e50282d1530c",
+    "outputs/fin301/baseline/visual_landmarks.pcd": "46b6150a1a5c513968f5704f196c141da60a063081acef27cbc817b82c250920",
+    "outputs/fin301/baseline/lidar_scan_map.pcd": "41006157dedf7bb4b171f292b4ba727b778be5fdee4829f742f567e424915338",
+    "outputs/fin301/baseline/map.pcd": "e086d24de4bc4742bb6c879fbc88734d3cb61d93c7182de58d9bf2d041fd334b",
+    "outputs/fin301/baseline/trajectory_arrays.npz": "3230debb9fc84034343d9f1f78aad69f6c256f2e40e6c0ee4a8af08a166eabba",
+    "outputs/fin301/audit/calibration.json": "2432f224e85aa32555bfe56c13e3ee036d0fda38939f46ba662354fef698ab6e"
+  },
+  "landmarks_checked": 93,
+  "evidence_groups": 6,
+  "unique_view_timestamp_checks": 24,
+  "lidar_points": 53700,
+  "combined_points": 53793,
+  "component_concatenation_verified": true,
+  "max_projection_difference_from_evidence_px": 1.4102052858788738e-12,
+  "max_depth_difference_from_evidence_m": 4.440892098500626e-15,
+  "max_pose_bracket_gap_s": 0.170683476,
+  "recomputed_max_reprojection_per_landmark_px": {
+    "min": 0.743116423503789,
+    "median": 1.699876875549113,
+    "p95": 1.962373824352269,
+    "max": 1.993528896898257
+  },
+  "all_view_depth_m": {
+    "min": 1.6507113735851509,
+    "median": 3.7311666913064663,
+    "p95": 7.209545734743821,
+    "max": 9.081424326421216
+  },
+  "all_view_euclidean_distance_m": {
+    "min": 1.8223655989907723,
+    "median": 3.961715725925699,
+    "p95": 9.230377745412062,
+    "max": 11.253249623072929
+  },
+  "parallax_deg": {
+    "min": 2.0245972621484154,
+    "median": 2.884153791924945,
+    "p95": 4.284815809441589,
+    "max": 6.312179969283772
+  },
+  "baseline_m": {
+    "min": 0.5772129957876836,
+    "median": 0.662918681734641,
+    "p95": 0.7038921029584551,
+    "max": 0.7038921029584551
+  },
+  "camera_origin_in_lidar_m": [
+    0.20578800000000003,
+    -2.723326424334251e-18,
+    -0.08748999999999998
+  ],
+  "xyz_min": [
+    -13.410494341061082,
+    -11.405479919298044,
+    -2.0783943615465024
+  ],
+  "xyz_max": [
+    3.1669358305253104,
+    -4.818952608374356,
+    3.7973840182002836
+  ],
+  "z_quantiles_0_1_5_50_95_99_100": [
+    -2.0783943615465024,
+    -0.2663373886823477,
+    0.4281076546336585,
+    1.17786180467701,
+    2.7996756265311054,
+    3.7436329805048842,
+    3.7973840182002836
+  ],
+  "negative_z_point_count": 2,
+  "contact_sheet_samples": [
+    {
+      "image_ids": [
+        5544,
+        5547,
+        5550,
+        5553
+      ],
+      "final_landmarks": 19,
+      "z_min_m": -2.0783943615465024,
+      "z_max_m": 3.7973840182002836
+    },
+    {
+      "image_ids": [
+        5504,
+        5507,
+        5510,
+        5513
+      ],
+      "final_landmarks": 14,
+      "z_min_m": -0.10876721712894305,
+      "z_max_m": 1.6414135739393767
+    },
+    {
+      "image_ids": [
+        5534,
+        5537,
+        5540,
+        5543
+      ],
+      "final_landmarks": 19,
+      "z_min_m": 0.026462368477299183,
+      "z_max_m": 3.7389589772270235
+    },
+    {
+      "image_ids": [
+        790,
+        793,
+        796,
+        799
+      ],
+      "final_landmarks": 8,
+      "z_min_m": 0.556666354116165,
+      "z_max_m": 1.469777928192071
+    },
+    {
+      "image_ids": [
+        3757,
+        3760,
+        3763,
+        3766
+      ],
+      "final_landmarks": 14,
+      "z_min_m": 0.6336680084799912,
+      "z_max_m": 2.597511459917525
+    },
+    {
+      "image_ids": [
+        5524,
+        5527,
+        5530,
+        5533
+      ],
+      "final_landmarks": 19,
+      "z_min_m": 0.42438045722401296,
+      "z_max_m": 1.2825383448182937
+    }
+  ],
+  "jpeg_payload_validation_review": {
+    "images_checked": 5879,
+    "jpeg_eoi_at_end": 2965,
+    "jpeg_eoi_followed_by_one_zero_padding_byte": 2912,
+    "missing_eoi_image_ids": [
+      2764,
+      3045
+    ],
+    "known_decodable_images": 5877,
+    "source_format_issue": "A strict endswith(FFD9) check falsely rejects valid JPEG payloads with one trailing zero; full OpenCV audit confirms padding is valid.",
+    "padding_example_ids": [
+      4,
+      8,
+      13,
+      14,
+      22,
+      100,
+      200,
+      500,
+      1000,
+      2000
+    ]
+  },
+  "limitations": [
+    "No independent physical landmark truth supplied.",
+    "Four-view consistency cannot fully exclude moving objects or reflections.",
+    "Metric scale and camera poses depend on the estimated LiDAR trajectory and recorded, physically unverified calibration."
+  ],
+  "visual_inspection": {
+    "inspected_groups": 6,
+    "artifacts": [
+      "visual_landmark_review_contact.png",
+      "../result/camera_landmarks.png",
+      "../result/visual_landmarks_3d.png"
+    ],
+    "observations": [
+      "Most accepted features overlay ceiling lights, structural edges, curtains or upper wall/window features.",
+      "No accepted marker was visibly located on the nearby people in the inspected first-view contact sheet. This is a qualitative spot check, not a dynamic-object guarantee.",
+      "Landmark89 overlays a reflective floor region and triangulates to z=-2.078394m; it is a likely virtual reflection, not reliable physical surface evidence."
+    ],
+    "reflection_candidate_landmark_id": 89,
+    "negative_z_is_not_generally_invalid": true
+  },
+  "heldout_predictive_summary": {
+    "all_points": {
+      "training_point_count": 93,
+      "fifth_view_tracked": 83,
+      "sixth_view_tracked": 70,
+      "both_heldout_views_within_2px": 10,
+      "fifth_view_predictive_error_px": {
+        "count": 83,
+        "min": 0.6103811279218709,
+        "median": 2.189036461309882,
+        "p95": 4.8334735481791204,
+        "max": 5.418178940233348
+      },
+      "sixth_view_predictive_error_px": {
+        "count": 70,
+        "min": 0.3743778924436592,
+        "median": 4.26443642440343,
+        "p95": 9.585855629858115,
+        "max": 12.367905420882622
+      }
+    },
+    "upward_world_rays": {
+      "training_point_count": 91,
+      "fifth_view_tracked": 81,
+      "sixth_view_tracked": 68,
+      "both_heldout_views_within_2px": 10,
+      "fifth_view_predictive_error_px": {
+        "count": 81,
+        "min": 0.6103811279218709,
+        "median": 2.1917625517918595,
+        "p95": 4.865512294887888,
+        "max": 5.418178940233348
+      },
+      "sixth_view_predictive_error_px": {
+        "count": 68,
+        "min": 0.3743778924436592,
+        "median": 4.26443642440343,
+        "p95": 9.58784261526113,
+        "max": 12.367905420882622
+      }
+    }
+  },
+  "localization_conclusion": "No demonstrated camera-driven localization accuracy improvement. Baseline camera poses and point scale are inherited from LiDAR; no confirmed visual loop or camera pose correction.",
+  "source_code_sha256_at_review_time": {
+    "indoor_mapping\\visual_landmarks.py": "ad2fc2c1ab35c759c802bf923528d0f61e8d8496c2d463e6865982763b6e29e9",
+    "indoor_mapping\\pipeline.py": "e13e6b630e4d9d0c4a78e4b316bb63a7abca482b6c5a9512d452e737eb41b239"
+  },
+  "baseline_snapshot": "outputs/fin301/baseline"
+}
